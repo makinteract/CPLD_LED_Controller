@@ -30,24 +30,24 @@ parameter MSB = 7;
 
 wire[MSB-1:0] buffer;
 
-/*shift_reg  #(MSB) sr0  (.reset(RESET),
+shift_reg  #(MSB) sr0  (.reset(RESET),
                         .clk (CLK),
 						.data (DATA),
                         .en (LATCH),
                         .registers (buffer)
-						);*/
+						);
 
-dff d0(CLK, DATA, buffer[0]);
-dff d1(CLK, buffer[0], buffer[1]);
-dff d2(CLK, buffer[1], buffer[2]);
-dff d3(CLK, buffer[2], buffer[3]);
-dff d4(CLK, buffer[3], buffer[4]);
-dff d5(CLK, buffer[4], buffer[5]);
-dff d6(CLK, buffer[5], buffer[6]);
+// Same
+// dff d0(CLK, DATA, buffer[0]);
+// dff d1(CLK, buffer[0], buffer[1]);
+// dff d2(CLK, buffer[1], buffer[2]);
+// dff d3(CLK, buffer[2], buffer[3]);
+// dff d4(CLK, buffer[3], buffer[4]);
+// dff d5(CLK, buffer[4], buffer[5]);
+// dff d6(CLK, buffer[5], buffer[6]);
 
-assign LED = buffer;
 
-/*
+
 reg [15:0] active;
 reg [15:0] pattern;
 wire [15:0] patternSignal;
@@ -106,5 +106,5 @@ end
 
 assign patternSignal = {16{PATTERN}};
 assign LED = out;
-*/
+
 endmodule
