@@ -23,13 +23,14 @@ module top (input wire RESET,
 			input wire CLK,
 			input wire DATA,
 			input wire PATTERN,	
-			output wire [15:0] LED
+			output wire [18:0] LED
 			);
 
 parameter MSB = 7;
+parameter LED_TOT = 19;
 
+// Shift-register 7 bits
 wire[MSB-1:0] buffer;
-
 shift_reg  #(MSB) sr0  (.reset(RESET),
                         .clk (CLK),
 						.data (DATA),
@@ -48,14 +49,14 @@ shift_reg  #(MSB) sr0  (.reset(RESET),
 
 
 
-reg [15:0] active;
-reg [15:0] pattern;
-wire [15:0] patternSignal;
-reg [15:0] out;
+reg [LED_TOT-1:0] active;
+reg [LED_TOT-1:0] pattern;
+wire [LED_TOT-1:0] patternSignal;
+reg [LED_TOT-1:0] out;
 
 // 7 bits instructions
-reg [4:0] ledAddress;
-reg [1:0] instruction;
+// reg [4:0] ledAddress;
+// reg [1:0] instruction;
 
 
 
@@ -63,35 +64,35 @@ always @*
 begin
 	
 	if (LATCH == 1'b1) begin
-		ledAddress <= buffer[4:0]; // 5 bits address
-		instruction <= buffer[MSB-1:5]; // 2 bits instructions
+		// ledAddress <= buffer[4:0]; // 5 bits address
+		// instruction <= buffer[MSB-1:5]; // 2 bits instructions
 
-		case (ledAddress)  // led address
-			0: begin  active[0] <= instruction[0]; pattern[0] <= instruction[1]; end
-			1: begin  active[1] <= instruction[0]; pattern[1] <= instruction[1]; end
-			2: begin  active[2] <= instruction[0]; pattern[2] <= instruction[1]; end
-			3: begin  active[3] <= instruction[0]; pattern[3] <= instruction[1]; end
-			4: begin  active[4] <= instruction[0]; pattern[4] <= instruction[1]; end
-			5: begin  active[5] <= instruction[0]; pattern[5] <= instruction[1]; end
-			6: begin  active[6] <= instruction[0]; pattern[6] <= instruction[1]; end
-			7: begin  active[7] <= instruction[0]; pattern[7] <= instruction[1]; end
-			8: begin  active[8] <= instruction[0]; pattern[8] <= instruction[1]; end
-			9: begin  active[9] <= instruction[0]; pattern[9] <= instruction[1]; end
-			10: begin  active[10] <= instruction[0]; pattern[10] <= instruction[1]; end
-			11: begin  active[11] <= instruction[0]; pattern[11] <= instruction[1]; end
-			12: begin  active[12] <= instruction[0]; pattern[12] <= instruction[1]; end
-			13: begin  active[13] <= instruction[0]; pattern[13] <= instruction[1]; end
-			14: begin  active[14] <= instruction[0]; pattern[14] <= instruction[1]; end
-			15: begin  active[15] <= instruction[0]; pattern[15] <= instruction[1]; end
-			// 16: begin  active[16] <= instruction[0]; pattern[16] <= instruction[1]; end
-			// 17: begin  active[17] <= instruction[0]; pattern[17] <= instruction[1]; end
-			// 18: begin  active[18] <= instruction[0]; pattern[18] <= instruction[1]; end
-			// 19: begin  active[19] <= instruction[0]; pattern[19] <= instruction[1]; end
-			// 20: begin  active[20] <= instruction[0]; pattern[20] <= instruction[1]; end
-			// 21: begin  active[21] <= instruction[0]; pattern[21] <= instruction[1]; end
-			// 22: begin  active[22] <= instruction[0]; pattern[22] <= instruction[1]; end
-			// 23: begin  active[23] <= instruction[0]; pattern[23] <= instruction[1]; end
-			// 24: begin  active[24] <= instruction[0]; pattern[24] <= instruction[1]; end
+		case (buffer[4:0])  // led address
+			0: begin  active[0] <= buffer[5]; pattern[0] <= buffer[6]; end
+			1: begin  active[1] <= buffer[5]; pattern[1] <= buffer[6]; end
+			2: begin  active[2] <= buffer[5]; pattern[2] <= buffer[6]; end
+			3: begin  active[3] <= buffer[5]; pattern[3] <= buffer[6]; end
+			4: begin  active[4] <= buffer[5]; pattern[4] <= buffer[6]; end
+			5: begin  active[5] <= buffer[5]; pattern[5] <= buffer[6]; end
+			6: begin  active[6] <= buffer[5]; pattern[6] <= buffer[6]; end
+			7: begin  active[7] <= buffer[5]; pattern[7] <= buffer[6]; end
+			8: begin  active[8] <= buffer[5]; pattern[8] <= buffer[6]; end
+			9: begin  active[9] <= buffer[5]; pattern[9] <= buffer[6]; end
+			10: begin  active[10] <= buffer[5]; pattern[10] <= buffer[6]; end
+			11: begin  active[11] <= buffer[5]; pattern[11] <= buffer[6]; end
+			12: begin  active[12] <= buffer[5]; pattern[12] <= buffer[6]; end
+			13: begin  active[13] <= buffer[5]; pattern[13] <= buffer[6]; end
+			14: begin  active[14] <= buffer[5]; pattern[14] <= buffer[6]; end
+			15: begin  active[15] <= buffer[5]; pattern[15] <= buffer[6]; end
+			16: begin  active[16] <= buffer[5]; pattern[16] <= buffer[6]; end
+			17: begin  active[17] <= buffer[5]; pattern[17] <= buffer[6]; end
+			18: begin  active[18] <= buffer[5]; pattern[18] <= buffer[6]; end
+			// 19: begin  active[19] <= buffer[5]; pattern[19] <= buffer[6]; end
+			// 20: begin  active[20] <= buffer[5]; pattern[20] <= buffer[6]; end
+			// 21: begin  active[21] <= buffer[5]; pattern[21] <= buffer[6]; end
+			// 22: begin  active[22] <= buffer[5]; pattern[22] <= buffer[6]; end
+			// 23: begin  active[23] <= buffer[5]; pattern[23] <= buffer[6]; end
+			// 24: begin  active[24] <= buffer[5]; pattern[24] <= buffer[6]; end
 			
 		endcase
 	end
@@ -104,7 +105,7 @@ begin
 	out <= (pattern & patternSignal) | active;
 end
 
-assign patternSignal = {16{PATTERN}};
+assign patternSignal = {LED_TOT{PATTERN}};
 assign LED = out;
 
 endmodule
