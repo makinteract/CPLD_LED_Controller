@@ -26,6 +26,13 @@ module top (input wire RESET,
 			output wire [22:0] LED
 			);
 
+
+assign LED[7:0] = 8'b11000111;
+
+endmodule
+
+
+/*
 parameter MSB = 8;
 
 wire[MSB-1:0] buffer;
@@ -243,3 +250,4 @@ ledCtrl lc22 (.state(led22),
 // 			);
 
 endmodule
+*/
