@@ -26,12 +26,9 @@ module shift_reg
       input clk,                    
 		input data,         
       input en,                     // enable low
-		output wire out,
       output reg [MSB-1:0] registers 
 	);    
- 
-	assign out = registers[MSB-1];
-	
+ 	
    always @ (posedge clk)
 	begin
          if (!reset)

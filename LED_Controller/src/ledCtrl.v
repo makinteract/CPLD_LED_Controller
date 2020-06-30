@@ -18,10 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ledCtrl(input wire [2:0] state,
+module ledCtrl(input wire [1:0] state,
                output wire led,
-               input wire pattern1,
-               input wire pattern2
+               input wire pattern1
                );
 
     reg out;
@@ -32,7 +31,6 @@ module ledCtrl(input wire [2:0] state,
             3'b0: out <= 1'b0;
             3'b1: out <= 1'b1;
             3'b10: out <= pattern1;
-            3'b11: out <= pattern2;
         endcase
     end
 

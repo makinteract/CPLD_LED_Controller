@@ -8,7 +8,7 @@ INFO:Cpld - Inferring BUFG constraint for signal 'RESET' based upon the LOC
 WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'RESET_IBUF'
    is ignored. Most likely the signal is gated and therefore cannot be used as a
    global control signal.
-ERROR:Cpld:1063 - Design requires at least 73 macrocells, exceeds device limit
+ERROR:Cpld:1063 - Design requires at least 68 macrocells, exceeds device limit
    64.
 ERROR:Cpld:1064 - Design rules checking error. Fitting process stopped.
 ERROR:Cpld:868 - Cannot fit the design into any of the specified devices with
