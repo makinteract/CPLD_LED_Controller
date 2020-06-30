@@ -1,0 +1,538 @@
+# XPLAOPT Version 9.99.99.99
+# XPLAOPT -run s -it b -i top.blx -dev XC2C64A-7VQ44 -reg -xor a -mode 1 -th 28 
+#         -fi 32 -bfi 38 -pre keep -unused keeper -terminate keeper -no_output_files 
+#$ MODULE top
+#$ PINS 6 "CLK":3 "DATA":5 "LATCH":2 "LED<0>":8 "LED<10>":23 "LED<11>":27 
+#$ PINS 5 "LED<12>":28 "LED<13>":29 "LED<14>":30 "LED<15>":31 "LED<16>":32 
+#$ PINS 5 "LED<17>":33 "LED<18>":34 "LED<19>":36 "LED<1>":12 "LED<20>":37 
+#$ PINS 5 "LED<21>":38 "LED<22>":39 "LED<23>":40 "LED<24>":41 "LED<2>":13 
+#$ PINS 5 "LED<3>":14 "LED<4>":16 "LED<5>":18 "LED<6>":19 "LED<7>":20 
+#$ PINS 4 "LED<8>":21 "LED<9>":22 "PATTERN":6 "RESET":1 
+#$ NODES 4 "N_PZ_161"'co' "N_PZ_189"'co' "active<0>" "active<10>" 
+#$ NODES 5 "active<11>" "active<12>" "active<13>" "active<14>" "active<1>" 
+#$ NODES 5 "active<2>" "active<3>" "active<4>" "active<5>" "active<6>" 
+#$ NODES 5 "active<7>" "active<8>" "active<9>" "buffer<0>" "buffer<1>" 
+#$ NODES 5 "buffer<2>" "buffer<3>" "buffer<4>" "buffer<5>" "buffer<6>" 
+#$ NODES 4 "buffer<7>" "instruction<0>" "instruction<1>" "instruction<2>" 
+#$ NODES 4 "ledAddress<0>" "ledAddress<1>" "ledAddress<2>" "ledAddress<3>" 
+#$ NODES 3 "ledAddress<4>" "pattern_rnm0<0>" "pattern_rnm0<10>" 
+#$ NODES 3 "pattern_rnm0<11>" "pattern_rnm0<12>" "pattern_rnm0<13>" 
+#$ NODES 3 "pattern_rnm0<14>" "pattern_rnm0<1>" "pattern_rnm0<2>" 
+#$ NODES 3 "pattern_rnm0<3>" "pattern_rnm0<4>" "pattern_rnm0<5>" 
+#$ NODES 3 "pattern_rnm0<6>" "pattern_rnm0<7>" "pattern_rnm0<8>" 
+#$ NODES 1 "pattern_rnm0<9>" 
+#$ PROPERTY xpla USER_SLEW_RATE LED<0> LED<10> LED<11> LED<12> 
+#$ PROPERTY xpla USER_SLEW_RATE LED<13> LED<14> LED<15> LED<16> 
+#$ PROPERTY xpla USER_SLEW_RATE LED<17> LED<18> LED<19> LED<1> 
+#$ PROPERTY xpla USER_SLEW_RATE LED<20> LED<21> LED<22> LED<23> 
+#$ PROPERTY xpla USER_SLEW_RATE LED<24> LED<2> LED<3> LED<4> 
+#$ PROPERTY xpla USER_SLEW_RATE LED<5> LED<6> LED<7> LED<8> LED<9>  
+#$ PROPERTY xpla unused_keeper 
+#$ PROPERTY xpla IOSTD CLK 2 -1
+#$ PROPERTY xpla IOSTD DATA 2 -1
+#$ PROPERTY xpla IOSTD LATCH 2 -1
+#$ PROPERTY xpla IOSTD LED<0> 2 -1
+#$ PROPERTY xpla IOSTD LED<10> 2 -1
+#$ PROPERTY xpla IOSTD LED<11> 2 -1
+#$ PROPERTY xpla IOSTD LED<12> 2 -1
+#$ PROPERTY xpla IOSTD LED<13> 2 -1
+#$ PROPERTY xpla IOSTD LED<14> 2 -1
+#$ PROPERTY xpla IOSTD LED<15> 2 -1
+#$ PROPERTY xpla IOSTD LED<16> 2 -1
+#$ PROPERTY xpla IOSTD LED<17> 2 -1
+#$ PROPERTY xpla IOSTD LED<18> 2 -1
+#$ PROPERTY xpla IOSTD LED<19> 2 -1
+#$ PROPERTY xpla IOSTD LED<1> 2 -1
+#$ PROPERTY xpla IOSTD LED<20> 2 -1
+#$ PROPERTY xpla IOSTD LED<21> 2 -1
+#$ PROPERTY xpla IOSTD LED<22> 2 -1
+#$ PROPERTY xpla IOSTD LED<23> 2 -1
+#$ PROPERTY xpla IOSTD LED<24> 2 -1
+#$ PROPERTY xpla IOSTD LED<2> 2 -1
+#$ PROPERTY xpla IOSTD LED<3> 2 -1
+#$ PROPERTY xpla IOSTD LED<4> 2 -1
+#$ PROPERTY xpla IOSTD LED<5> 2 -1
+#$ PROPERTY xpla IOSTD LED<6> 2 -1
+#$ PROPERTY xpla IOSTD LED<7> 2 -1
+#$ PROPERTY xpla IOSTD LED<8> 2 -1
+#$ PROPERTY xpla IOSTD LED<9> 2 -1
+#$ PROPERTY xpla IOSTD PATTERN 2 -1
+#$ PROPERTY xpla IOSTD RESET 2 -1
+.model top
+.inputs  "RESET" "DATA" "CLK" "LATCH" "PATTERN" "active<0>".Q "active<10>".Q 
+         "active<11>".Q "active<12>".Q "active<13>".Q "active<14>".Q "active<1>".Q 
+         "active<2>".Q "active<3>".Q "active<4>".Q "active<5>".Q "active<6>".Q 
+         "active<7>".Q "active<8>".Q "active<9>".Q "buffer<0>".Q "buffer<1>".Q 
+         "buffer<2>".Q "buffer<3>".Q "buffer<4>".Q "buffer<5>".Q "buffer<6>".Q 
+         "buffer<7>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+         "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+         "ledAddress<4>".Q "pattern_rnm0<0>".Q "pattern_rnm0<10>".Q 
+         "pattern_rnm0<11>".Q "pattern_rnm0<12>".Q "pattern_rnm0<13>".Q 
+         "pattern_rnm0<14>".Q "pattern_rnm0<1>".Q "pattern_rnm0<2>".Q 
+         "pattern_rnm0<3>".Q "pattern_rnm0<4>".Q "pattern_rnm0<5>".Q 
+         "pattern_rnm0<6>".Q "pattern_rnm0<7>".Q "pattern_rnm0<8>".Q 
+         "pattern_rnm0<9>".Q
+.outputs "active<0>".D "active<0>".LH "active<0>".AR "active<10>".D "active<10>".LH 
+         "active<10>".AR "active<11>".D "active<11>".LH "active<11>".AR "active<12>".D 
+         "active<12>".LH "active<12>".AR "active<13>".D "active<13>".LH "active<13>".AR 
+         "active<14>".D "active<14>".LH "active<14>".AR "active<1>".D "active<1>".LH 
+         "active<1>".AR "active<2>".D "active<2>".LH "active<2>".AR "active<3>".D 
+         "active<3>".LH "active<3>".AR "active<4>".D "active<4>".LH "active<4>".AR 
+         "active<5>".D "active<5>".LH "active<5>".AR "active<6>".D "active<6>".LH 
+         "active<6>".AR "active<7>".D "active<7>".LH "active<7>".AR "active<8>".D 
+         "active<8>".LH "active<8>".AR "active<9>".D "active<9>".LH "active<9>".AR 
+         "buffer<0>".D "buffer<0>".CLK "buffer<1>".D "buffer<1>".CLK "buffer<2>".D 
+         "buffer<2>".CLK "buffer<3>".D "buffer<3>".CLK "buffer<4>".D "buffer<4>".CLK 
+         "buffer<5>".D "buffer<5>".CLK "buffer<6>".D "buffer<6>".CLK "buffer<7>".D 
+         "buffer<7>".CLK "instruction<1>".D "instruction<1>".LH "instruction<2>".D 
+         "instruction<2>".LH "instruction<0>".D "instruction<0>".LH "ledAddress<0>".D 
+         "ledAddress<0>".LH "ledAddress<1>".D "ledAddress<1>".LH "ledAddress<2>".D 
+         "ledAddress<2>".LH "ledAddress<3>".D "ledAddress<3>".LH "ledAddress<4>".D 
+         "ledAddress<4>".LH "pattern_rnm0<0>".D "pattern_rnm0<0>".LH 
+         "pattern_rnm0<10>".D "pattern_rnm0<10>".LH "pattern_rnm0<11>".D 
+         "pattern_rnm0<11>".LH "pattern_rnm0<12>".D "pattern_rnm0<12>".LH 
+         "pattern_rnm0<13>".D "pattern_rnm0<13>".LH "pattern_rnm0<14>".D 
+         "pattern_rnm0<14>".LH "pattern_rnm0<1>".D "pattern_rnm0<1>".LH 
+         "pattern_rnm0<2>".D "pattern_rnm0<2>".LH "pattern_rnm0<3>".D 
+         "pattern_rnm0<3>".LH "pattern_rnm0<4>".D "pattern_rnm0<4>".LH 
+         "pattern_rnm0<5>".D "pattern_rnm0<5>".LH "pattern_rnm0<6>".D 
+         "pattern_rnm0<6>".LH "pattern_rnm0<7>".D "pattern_rnm0<7>".LH 
+         "pattern_rnm0<8>".D "pattern_rnm0<8>".LH "pattern_rnm0<9>".D 
+         "pattern_rnm0<9>".LH "LED<0>" "LED<10>" "LED<11>" "LED<12>" "LED<13>" 
+         "LED<14>" "LED<1>" "LED<2>" "LED<3>" "LED<4>" "LED<5>" "LED<6>" "LED<7>" 
+         "LED<8>" "LED<9>" "LED<24>" "LED<23>" "LED<22>" "LED<21>" "LED<20>" "LED<19>" 
+         "LED<18>" "LED<17>" "LED<16>" "LED<15>"
+.names "LATCH" "active<0>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<0>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<0>".LH
+00000 1
+.names "RESET"  "active<0>".AR
+0 1
+.names "LATCH" "active<10>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<10>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<10>".LH
+01010 1
+.names "RESET"  "active<10>".AR
+0 1
+.names "LATCH" "active<11>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<11>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<11>".LH
+11010 1
+.names "RESET"  "active<11>".AR
+0 1
+.names "LATCH" "active<12>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<12>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<12>".LH
+00110 1
+.names "RESET"  "active<12>".AR
+0 1
+.names "LATCH" "active<13>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<13>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<13>".LH
+10110 1
+.names "RESET"  "active<13>".AR
+0 1
+.names "LATCH" "active<14>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<14>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<14>".LH
+01110 1
+.names "RESET"  "active<14>".AR
+0 1
+.names "LATCH" "active<1>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<1>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<1>".LH
+10000 1
+.names "RESET"  "active<1>".AR
+0 1
+.names "LATCH" "active<2>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<2>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<2>".LH
+01000 1
+.names "RESET"  "active<2>".AR
+0 1
+.names "LATCH" "active<3>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<3>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<3>".LH
+11000 1
+.names "RESET"  "active<3>".AR
+0 1
+.names "LATCH" "active<4>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<4>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<4>".LH
+00100 1
+.names "RESET"  "active<4>".AR
+0 1
+.names "LATCH" "active<5>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<5>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<5>".LH
+10100 1
+.names "RESET"  "active<5>".AR
+0 1
+.names "LATCH" "active<6>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<6>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<6>".LH
+01100 1
+.names "RESET"  "active<6>".AR
+0 1
+.names "LATCH" "active<7>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<7>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<7>".LH
+11100 1
+.names "RESET"  "active<7>".AR
+0 1
+.names "LATCH" "active<8>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<8>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<8>".LH
+00010 1
+.names "RESET"  "active<8>".AR
+0 1
+.names "LATCH" "active<9>".Q "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "N_PZ_189"  "active<9>".D-
+-0---0 1
+1-000- 1
+.names "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q  "active<9>".LH
+10010 1
+.names "RESET"  "active<9>".AR
+0 1
+.names "RESET" "DATA" "LATCH" "buffer<0>".Q  "buffer<0>".D
+110- 1
+1-11 1
+.names "CLK"  "buffer<0>".CLK
+1 1
+.names "RESET" "LATCH" "buffer<0>".Q "buffer<1>".Q  "buffer<1>".D
+101- 1
+11-1 1
+.names "CLK"  "buffer<1>".CLK
+1 1
+.names "RESET" "LATCH" "buffer<1>".Q "buffer<2>".Q  "buffer<2>".D
+101- 1
+11-1 1
+.names "CLK"  "buffer<2>".CLK
+1 1
+.names "RESET" "LATCH" "buffer<2>".Q "buffer<3>".Q  "buffer<3>".D
+101- 1
+11-1 1
+.names "CLK"  "buffer<3>".CLK
+1 1
+.names "RESET" "LATCH" "buffer<3>".Q "buffer<4>".Q  "buffer<4>".D
+101- 1
+11-1 1
+.names "CLK"  "buffer<4>".CLK
+1 1
+.names "RESET" "LATCH" "buffer<4>".Q "buffer<5>".Q  "buffer<5>".D
+101- 1
+11-1 1
+.names "CLK"  "buffer<5>".CLK
+1 1
+.names "RESET" "LATCH" "buffer<5>".Q "buffer<6>".Q  "buffer<6>".D
+101- 1
+11-1 1
+.names "CLK"  "buffer<6>".CLK
+1 1
+.names "RESET" "LATCH" "buffer<6>".Q "buffer<7>".Q  "buffer<7>".D
+101- 1
+11-1 1
+.names "CLK"  "buffer<7>".CLK
+1 1
+.names "buffer<6>".Q  "instruction<1>".D
+1 1
+.names "RESET" "LATCH"  "instruction<1>".LH
+11 1
+.names "buffer<7>".Q  "instruction<2>".D
+1 1
+.names "RESET" "LATCH"  "instruction<2>".LH
+11 1
+.names "buffer<5>".Q  "instruction<0>".D
+1 1
+.names "RESET" "LATCH"  "instruction<0>".LH
+11 1
+.names "buffer<0>".Q  "ledAddress<0>".D
+1 1
+.names "RESET" "LATCH"  "ledAddress<0>".LH
+11 1
+.names "buffer<1>".Q  "ledAddress<1>".D
+1 1
+.names "RESET" "LATCH"  "ledAddress<1>".LH
+11 1
+.names "buffer<2>".Q  "ledAddress<2>".D
+1 1
+.names "RESET" "LATCH"  "ledAddress<2>".LH
+11 1
+.names "buffer<3>".Q  "ledAddress<3>".D
+1 1
+.names "RESET" "LATCH"  "ledAddress<3>".LH
+11 1
+.names "buffer<4>".Q  "ledAddress<4>".D
+1 1
+.names "RESET" "LATCH"  "ledAddress<4>".LH
+11 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<0>".Q "N_PZ_161"  "pattern_rnm0<0>".D-
+----1----0- 1
+-----1---0- 1
+------1--0- 1
+-------1-0- 1
+---------00 1
+100100000-- 1
+.names "LATCH"  "pattern_rnm0<0>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<10>".Q "N_PZ_161"  "pattern_rnm0<10>".D-
+----1----0- 1
+-----0---0- 1
+------1--0- 1
+-------0-0- 1
+---------00 1
+100101010-- 1
+.names "LATCH"  "pattern_rnm0<10>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<11>".Q "N_PZ_161"  "pattern_rnm0<11>".D-
+----0----0- 1
+-----0---0- 1
+------1--0- 1
+-------0-0- 1
+---------00 1
+100111010-- 1
+.names "LATCH"  "pattern_rnm0<11>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<12>".Q "N_PZ_161"  "pattern_rnm0<12>".D-
+----1----0- 1
+-----1---0- 1
+------0--0- 1
+-------0-0- 1
+---------00 1
+100100110-- 1
+.names "LATCH"  "pattern_rnm0<12>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<13>".Q "N_PZ_161"  "pattern_rnm0<13>".D-
+----0----0- 1
+-----1---0- 1
+------0--0- 1
+-------0-0- 1
+---------00 1
+100110110-- 1
+.names "LATCH"  "pattern_rnm0<13>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<14>".Q "N_PZ_161"  "pattern_rnm0<14>".D-
+----1----0- 1
+-----0---0- 1
+------0--0- 1
+-------0-0- 1
+---------00 1
+100101110-- 1
+.names "LATCH"  "pattern_rnm0<14>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<1>".Q "N_PZ_161"  "pattern_rnm0<1>".D-
+----0----0- 1
+-----1---0- 1
+------1--0- 1
+-------1-0- 1
+---------00 1
+100110000-- 1
+.names "LATCH"  "pattern_rnm0<1>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<2>".Q "N_PZ_161"  "pattern_rnm0<2>".D-
+----1----0- 1
+-----0---0- 1
+------1--0- 1
+-------1-0- 1
+---------00 1
+100101000-- 1
+.names "LATCH"  "pattern_rnm0<2>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<3>".Q "N_PZ_161"  "pattern_rnm0<3>".D-
+----0----0- 1
+-----0---0- 1
+------1--0- 1
+-------1-0- 1
+---------00 1
+100111000-- 1
+.names "LATCH"  "pattern_rnm0<3>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<4>".Q "N_PZ_161"  "pattern_rnm0<4>".D-
+----1----0- 1
+-----1---0- 1
+------0--0- 1
+-------1-0- 1
+---------00 1
+100100100-- 1
+.names "LATCH"  "pattern_rnm0<4>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<5>".Q "N_PZ_161"  "pattern_rnm0<5>".D-
+----0----0- 1
+-----1---0- 1
+------0--0- 1
+-------1-0- 1
+---------00 1
+100110100-- 1
+.names "LATCH"  "pattern_rnm0<5>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<6>".Q "N_PZ_161"  "pattern_rnm0<6>".D-
+----1----0- 1
+-----0---0- 1
+------0--0- 1
+-------1-0- 1
+---------00 1
+100101100-- 1
+.names "LATCH"  "pattern_rnm0<6>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<7>".Q "N_PZ_161"  "pattern_rnm0<7>".D-
+----0----0- 1
+-----0---0- 1
+------0--0- 1
+-------1-0- 1
+---------00 1
+100111100-- 1
+.names "LATCH"  "pattern_rnm0<7>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<8>".Q "N_PZ_161"  "pattern_rnm0<8>".D-
+----1----0- 1
+-----1---0- 1
+------1--0- 1
+-------0-0- 1
+---------00 1
+100100010-- 1
+.names "LATCH"  "pattern_rnm0<8>".LH
+1 1
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<0>".Q "ledAddress<1>".Q "ledAddress<2>".Q "ledAddress<3>".Q 
+       "ledAddress<4>".Q "pattern_rnm0<9>".Q "N_PZ_161"  "pattern_rnm0<9>".D-
+----0----0- 1
+-----1---0- 1
+------1--0- 1
+-------0-0- 1
+---------00 1
+100110010-- 1
+.names "LATCH"  "pattern_rnm0<9>".LH
+1 1
+.names "PATTERN" "active<0>".Q "pattern_rnm0<0>".Q  "LED<0>"
+11- 1
+-10 1
+.names "PATTERN" "active<10>".Q "pattern_rnm0<10>".Q  "LED<10>"
+11- 1
+-10 1
+.names "PATTERN" "active<11>".Q "pattern_rnm0<11>".Q  "LED<11>"
+11- 1
+-10 1
+.names "PATTERN" "active<12>".Q "pattern_rnm0<12>".Q  "LED<12>"
+11- 1
+-10 1
+.names "PATTERN" "active<13>".Q "pattern_rnm0<13>".Q  "LED<13>"
+11- 1
+-10 1
+.names "PATTERN" "active<14>".Q "pattern_rnm0<14>".Q  "LED<14>"
+11- 1
+-10 1
+.names "PATTERN" "active<1>".Q "pattern_rnm0<1>".Q  "LED<1>"
+11- 1
+-10 1
+.names "PATTERN" "active<2>".Q "pattern_rnm0<2>".Q  "LED<2>"
+11- 1
+-10 1
+.names "PATTERN" "active<3>".Q "pattern_rnm0<3>".Q  "LED<3>"
+11- 1
+-10 1
+.names "PATTERN" "active<4>".Q "pattern_rnm0<4>".Q  "LED<4>"
+11- 1
+-10 1
+.names "PATTERN" "active<5>".Q "pattern_rnm0<5>".Q  "LED<5>"
+11- 1
+-10 1
+.names "PATTERN" "active<6>".Q "pattern_rnm0<6>".Q  "LED<6>"
+11- 1
+-10 1
+.names "PATTERN" "active<7>".Q "pattern_rnm0<7>".Q  "LED<7>"
+11- 1
+-10 1
+.names "PATTERN" "active<8>".Q "pattern_rnm0<8>".Q  "LED<8>"
+11- 1
+-10 1
+.names "PATTERN" "active<9>".Q "pattern_rnm0<9>".Q  "LED<9>"
+11- 1
+-10 1
+.names  "LED<24>"
+.names  "LED<23>"
+.names  "LED<22>"
+.names  "LED<21>"
+.names  "LED<20>"
+.names  "LED<19>"
+.names  "LED<18>"
+.names  "LED<17>"
+.names  "LED<16>"
+.names  "LED<15>"
+.names "RESET" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q 
+       "ledAddress<4>".Q  "N_PZ_161"
+11000 1
+.names "LATCH" "instruction<1>".Q "instruction<2>".Q "instruction<0>".Q  "N_PZ_189"
+100- 1
+1-00 1
+.end

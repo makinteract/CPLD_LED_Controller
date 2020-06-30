@@ -26,6 +26,6 @@ NET "LED<19>"    	LOC = "p36";
 NET "LED<20>"    	LOC = "p37";
 NET "LED<21>"    	LOC = "p38";
 NET "LED<22>"    	LOC = "p39";
-# NET "LED<23>"    	LOC = "p40";
-# NET "LED<24>"    	LOC = "p41";
+NET "LED<23>"    	LOC = "p40";
+NET "LED<24>"    	LOC = "p41";
 
