@@ -11,16 +11,13 @@
 <msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">RESET</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P1</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
 </msg>
 
-<msg type="warning" file="Cpld" num="1239" delta="old" >The global <arg fmt="%s" index="1">clock</arg> designation (BUFG) on signal &apos;<arg fmt="%s" index="2">RESET_IBUF</arg>&apos; is ignored. Most likely the signal is gated and therefore cannot be used as a global control signal.
+<msg type="warning" file="Cpld" num="1007" delta="new" >Removing unused input(s) &apos;<arg fmt="%s" index="1">LATCH</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
 </msg>
 
-<msg type="error" file="Cpld" num="1063" delta="new" >Design requires at least <arg fmt="%s" index="1">68</arg> macrocells, exceeds device limit <arg fmt="%s" index="2">64</arg>.
+<msg type="warning" file="Cpld" num="1007" delta="new" >Removing unused input(s) &apos;<arg fmt="%s" index="1">PATTERN</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
 </msg>
 
-<msg type="error" file="Cpld" num="1064" delta="old" >Design rules checking error. Fitting process stopped.
-</msg>
-
-<msg type="error" file="Cpld" num="868" delta="old" >Cannot fit the design into any of the specified devices with the selected implementation options.
+<msg type="warning" file="Cpld" num="1007" delta="new" >Removing unused input(s) &apos;<arg fmt="%s" index="1">RESET</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
 </msg>
 
 </messages>
