@@ -23,14 +23,13 @@ module top (input wire RESET,
 			input wire CLK,
 			input wire DATA,
 			input wire PATTERN,	
-			output wire [18:0] LED
+			output wire [20:0] LED
 			);
 
-parameter MSB = 7;
-parameter LED_TOT = 19;
+parameter MSB = 8;
 
-// Shift-register 7 bits
 wire[MSB-1:0] buffer;
+
 shift_reg  #(MSB) sr0  (.reset(RESET),
                         .clk (CLK),
 						.data (DATA),
@@ -38,25 +37,35 @@ shift_reg  #(MSB) sr0  (.reset(RESET),
                         .registers (buffer)
 						);
 
-// Same
-// dff d0(CLK, DATA, buffer[0]);
-// dff d1(CLK, buffer[0], buffer[1]);
-// dff d2(CLK, buffer[1], buffer[2]);
-// dff d3(CLK, buffer[2], buffer[3]);
-// dff d4(CLK, buffer[3], buffer[4]);
-// dff d5(CLK, buffer[4], buffer[5]);
-// dff d6(CLK, buffer[5], buffer[6]);
 
-
-
-reg [LED_TOT-1:0] active;
-reg [LED_TOT-1:0] pattern;
-wire [LED_TOT-1:0] patternSignal;
-reg [LED_TOT-1:0] out;
-
-// 7 bits instructions
-// reg [4:0] ledAddress;
 // reg [1:0] instruction;
+// reg [4:0] ledAddress;
+
+reg [1:0] led0;
+reg [1:0] led1;
+reg [1:0] led2;
+reg [1:0] led3;
+reg [1:0] led4;
+reg [1:0] led5;
+reg [1:0] led6;
+reg [1:0] led7;
+reg [1:0] led8;
+reg [1:0] led9;
+reg [1:0] led10;
+reg [1:0] led11;
+reg [1:0] led12;
+reg [1:0] led13;
+reg [1:0] led14;
+reg [1:0] led15;
+reg [1:0] led16;
+reg [1:0] led17;
+reg [1:0] led18;
+reg [1:0] led19;
+reg [1:0] led20;
+// reg [1:0] led21;
+// reg [1:0] led22;
+// reg [1:0] led23;
+// reg [1:0] led24;
 
 
 
@@ -64,48 +73,191 @@ always @*
 begin
 	
 	if (LATCH == 1'b1) begin
-		// ledAddress <= buffer[4:0]; // 5 bits address
-		// instruction <= buffer[MSB-1:5]; // 2 bits instructions
+		// instruction <= buffer[MSB-1:5];
+		// ledAddress <= buffer[4:0];		
 
-		case (buffer[4:0])  // led address
-			0: begin  active[0] <= buffer[5]; pattern[0] <= buffer[6]; end
-			1: begin  active[1] <= buffer[5]; pattern[1] <= buffer[6]; end
-			2: begin  active[2] <= buffer[5]; pattern[2] <= buffer[6]; end
-			3: begin  active[3] <= buffer[5]; pattern[3] <= buffer[6]; end
-			4: begin  active[4] <= buffer[5]; pattern[4] <= buffer[6]; end
-			5: begin  active[5] <= buffer[5]; pattern[5] <= buffer[6]; end
-			6: begin  active[6] <= buffer[5]; pattern[6] <= buffer[6]; end
-			7: begin  active[7] <= buffer[5]; pattern[7] <= buffer[6]; end
-			8: begin  active[8] <= buffer[5]; pattern[8] <= buffer[6]; end
-			9: begin  active[9] <= buffer[5]; pattern[9] <= buffer[6]; end
-			10: begin  active[10] <= buffer[5]; pattern[10] <= buffer[6]; end
-			11: begin  active[11] <= buffer[5]; pattern[11] <= buffer[6]; end
-			12: begin  active[12] <= buffer[5]; pattern[12] <= buffer[6]; end
-			13: begin  active[13] <= buffer[5]; pattern[13] <= buffer[6]; end
-			14: begin  active[14] <= buffer[5]; pattern[14] <= buffer[6]; end
-			15: begin  active[15] <= buffer[5]; pattern[15] <= buffer[6]; end
-			16: begin  active[16] <= buffer[5]; pattern[16] <= buffer[6]; end
-			17: begin  active[17] <= buffer[5]; pattern[17] <= buffer[6]; end
-			18: begin  active[18] <= buffer[5]; pattern[18] <= buffer[6]; end
-			// 19: begin  active[19] <= buffer[5]; pattern[19] <= buffer[6]; end
-			// 20: begin  active[20] <= buffer[5]; pattern[20] <= buffer[6]; end
-			// 21: begin  active[21] <= buffer[5]; pattern[21] <= buffer[6]; end
-			// 22: begin  active[22] <= buffer[5]; pattern[22] <= buffer[6]; end
-			// 23: begin  active[23] <= buffer[5]; pattern[23] <= buffer[6]; end
-			// 24: begin  active[24] <= buffer[5]; pattern[24] <= buffer[6]; end
-			
+		case (buffer[4:0])
+			0: led0 <= buffer[MSB-1:5];
+			1: led1 <= buffer[MSB-1:5];
+			2: led2 <= buffer[MSB-1:5];
+			3: led3 <= buffer[MSB-1:5];
+			4: led4 <= buffer[MSB-1:5];
+			5: led5 <= buffer[MSB-1:5];
+			6: led6 <= buffer[MSB-1:5];
+			7: led7 <= buffer[MSB-1:5];
+
+			8: led8 <= buffer[MSB-1:5];
+			9: led9 <= buffer[MSB-1:5];
+			10: led10 <= buffer[MSB-1:5];
+			11: led11 <= buffer[MSB-1:5];
+			12: led12 <= buffer[MSB-1:5];
+			13: led13 <= buffer[MSB-1:5];
+			14: led14 <= buffer[MSB-1:5];
+			15: led15 <= buffer[MSB-1:5];
+
+			16: led16 <= buffer[MSB-1:5];
+			17: led17 <= buffer[MSB-1:5];
+			18: led18 <= buffer[MSB-1:5];
+			19: led19 <= buffer[MSB-1:5];
+			20: led20 <= buffer[MSB-1:5];
+			// 21: led21 <= buffer[MSB-1:5];
+			// 22: led22 <= buffer[MSB-1:5];
+			// 23: led23 <= buffer[MSB-1:5];
+			// 24: led24 <= buffer[MSB-1:5];
+
 		endcase
 	end
 end
 
-always @(PATTERN)
-begin
-	// led[0] <= pattern[0] ? PATTERN : active[0];
-	// same as above
-	out <= (pattern & patternSignal) | active;
-end
 
-assign patternSignal = {LED_TOT{PATTERN}};
-assign LED = out;
+ledCtrl lc0 (.state(led0),
+            .led(LED[0]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
 
+ledCtrl lc1 (.state(led1),
+            .led(LED[1]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc2 (.state(led2),
+            .led(LED[2]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc3 (.state(led3),
+            .led(LED[3]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc4 (.state(led4),
+            .led(LED[4]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc5 (.state(led5),
+            .led(LED[5]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc6 (.state(led6),
+            .led(LED[6]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc7 (.state(led7),
+            .led(LED[7]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc8 (.state(led8),
+            .led(LED[8]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc9 (.state(led9),
+            .led(LED[9]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc10 (.state(led10),
+            .led(LED[10]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc11 (.state(led11),
+            .led(LED[11]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc12 (.state(led12),
+            .led(LED[12]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc13 (.state(led13),
+            .led(LED[13]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc14 (.state(led14),
+            .led(LED[14]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc15 (.state(led15),
+            .led(LED[15]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc16 (.state(led16),
+            .led(LED[16]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc17 (.state(led17),
+            .led(LED[17]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc18 (.state(led18),
+            .led(LED[18]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc19 (.state(led19),
+            .led(LED[19]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl l20 (.state(led20),
+            .led(LED[20]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+/*ledCtrl lc21 (.state(led21),
+            .led(LED[21]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc22 (.state(led22),
+            .led(LED[22]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc23 (.state(led23),
+            .led(LED[23]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+
+ledCtrl lc24 (.state(led24),
+            .led(LED[24]),
+            .pattern1 (PATTERN),
+			.pattern2 (PATTERN)
+			);
+*/
 endmodule

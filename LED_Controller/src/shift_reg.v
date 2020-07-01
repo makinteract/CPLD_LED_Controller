@@ -36,7 +36,6 @@ module shift_reg
          else begin
             if (~en)
                registers <= {registers[MSB-2:0], data}; // MSBFIRST 
-               //  registers <= registers;
                //registers <= {data, registers[MSB-1:1]};
             else
                registers <= registers;
