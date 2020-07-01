@@ -74,3 +74,13 @@ LED_Controller/_xmsgs/ngdbuild.xmsgs
 LED_Controller/_xmsgs/pn_parser.xmsgs
 
 LED_Controller/_xmsgs/xst.xmsgs
+
+Altium/LightBoard/History/
+
+Altium/LightBoard/Project Logs for LightBoard/
+
+Altium/LightBoard/__Previews/
+
+Software/Arduino/Shifter/.vscode/
+
+Software/HDL/LED_Controller/_xmsgs/

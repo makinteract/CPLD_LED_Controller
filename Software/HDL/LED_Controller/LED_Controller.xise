@@ -49,9 +49,7 @@
     <property xil_pn:name="Clock Enable" xil_pn:value="false" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Collapsing Input Limit (2-36)" xil_pn:value="36" xil_pn:valueState="default"/>
     <property xil_pn:name="Collapsing Input Limit (2-54)" xil_pn:value="54" xil_pn:valueState="default"/>
-    <property xil_pn:name="Collapsing Input Limit (4-40)" xil_pn:value="32" xil_pn:valueState="default"/>
-    <property xil_pn:name="Collapsing Pterm Limit (1-90)" xil_pn:value="25" xil_pn:valueState="default"/>
-    <property xil_pn:name="Collapsing Pterm Limit (3-56)" xil_pn:value="28" xil_pn:valueState="default"/>
+    <property xil_pn:name="Collapsing Pterm Limit (1-90)" xil_pn:value="25" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Compile CPLD Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile SIMPRIM (Timing) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile UNISIM (Functional) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
@@ -73,7 +71,6 @@
     <property xil_pn:name="Exhaustive Fit Mode" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="FSM Encoding Algorithm" xil_pn:value="Auto" xil_pn:valueState="default"/>
     <property xil_pn:name="Filter Files From Compile Order" xil_pn:value="true" xil_pn:valueState="default"/>
-    <property xil_pn:name="Function Block Input Limit (4-40)" xil_pn:value="38" xil_pn:valueState="default"/>
     <property xil_pn:name="Functional Model Target Language ArchWiz" xil_pn:value="Verilog" xil_pn:valueState="default"/>
     <property xil_pn:name="Functional Model Target Language Coregen" xil_pn:value="Verilog" xil_pn:valueState="default"/>
     <property xil_pn:name="Functional Model Target Language Schematic" xil_pn:value="Verilog" xil_pn:valueState="default"/>
@@ -90,9 +87,8 @@
     <property xil_pn:name="HDL Equations Style" xil_pn:value="Source" xil_pn:valueState="default"/>
     <property xil_pn:name="Hierarchy Separator" xil_pn:value="/" xil_pn:valueState="default"/>
     <property xil_pn:name="I/O Pin Termination" xil_pn:value="Keeper" xil_pn:valueState="default"/>
-    <property xil_pn:name="I/O Voltage Standard" xil_pn:value="LVCMOS18" xil_pn:valueState="default"/>
     <property xil_pn:name="ISim UUT Instance Name" xil_pn:value="UUT" xil_pn:valueState="default"/>
-    <property xil_pn:name="Implementation Template" xil_pn:value="Optimize Density" xil_pn:valueState="default"/>
+    <property xil_pn:name="Implementation Template" xil_pn:value="Optimize Density" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Module|top" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top File" xil_pn:value="src/top.v" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/top" xil_pn:valueState="non-default"/>
@@ -101,7 +97,6 @@
     <property xil_pn:name="Include UNISIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include sdf_annotate task in Verilog File" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Incremental Compilation" xil_pn:value="true" xil_pn:valueState="default"/>
-    <property xil_pn:name="Input and tristate I/O Termination Mode" xil_pn:value="Keeper" xil_pn:valueState="default"/>
     <property xil_pn:name="Insert Buffers to Prevent Pulse Swallowing" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Instantiation Template Target Language Xps" xil_pn:value="Verilog" xil_pn:valueState="default"/>
     <property xil_pn:name="Keep Hierarchy" xil_pn:value="No" xil_pn:valueState="default"/>
@@ -113,7 +108,7 @@
     <property xil_pn:name="Launch SDK after Export" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Library for Verilog Sources" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="Load glbl" xil_pn:value="true" xil_pn:valueState="default"/>
-    <property xil_pn:name="Local Macrocell Feedback" xil_pn:value="On" xil_pn:valueState="default"/>
+    <property xil_pn:name="Local Macrocell Feedback" xil_pn:value="On" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Logic Optimization" xil_pn:value="Density" xil_pn:valueState="default"/>
     <property xil_pn:name="Macro Preserve" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Macrocell Power Setting" xil_pn:value="Std" xil_pn:valueState="default"/>
@@ -146,7 +141,7 @@
     <property xil_pn:name="Output Slew Rate" xil_pn:value="Fast" xil_pn:valueState="default"/>
     <property xil_pn:name="Overwrite Compiled Libraries" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Package" xil_pn:value="VQ44" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Pin Feedback" xil_pn:value="On" xil_pn:valueState="default"/>
+    <property xil_pn:name="Pin Feedback" xil_pn:value="On" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Port to be used" xil_pn:value="Auto - default" xil_pn:valueState="default"/>
     <property xil_pn:name="Post Map Simulation Model Name" xil_pn:value="top_map.v" xil_pn:valueState="default"/>
     <property xil_pn:name="Post Place &amp; Route Simulation Model Name" xil_pn:value="top_timesim.v" xil_pn:valueState="default"/>
@@ -192,7 +187,6 @@
     <property xil_pn:name="Timing Report Format" xil_pn:value="Summary" xil_pn:valueState="default"/>
     <property xil_pn:name="Top-Level Source Type" xil_pn:value="HDL" xil_pn:valueState="default"/>
     <property xil_pn:name="Tristate On Configuration Pulse Width" xil_pn:value="0" xil_pn:valueState="default"/>
-    <property xil_pn:name="Unused I/O Pad Termination Mode" xil_pn:value="Keeper" xil_pn:valueState="default"/>
     <property xil_pn:name="Use 64-bit PlanAhead on 64-bit Systems" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Use Custom Project File Behavioral" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Use Custom Project File Fit" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -205,8 +199,6 @@
     <property xil_pn:name="Use Custom Waveform Configuration File Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Use Custom Waveform Configuration File Par" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Use Custom Waveform Configuration File Translate" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Use Data Gate" xil_pn:value="true" xil_pn:valueState="default"/>
-    <property xil_pn:name="Use Direct Input for Input Registers" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Use Global Clocks" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Use Global Output Enables" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Use Global Set/Reset" xil_pn:value="true" xil_pn:valueState="default"/>

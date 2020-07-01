@@ -18,7 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module top (input wire LATCH,
+module top (input wire RESET,
+			input wire LATCH,
 			input wire CLK,
 			input wire DATA,
 			input wire PATTERN1,
@@ -30,7 +31,8 @@ parameter MSB = 7;
 
 wire[MSB-1:0] buffer;
 
-shift_reg  #(MSB) sr0  (.clk (CLK),
+shift_reg  #(MSB) sr0  (.reset(RESET),
+						.clk (CLK),
 						.data (DATA),
                         .en (LATCH),
                         .registers (buffer)
@@ -64,6 +66,9 @@ reg [1:0] led19;
 
 assign instruction = buffer[MSB-1:5];
 assign ledAddress = buffer[4:0];	
+
+wire pattern1_half = PATTERN2;
+/*
 reg pattern1_half;
 reg temp;
 
@@ -73,6 +78,7 @@ always @(posedge PATTERN1)
 always @(posedge temp)
 	// pattern1_half <= PATTERN2;
 	pattern1_half <= ~pattern1_half;
+*/
 
 always @*
 begin

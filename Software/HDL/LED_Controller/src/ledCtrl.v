@@ -27,7 +27,6 @@ module ledCtrl(input wire [1:0] state,
     reg out;
 
     always @* begin
-
         case (state)
             3'b0: out <= 1'b0;
             3'b1: out <= 1'b1;
