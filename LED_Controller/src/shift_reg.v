@@ -22,7 +22,7 @@
 module shift_reg  
 	#(parameter MSB=8) 
 	(  
-      input reset,
+     
       input clk,                    
 		input data,         
       input en,                     // enable low
@@ -31,15 +31,13 @@ module shift_reg
  	
    always @ (posedge clk)
 	begin
-         if (!reset)
-            registers <= 0;
-         else begin
+      
             if (~en)
                registers <= {registers[MSB-2:0], data}; // MSBFIRST 
                //registers <= {data, registers[MSB-1:1]};
             else
                registers <= registers;
-         end
+       
    end
 		
 endmodule

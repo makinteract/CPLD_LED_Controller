@@ -18,11 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module top (input wire RESET,
-			input wire LATCH,
+module top (input wire LATCH,
 			input wire CLK,
 			input wire DATA,
-			input wire PATTERN,	
+			input wire PATTERN1,	
+			input wire PATTERN1,	
 			output wire [20:0] LED
 			);
 
@@ -30,16 +30,15 @@ parameter MSB = 8;
 
 wire[MSB-1:0] buffer;
 
-shift_reg  #(MSB) sr0  (.reset(RESET),
-                        .clk (CLK),
+shift_reg  #(MSB) sr0  (.clk (CLK),
 						.data (DATA),
                         .en (LATCH),
                         .registers (buffer)
 						);
 
 
-// reg [1:0] instruction;
-// reg [4:0] ledAddress;
+wire [1:0] instruction;
+wire [4:0] ledAddress;
 
 reg [1:0] led0;
 reg [1:0] led1;
@@ -67,43 +66,43 @@ reg [1:0] led20;
 // reg [1:0] led23;
 // reg [1:0] led24;
 
-
+assign instruction = buffer[MSB-1:5];
+assign ledAddress = buffer[4:0];	
 
 always @*
 begin
 	
 	if (LATCH == 1'b1) begin
-		// instruction <= buffer[MSB-1:5];
-		// ledAddress <= buffer[4:0];		
+	
+		case (ledAddress)
+			0: led0 <= instruction;
+			1: led1 <= instruction;
+			2: led2 <= instruction;
+			3: led3 <= instruction;
+			4: led4 <= instruction;
+			5: led5 <= instruction;
+			6: led6 <= instruction;
+			7: led7 <= instruction;
 
-		case (buffer[4:0])
-			0: led0 <= buffer[MSB-1:5];
-			1: led1 <= buffer[MSB-1:5];
-			2: led2 <= buffer[MSB-1:5];
-			3: led3 <= buffer[MSB-1:5];
-			4: led4 <= buffer[MSB-1:5];
-			5: led5 <= buffer[MSB-1:5];
-			6: led6 <= buffer[MSB-1:5];
-			7: led7 <= buffer[MSB-1:5];
+			8: led8 <= instruction;
+			9: led9 <= instruction;
+			10: led10 <= instruction;
+			11: led11 <= instruction;
+			12: led12 <= instruction;
+			13: led13 <= instruction;
+			14: led14 <= instruction;
+			15: led15 <= instruction;
 
-			8: led8 <= buffer[MSB-1:5];
-			9: led9 <= buffer[MSB-1:5];
-			10: led10 <= buffer[MSB-1:5];
-			11: led11 <= buffer[MSB-1:5];
-			12: led12 <= buffer[MSB-1:5];
-			13: led13 <= buffer[MSB-1:5];
-			14: led14 <= buffer[MSB-1:5];
-			15: led15 <= buffer[MSB-1:5];
+			16: led16 <= instruction;
+			// 17: led17 <= instruction;
+			// 18: led18 <= instruction;
+			// 19: led19 <= instruction;
+			// 20: led20 <= instruction;
 
-			16: led16 <= buffer[MSB-1:5];
-			17: led17 <= buffer[MSB-1:5];
-			18: led18 <= buffer[MSB-1:5];
-			19: led19 <= buffer[MSB-1:5];
-			20: led20 <= buffer[MSB-1:5];
-			// 21: led21 <= buffer[MSB-1:5];
-			// 22: led22 <= buffer[MSB-1:5];
-			// 23: led23 <= buffer[MSB-1:5];
-			// 24: led24 <= buffer[MSB-1:5];
+			// 21: led21 <= instruction;
+			// 22: led22 <= instruction;
+			// 23: led23 <= instruction;
+			// 24: led24 <= instruction;
 
 		endcase
 	end
@@ -112,152 +111,152 @@ end
 
 ledCtrl lc0 (.state(led0),
             .led(LED[0]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc1 (.state(led1),
             .led(LED[1]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc2 (.state(led2),
             .led(LED[2]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc3 (.state(led3),
             .led(LED[3]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc4 (.state(led4),
             .led(LED[4]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc5 (.state(led5),
             .led(LED[5]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc6 (.state(led6),
             .led(LED[6]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc7 (.state(led7),
             .led(LED[7]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc8 (.state(led8),
             .led(LED[8]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc9 (.state(led9),
             .led(LED[9]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc10 (.state(led10),
             .led(LED[10]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc11 (.state(led11),
             .led(LED[11]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc12 (.state(led12),
             .led(LED[12]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc13 (.state(led13),
             .led(LED[13]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc14 (.state(led14),
             .led(LED[14]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc15 (.state(led15),
             .led(LED[15]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc16 (.state(led16),
             .led(LED[16]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc17 (.state(led17),
             .led(LED[17]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc18 (.state(led18),
             .led(LED[18]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc19 (.state(led19),
             .led(LED[19]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl l20 (.state(led20),
             .led(LED[20]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
-
-/*ledCtrl lc21 (.state(led21),
+/*
+ledCtrl lc21 (.state(led21),
             .led(LED[21]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc22 (.state(led22),
             .led(LED[22]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc23 (.state(led23),
             .led(LED[23]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 
 ledCtrl lc24 (.state(led24),
             .led(LED[24]),
-            .pattern1 (PATTERN),
-			.pattern2 (PATTERN)
+            .pattern1 (PATTERN1),
+			.pattern2 (PATTERN2)
 			);
 */
 endmodule
