@@ -21,9 +21,7 @@
 
 module shift_reg  
 	#(parameter MSB=8) 
-	(  
-     
-      input clk,                    
+	(  input clk,                    
 		input data,         
       input en,                     // enable low
       output reg [MSB-1:0] registers 
@@ -31,13 +29,11 @@ module shift_reg
  	
    always @ (posedge clk)
 	begin
-      
-            if (~en)
-               registers <= {registers[MSB-2:0], data}; // MSBFIRST 
-               //registers <= {data, registers[MSB-1:1]};
-            else
-               registers <= registers;
-       
+      if (~en)
+         registers <= {registers[MSB-2:0], data}; // MSBFIRST 
+         //registers <= {data, registers[MSB-1:1]};
+      else
+         registers <= registers;
    end
 		
 endmodule
