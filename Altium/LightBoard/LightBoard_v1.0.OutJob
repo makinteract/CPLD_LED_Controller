@@ -17,11 +17,11 @@ RevisionNamingSchemeGUID=
 [OutputGroup1]
 Name=LightBoard_v1.0.OutJob
 Description=
-TargetOutputMedium=PDF
+TargetOutputMedium=Folder Structure
 VariantName=[No Variations]
 VariantScope=1
 CurrentConfigurationName=
-TargetPrinter=Virtual Printer
+TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputMedium1=Print Job
 OutputMedium1_Type=Printer
@@ -57,7 +57,7 @@ OutputName2=Schematic Prints
 OutputCategory2=Documentation
 OutputDocumentPath2=
 OutputVariantName2=
-OutputEnabled2=1
+OutputEnabled2=0
 OutputEnabled2_OutputMedium1=0
 OutputEnabled2_OutputMedium2=1
 OutputEnabled2_OutputMedium3=0
@@ -113,9 +113,9 @@ Configuration4_Item4=16|ViewY=34842140|LookAtX=86651224|LookAtY=228553824|LookAt
 Configuration4_Name5=SortOrder
 Configuration4_Item5=Designator=Up
 Configuration4_Name6=VisibleOrder
-Configuration4_Item6=Designator=171|Comment=100|Description=100|Manufacturer 1=100|Manufacturer Lifecycle 1=100|Manufacturer Part Number 1=100|Quantity=100|Supplier Currency 1=100|Supplier Order Qty 1=46|Supplier Unit Price 1=100
+Configuration4_Item6=Designator=171|Packaging=100|Supplier Part Number 1=100|Comment=100|Description=100|Manufacturer 1=100|Manufacturer Part Number 1=100|Quantity=100|Supplier Currency 1=100|Supplier Order Qty 1=46|Supplier Unit Price 1=100
 Configuration4_Name7=VisibleOrder_Flat
-Configuration4_Item7=Designator=171|Comment=100|Description=100|Manufacturer 1=100|Manufacturer Lifecycle 1=100|Manufacturer Part Number 1=100|Quantity=100|Supplier Currency 1=100|Supplier Order Qty 1=46|Supplier Unit Price 1=100
+Configuration4_Item7=Designator=171|Packaging=100|Supplier Part Number 1=100|Comment=100|Description=100|Manufacturer 1=100|Manufacturer Part Number 1=100|Quantity=100|Supplier Currency 1=100|Supplier Order Qty 1=46|Supplier Unit Price 1=100
 OutputType5=NC Drill
 OutputName5=NC Drill Files
 OutputCategory5=Fabrication
@@ -320,7 +320,7 @@ ShowComponentParameters2=1
 GlobalBookmarks2=0
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=C:\Users\Andrea\GIT\VirtualSensors\Hardware\PCB\Project Outputs for VirtualSensors\
+OutputFilePath3=C:\Users\Andrea\GIT\CPLD_LED_Controller\Altium\LightBoard\Project Outputs for LightBoard\
 ReleaseManaged3=1
 OutputBasePath3=Project Outputs for LightBoard
 OutputPathMedia3=
@@ -374,7 +374,7 @@ WmvQuality4=80
 [GeneratedFilesSettings]
 RelativeOutputPath2=C:\Users\Andrea\GIT\VirtualSensors\Hardware\PCB\Project Outputs for VirtualSensors\VirtualSensors.PDF
 OpenOutputs2=0
-RelativeOutputPath3=C:\Users\Andrea\GIT\VirtualSensors\Hardware\PCB\Project Outputs for VirtualSensors\
+RelativeOutputPath3=C:\Users\Andrea\GIT\CPLD_LED_Controller\Altium\LightBoard\Project Outputs for LightBoard\
 OpenOutputs3=0
 AddToProject3=0
 TimestampFolder3=0
