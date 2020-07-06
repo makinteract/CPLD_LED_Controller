@@ -84,3 +84,13 @@ Altium/LightBoard/__Previews/
 Software/Arduino/Shifter/.vscode/
 
 Software/HDL/LED_Controller/_xmsgs/
+
+Altium/BlinkBoard/__Previews/
+
+Altium/BlinkBoard/History/
+
+Altium/BlinkBoard/Project Logs for BlinkBoard/
+
+Altium/BlinkBoard/Project Logs for LightBoard/
+
+*.log
