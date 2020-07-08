@@ -1,23 +1,10 @@
-Output: Gerber Files
-Type  : Gerber
+Output: Export STEP
+Type  : ExportSTEP
 From  : Variant [[No Variations]] of PCB Document [BlinkBoard.PcbDoc]
-   Generated File[BlinkBoard.GTO]
-   Generated File[BlinkBoard.GTP]
-   Generated File[BlinkBoard.GTS]
-   Generated File[BlinkBoard.GTL]
-   Generated File[BlinkBoard.GP1]
-   Generated File[BlinkBoard.GP2]
-   Generated File[BlinkBoard.GBL]
-   Generated File[BlinkBoard.GBS]
-   Generated File[BlinkBoard.GBP]
-   Generated File[BlinkBoard.GBO]
-   Generated File[BlinkBoard.GM3]
-   Generated File[BlinkBoard.RUL]
-   Generated File[BlinkBoard.EXTREP]
-   Generated File[BlinkBoard.REP]
+   Generated File[BlinkBoard.step]
 
 
-Files Generated   : 14
+Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 1:49:44 PM On 7/7/2020
+Finished Output Generation At 1:05:59 PM On 7/8/2020

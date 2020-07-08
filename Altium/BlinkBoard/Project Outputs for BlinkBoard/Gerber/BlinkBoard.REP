@@ -2,41 +2,10 @@
 FileName = BlinkBoard.GBR
 AutoAperture = True
 *************************************************************
-Generating : Top Solder
-      File : BlinkBoard.GTS
+Generating : Bottom Paste
+      File : BlinkBoard.GBP
 
-    Adding Layer      : Top Solder
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : BlinkBoard.GBL
+    Adding Layer      : Bottom Paste
 
     Adding Layer      : Bottom Layer
 
@@ -44,42 +13,6 @@ Generating : Bottom Layer
 
 
 Used DCodes :
-    D50
-    D53
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-*************************************************************
-
-*************************************************************
-Generating : Top Paste
-      File : BlinkBoard.GTP
-
-    Adding Layer      : Top Paste
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
 *************************************************************
 
 *************************************************************
@@ -92,13 +25,13 @@ Generating : Int1 (GND)
 
 
 Used DCodes :
-    D63
-    D64
-    D65
     D66
     D67
     D68
     D69
+    D70
+    D71
+    D72
 *************************************************************
 
 *************************************************************
@@ -113,23 +46,52 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Solder
-      File : BlinkBoard.GBS
+Generating : Top Layer
+      File : BlinkBoard.GTL
 
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : BlinkBoard.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
 *************************************************************
 
 *************************************************************
@@ -148,68 +110,7 @@ Used DCodes :
     D15
     D16
     D17
-*************************************************************
-
-*************************************************************
-Generating : Bottom Paste
-      File : BlinkBoard.GBP
-
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : BlinkBoard.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Top Layer
-      File : BlinkBoard.GTL
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
     D18
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
 *************************************************************
 
 *************************************************************
@@ -222,12 +123,115 @@ Generating : Int2 (PWR)
 
 
 Used DCodes :
-    D63
-    D64
-    D65
     D66
     D67
     D68
     D69
+    D70
+    D71
+    D72
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : BlinkBoard.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : BlinkBoard.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : BlinkBoard.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D55
+    D57
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : BlinkBoard.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
 *************************************************************
 
