@@ -1,4 +1,4 @@
-# CPLD_LED_Controller
+# BlinkBoard
 
 Controlling LEDs using the [CoolRunner-II][product]. [Schematics][schematics] and [datasheet][datasheet] are provided in the links for reference. 
 
