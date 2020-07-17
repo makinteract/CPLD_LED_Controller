@@ -16,7 +16,9 @@ let mainWindow
 function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 1200,
+        minWidth: 800,
+        minHeight: 600,
+        width: 800,
         height: 600,
         webPreferences: {
             nodeIntegration: true,
@@ -66,8 +68,13 @@ app.on('activate', function() {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
+
+
 // Enable live reload for Electron too
+
+/*
 require('electron-reload')(__dirname, {
     // Note that the path to electron may vary according to the main file
     electron: require(`${__dirname}/node_modules/electron`)
 });
+*/
