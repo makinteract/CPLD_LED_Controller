@@ -18,6 +18,11 @@
 
 #define PATTERN2_PERIOD_MS 100
 #define BUFFER_SIZE 128
+#define MCP4725A0 0x60
+
+#define MIN_VOLTAGE 0
+#define MAX_VOLTAGE 4500
+#define MAX_SAMPLES 50
 
 #endif
 
