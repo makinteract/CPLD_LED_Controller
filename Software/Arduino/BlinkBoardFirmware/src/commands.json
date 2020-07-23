@@ -1,0 +1,12 @@
+{"cmd": "status"}
+{"status": "ready"}
+
+{"cmd": "reset"}
+{"ack": "reset"}
+
+{"cmd": "set", "pattern": "on|off|p1|p2", "type": "row|v|out", "value":"number"} 
+{"cmd": "set", "pattern": "on", "type": "row", "value":"15"} 
+
+
+{"ack":"json parse fail"}
+{"ack":"invalid command"}

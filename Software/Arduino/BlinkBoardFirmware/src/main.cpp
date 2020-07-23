@@ -15,6 +15,7 @@ void initialize();
 void blink();
 void parse(const String &buffer);
 void ack(const String &msg);
+void sendJSON (const String &key, const String &val);
 void sendCommand (uint8_t ledNumber, LED_State state);
 void reset();
 
@@ -56,9 +57,6 @@ void loop()
 
 void initialize()
 {
-  Serial.begin(115200);
-  ack(F("ready"));
-
   pinMode(LATCH1, OUTPUT);
   pinMode(LATCH2, OUTPUT);
   pinMode(LATCH3, OUTPUT);
@@ -69,6 +67,9 @@ void initialize()
   pinMode(OUTPUT_D0, OUTPUT);
   pinMode(OUTPUT_D1, OUTPUT);
   pinMode(PATTERN2, OUTPUT);
+
+  Serial.begin(115200);
+  sendJSON (F("status"), F("ready"));
 }
 
 
@@ -99,16 +100,37 @@ void parse(const String &buffer)
   }
 
   // Parse JSON
-  if (json["cmd"] == F("reset"))
+  // READY
+  if (json["cmd"] == F("status"))
   {
     // do something
-    ack(F("ok"));
+    sendJSON (F("status"), F("ready"));
   }
+  // RESET
+  else if (json["cmd"] == F("reset"))
+  {
+    // do something
+    ack(F("reset"));
+  }
+  // SET
+  else if (json["cmd"] == F("set"))
+  {
+    String pt= json["pattern"].as<String>();
+    String type= json["type"].as<String>();
+    long val= json["value"].as<long>();
+
+    Serial.println(pt);
+    Serial.println(type);
+    Serial.println(val);
+    
+  }
+  // ELSE
   else
   {
     ack(F("invalid command"));
   }
 }
+
 
 void ack(const String &msg)
 {
@@ -116,6 +138,11 @@ void ack(const String &msg)
   Serial.println(result);
 }
 
+void sendJSON (const String &key, const String &val)
+{
+  String result = "{\"" + key + "\": \"" + val + "\"}";
+  Serial.println(result);
+}
 
 void sendCommand (uint8_t ledNumber, LED_State state)
 {
