@@ -14,7 +14,7 @@
 #define OUTPUT_D0 5
 #define OUTPUT_D1 6
 // D2 is attached to DAC
-#define PATTERN2 3
+#define PATTERN2_PIN 3
 
 #define PATTERN2_PERIOD_MS 100
 #define BUFFER_SIZE 128

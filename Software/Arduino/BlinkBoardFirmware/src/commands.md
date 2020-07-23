@@ -63,8 +63,24 @@ For PWM the input duty and the return voltage are clipped between 0 and 100. Pin
 ```
 
 ---
+## LEDs
+
+
+```js
+{"cmd": "setled", "led": "0", "pattern": "on"} 
+{"cmd": "setled", "led": "0", "pattern": "off"} 
+{"cmd": "setled", "led": "0", "pattern": "ptrn1"} 
+{"cmd": "setled", "led": "0", "pattern": "ptrn2"} 
+
+{"ack": "setled", "led": "0", "pattern": "on"} 
+{"ack": "setled", "led": "0", "pattern": "off"} 
+{"ack": "setled", "led": "0", "pattern": "ptrn1"} 
+{"ack": "setled", "led": "0", "pattern": "ptrn2"} 
+
+```
 
 - set breadboard led
+
 - set iindicator led
 - set input led
 

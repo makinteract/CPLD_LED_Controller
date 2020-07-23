@@ -8,20 +8,17 @@
 // Constants
 #include "constants.hpp"
 
-// Types
-enum LED_State { ON, OFF, PTRN1, PTRN2 };
-
 // Forward declarations
 void initialize();
 void reset();
 void blink();
 void parse(const String &buffer);
-// void sendCommand (uint8_t ledNumber, LED_State state);
 uint32_t setVoltage(uint32_t mV);
 void sendJson();
 void readAnalogSamples (uint16_t& a0, uint16_t& a1, uint16_t& a2, uint8_t samples);
 void invalidCommand();
 uint16_t dutyCycleToByte (uint16_t value);
+bool sendLedCommand (uint8_t ledNumber, uint8_t chipNumber, String& state);
 
 // Globals
 StaticJsonDocument<BUFFER_SIZE> json;
@@ -77,7 +74,7 @@ void initialize()
 
   pinMode(OUTPUT_D0, OUTPUT);
   pinMode(OUTPUT_D1, OUTPUT);
-  pinMode(PATTERN2, OUTPUT);
+  pinMode(PATTERN2_PIN, OUTPUT);
 
   // DAC
   dac.begin(MCP4725A0);
@@ -94,7 +91,7 @@ void blink()
 {
   static boolean output = HIGH;
 
-  digitalWrite(PATTERN2, output);
+  digitalWrite(PATTERN2_PIN, output);
   output = !output;
 }
 
@@ -210,13 +207,18 @@ void parse(const String &buffer)
   // SET LED
   else if (json["cmd"] == F("setled"))
   {
-    // String pt= json["pattern"].as<String>();
-    // String type= json["type"].as<String>();
-    // long val= json["value"].as<long>();
+    long led= json["led"].as<long>();
+    String ptrn= json["pattern"].as<String>();
 
-    // json.clear();
-    // json["ack"] = "ledChange";
-    // sendJson();
+    /*bool ok1=*/ sendLedCommand (led, 1, ptrn);
+    /*bool ok2=*/ sendLedCommand (led, 2, ptrn);
+    /*bool ok3=*/sendLedCommand (led, 3, ptrn);
+    
+
+    json.clear();
+    json["ack"] = "setled";
+    // todo
+    sendJson();
     
   }
   // ELSE
@@ -258,21 +260,33 @@ void readAnalogSamples (uint16_t& a0, uint16_t& a1, uint16_t& a2, uint8_t sample
   a2/= samples;
 }
 
-// void sendCommand (uint8_t ledNumber, LED_State state)
-// {
-//   byte op = 0;
-//   switch (state)
-//   {
-//     case OFF: op= 0; break;   // 00
-//     case ON: op= 1; break;    // 01
-//     case PTRN1: op= 2; break; // 10
-//     case PTRN2: op= 3; break; // 11
-//   }
+// LED number 0-19
+// chipNumber: 1,2,3
+bool sendLedCommand (uint8_t ledNumber, uint8_t chipNumber, String& state)
+{
+  if (ledNumber > 19) return false;
+  
+  uint8_t latch = 0;
+  switch (chipNumber)
+  {
+    case 1: latch= LATCH1; break;  
+    case 2: latch= LATCH2; break;  
+    case 3: latch= LATCH3; break;  
+    default: return false;
+  }
 
-//   digitalWrite(LATCH1, LOW);
-//   shiftOut(DATA, CLK, MSBFIRST, ledNumber | (op << 5 ));
-//   digitalWrite(LATCH1, HIGH);
-// }
+  uint8_t op = 0; // off
+  if (state=="on") op= 0;
+  else if (state=="off") op= 1;
+  else if (state=="ptrn1") op= 2;
+  else if (state=="ptrn2") op= 3;
+  else return false;
+
+  digitalWrite(latch, LOW);
+  shiftOut(DATA, CLK, MSBFIRST, ledNumber | (op << 5 ));
+  digitalWrite(latch, HIGH);
+  return true;
+}
 
 
 void sendJson()
