@@ -13,16 +13,19 @@
 #define INPUT_A2 A2
 #define OUTPUT_D0 5
 #define OUTPUT_D1 6
-// D2 is attached to DAC
-#define PATTERN2_PIN 3
 
-#define PATTERN2_PERIOD_MS 100
+#define PWM_PIN 3
+#define DEFAULT_BRIGHTNESS 20
+
 #define BUFFER_SIZE 128
 #define MCP4725A0 0x60
 
 #define MIN_VOLTAGE 0
 #define MAX_VOLTAGE 4500
 #define MAX_SAMPLES 50
+
+#define ANIMATION_DELAYMS 30
+#define ROWS 25
 
 #endif
 
