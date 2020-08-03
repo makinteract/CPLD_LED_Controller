@@ -56,7 +56,6 @@ void setup()
 
 
 
-
 void loop()
 {
   while (Serial.available())
@@ -307,7 +306,7 @@ uint32_t setVoltage(uint32_t mV)
   // clip
   if (mV> MAX_VOLTAGE) mV= MAX_VOLTAGE;
 
-  uint32_t v = mV * 4095 / MAX_VOLTAGE; // up to 4500 mV
+  uint32_t v = map (mV, 0, MAX_VOLTAGE, 0, 4095);
   dac.setVoltage(v, false); // to do the convertion
   return mV;
 }

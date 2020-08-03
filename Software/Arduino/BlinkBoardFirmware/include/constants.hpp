@@ -21,7 +21,7 @@
 #define MCP4725A0 0x60
 
 #define MIN_VOLTAGE 0
-#define MAX_VOLTAGE 4500
+#define MAX_VOLTAGE 4800
 #define MAX_SAMPLES 50
 
 #define ANIMATION_DELAYMS 30
