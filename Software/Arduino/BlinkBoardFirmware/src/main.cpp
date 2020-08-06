@@ -437,7 +437,7 @@ uint16_t dutyCycleToByte (uint16_t value)
 uint16_t setBrigtness(uint16_t brightness)
 {
   if (brightness > 100) brightness=100;
-  analogWrite(PWM_PIN, brightness*256/100);
+  analogWrite(PWM_PIN, brightness*255/100);
   return brightness;
 }
 

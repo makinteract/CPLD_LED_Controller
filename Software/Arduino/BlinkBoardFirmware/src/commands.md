@@ -113,12 +113,10 @@ Patterns
 ```
 
 
-
-
 ---
 # Brightness
 
-Values of brightness between 0 and 100
+Values of brightness between 0 and 99
 ```js
 {"cmd": "setBrightness", "value": "1"} 
 {"ack": "brightness", "value": "1"} 
