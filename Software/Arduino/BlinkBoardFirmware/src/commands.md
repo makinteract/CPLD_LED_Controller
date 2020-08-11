@@ -9,6 +9,24 @@ Ready status upon request or at startup
 ```
 
 ---
+# Set activation
+
+Used to activate boards until date month/year
+```js
+{"cmd": "activate", "month": 12, "year": 20}    // activate until December 2020 (included)
+{"ack": "activate"}  // answer
+```
+---
+# Check activation
+
+Check activation by passing the current month and year and see if it is <= of activation date
+```js
+{"cmd": "checkActive", "month": 9, "year": 20}    // check activateion in September 2020
+{"ack": "active"}  // answer
+{"ack": "expired"}  // answer
+```
+
+---
 ## Reset
 
 Reset LED and outputs
@@ -34,11 +52,11 @@ Read A0, A1, A2 using specific number of samples (default 1 max 50);
 
 Set voltage between 0V and 4.5V on **D2**. The input value and the return voltage are clipped between 0 and 4.5V.
 ```js
-{"cmd": "setv", "value" : "4000"}     // request
+{"cmd": "setV", "value" : "4000"}     // request
 {"ack": "voltage", "value": 4000}     // answer
 
 //clipping example
-{"cmd": "setv", "value" : "5000"}     // request
+{"cmd": "setV", "value" : "5000"}     // request
 {"ack": "voltage", "value": 4500}     // answer
 ```
 
@@ -147,6 +165,7 @@ Other errors
 ```js
 {"ack":"json parse fail"}   // not valid JSON input
 {"ack":"invalid command"}   // not valid command
+{"ack":"activation expired"}  // no longer active baord
 ```
 
 

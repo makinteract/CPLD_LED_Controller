@@ -3,6 +3,7 @@
 // Libs
 #include <ArduinoJson.h>
 #include <Adafruit_MCP4725.h>
+#include <EEPROM.h>
 
 // Constants
 #include "constants.hpp"
@@ -35,12 +36,18 @@ void setErrorStatus(bool on);
 uint16_t dutyCycleToByte (uint16_t value);
 uint16_t analogReadingToVoltage (uint16_t val);
 
+// EEPROM
+void writeDateEeprom (uint8_t month, uint8_t year);
+bool isActive (uint8_t currentMonth, uint8_t currentYear);
+
+
+
 
 // Globals
 Adafruit_MCP4725 dac;
 StaticJsonDocument<BUFFER_SIZE> json;
 String buffer = "";
-
+bool active = false;
 
 
 // Main
@@ -128,7 +135,6 @@ void parse(const String &buffer)
   // Reset for next instruction errors status led
   setErrorStatus(false);
 
-
   // Test if parsing succeeds.
   if (error)
   {
@@ -139,7 +145,52 @@ void parse(const String &buffer)
     return;
   }
 
-  // Parse JSON
+  // Pre-Parse JSON for activation
+  // SetActivation
+  if (json["cmd"] == F("activate"))
+  {
+    long month= json["month"].as<long>();
+    long year= json["year"].as<long>();
+
+    writeDateEeprom(month,year);
+    json.clear();
+    json["ack"] = "activate";
+    sendJson();
+    return;
+  }
+  // Check activation
+  else if (json["cmd"] == F("checkActive"))
+  {
+    long month= json["month"].as<long>();
+    long year= json["year"].as<long>();
+    active = isActive (month, year);
+    
+    json.clear();
+    if (active) 
+    {
+      json["ack"] = "active";
+      setErrorStatus(false); 
+    } else 
+    { 
+      json["ack"] = "expired"; 
+      setErrorStatus(true); 
+    }
+    sendJson();
+    return;
+  }
+
+
+  // No longer active
+  if (!active)
+  {
+    setErrorStatus(true); 
+    json.clear();
+    json["ack"] = "activation expired";
+    sendJson();
+    return;
+  }
+
+  // Parse JSON commands
   // READY
   if (json["cmd"] == F("status"))
   {
@@ -227,7 +278,7 @@ void parse(const String &buffer)
     sendJson();
   }
   // SET VOLTAGE
-  else if (json["cmd"] == F("setv"))
+  else if (json["cmd"] == F("setV"))
   {
     long val= json["value"].as<long>();
     val= setVoltage(val);
@@ -505,4 +556,23 @@ void setErrorStatus(bool on)
 uint16_t analogReadingToVoltage (uint16_t val)
 {
   return map (val, 0, 1025, 0, 5000);
+}
+
+void writeDateEeprom (uint8_t month, uint8_t year)
+{
+  if (month > 12) return;
+  if (year > 50) return; // e.g., 2021 is 21
+
+  EEPROM.write(EEPROM_ADDRESS, month);
+  EEPROM.write(EEPROM_ADDRESS+1, year);
+}
+
+bool isActive (uint8_t currentMonth, uint8_t currentYear)
+{
+  uint8_t month = EEPROM.read(EEPROM_ADDRESS);
+  uint8_t year = EEPROM.read(EEPROM_ADDRESS+1);
+
+  if (currentYear < year) return true;
+  if (currentYear > year) return false;
+  return currentMonth <= month; // same year
 }
