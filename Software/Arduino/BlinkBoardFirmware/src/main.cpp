@@ -159,33 +159,28 @@ void parse(const String &buffer)
     return;
   }
   // Check activation
-  else if (json["cmd"] == F("checkActive"))
+  else if (json["cmd"] == F("initialize"))
   {
     long month= json["month"].as<long>();
     long year= json["year"].as<long>();
     active = isActive (month, year);
     
-    json.clear();
     if (active) 
     {
-      json["ack"] = "active";
+      json.clear();
+      json["status"] = "ready";
       setErrorStatus(false); 
-    } else 
-    { 
-      json["ack"] = "expired"; 
-      setErrorStatus(true); 
+      sendJson();
+      return;
     }
-    sendJson();
-    return;
   }
-
 
   // No longer active
   if (!active)
   {
     setErrorStatus(true); 
     json.clear();
-    json["ack"] = "activation expired";
+    json["status"] = "expired";
     sendJson();
     return;
   }
@@ -195,7 +190,8 @@ void parse(const String &buffer)
   if (json["cmd"] == F("status"))
   {
     json.clear();
-    json["status"] = "ready";
+    if (active) json["status"] = "ready";
+    else json["status"] = "expired";
     sendJson();
   }
   // RESET

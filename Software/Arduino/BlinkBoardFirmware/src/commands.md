@@ -1,29 +1,34 @@
 # Commands
 
-## Check status
+# Initialize at startup
 
-Ready status upon request or at startup
+Check activation by passing the current month and year and see if it is <= of activation date
+
 ```js
-{"cmd": "status"}    // request
+{"cmd": "initialize", "month": 9, "year": 20}    // check activateion in September 2020
 {"status": "ready"}  // answer
+{"status": "expired"}  // answer
 ```
 
 ---
-# Set activation
+
+## Check status
+
+Check if ready.
+
+```js
+{"cmd": "status"}    // request
+{"status": "ready"}  // answer
+{"status": "expired"}  // answer
+```
+
+---
+# Set activation deadline
 
 Used to activate boards until date month/year
 ```js
 {"cmd": "activate", "month": 12, "year": 20}    // activate until December 2020 (included)
 {"ack": "activate"}  // answer
-```
----
-# Check activation
-
-Check activation by passing the current month and year and see if it is <= of activation date
-```js
-{"cmd": "checkActive", "month": 9, "year": 20}    // check activateion in September 2020
-{"ack": "active"}  // answer
-{"ack": "expired"}  // answer
 ```
 
 ---
@@ -165,7 +170,6 @@ Other errors
 ```js
 {"ack":"json parse fail"}   // not valid JSON input
 {"ack":"invalid command"}   // not valid command
-{"ack":"activation expired"}  // no longer active baord
 ```
 
 

@@ -94,3 +94,5 @@ Altium/BlinkBoard/Project Logs for BlinkBoard/
 Altium/BlinkBoard/Project Logs for LightBoard/
 
 *.log
+
+.DS_Store
