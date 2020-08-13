@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-07-24T07:07:31</DateModified>
+  <DateModified>2020-08-13T11:37:57</DateModified>
   <ModuleName>top</ModuleName>
-  <SummaryTimeStamp>2020-07-24T07:05:03</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-08-13T11:35:14</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Andrea/GIT/BlinkBoard/Software/HDL/LED_Controller/iseconfig/top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Andrea/GIT/BlinkBoard/Software/HDL/LED_Controller\</ImplementationReportsDirectory>
   <DateInitialized>2020-06-30T09:50:36</DateInitialized>
