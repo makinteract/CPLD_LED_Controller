@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: MAKinteract Lab KAIST
+// Engineer: Andrea Bianchi
 // 
 // Create Date:    17:09:07 06/22/2020 
 // Design Name: 

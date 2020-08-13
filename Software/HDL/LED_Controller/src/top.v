@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: MAKinteract Lab KAIST
+// Engineer: Andrea Bianchi
 // 
 // Create Date:    11:10:17 01/03/2020 
 // Design Name: 
@@ -22,8 +22,8 @@ module top (input wire RESET,
 			input wire LATCH,
 			input wire CLK,
 			input wire DATA,
-			input wire PATTERN1,
-			input wire PATTERN2,	
+			input wire PATTERN_555,
+			input wire PWM,	
 			output wire [19:0] LED
 			);
 
@@ -68,19 +68,17 @@ reg [1:0] led19;
 assign instruction = buffer[MSB-1:5];
 assign ledAddress = buffer[4:0];	
 
-wire ptrn2 = PATTERN2;
 
-/*
 // half of pattern1
-reg ptrn2;
+reg half_pattern;
 reg temp;
 
-always @(posedge PATTERN1)
+always @(posedge PATTERN_555)
 	temp <= ~temp;
 
 always @(posedge temp)
-	ptrn2 <= ~ptrn2;
-*/
+	half_pattern <= ~half_pattern;
+
 
 
 always @*
@@ -119,122 +117,142 @@ end
 
 ledCtrl lc0 (.state(led0),
             .led(LED[0]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc1 (.state(led1),
             .led(LED[1]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc2 (.state(led2),
             .led(LED[2]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc3 (.state(led3),
             .led(LED[3]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc4 (.state(led4),
             .led(LED[4]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc5 (.state(led5),
             .led(LED[5]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc6 (.state(led6),
             .led(LED[6]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc7 (.state(led7),
             .led(LED[7]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc8 (.state(led8),
             .led(LED[8]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc9 (.state(led9),
             .led(LED[9]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc10 (.state(led10),
             .led(LED[10]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc11 (.state(led11),
             .led(LED[11]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc12 (.state(led12),
             .led(LED[12]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc13 (.state(led13),
             .led(LED[13]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc14 (.state(led14),
             .led(LED[14]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc15 (.state(led15),
             .led(LED[15]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc16 (.state(led16),
             .led(LED[16]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc17 (.state(led17),
             .led(LED[17]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc18 (.state(led18),
             .led(LED[18]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 ledCtrl lc19 (.state(led19),
             .led(LED[19]),
-            .pattern1 (PATTERN1),
-			.pattern2 (ptrn2)
+            .ledOn(PWM),
+			.pattern1 (PATTERN_555),
+			.pattern2 (half_pattern)
 			);
 
 
