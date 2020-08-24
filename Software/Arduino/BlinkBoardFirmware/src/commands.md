@@ -1,16 +1,5 @@
 # Commands
 
-# Initialize at startup
-
-Check activation by passing the current month and year and see if it is <= of activation date
-
-```js
-{"cmd": "initialize", "month": 9, "year": 20}    // check activateion in September 2020
-{"status": "ready"}  // answer
-{"status": "expired"}  // answer
-```
-
----
 
 ## Check status
 
@@ -19,16 +8,16 @@ Check if ready.
 ```js
 {"cmd": "status"}    // request
 {"status": "ready"}  // answer
-{"status": "expired"}  // answer
 ```
 
 ---
-# Set activation deadline
+# Check formware version
 
-Used to activate boards until date month/year
+Check activation by passing the current month and year and see if it is <= of activation date
+
 ```js
-{"cmd": "activate", "month": 12, "year": 20}    // activate until December 2020 (included)
-{"ack": "activate"}  // answer
+{"cmd": "version"}  // check activateion in September 2020
+{"version": "1.0"}  // answer
 ```
 
 ---

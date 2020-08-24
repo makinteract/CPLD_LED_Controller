@@ -19,7 +19,7 @@
 
 // ADDRESSES
 #define MCP4725A0 0x60
-#define EEPROM_ADDRESS 0
+// #define EEPROM_ADDRESS 0
 
 // SETTINGS
 #define DEFAULT_BRIGHTNESS 20
@@ -29,5 +29,8 @@
 #define MAX_SAMPLES 50
 #define ANIMATION_DELAYMS 30
 #define ROWS 25
+
+#define VERSION F("1.1")
+#define BAUD_RATE 115200
 
 #endif

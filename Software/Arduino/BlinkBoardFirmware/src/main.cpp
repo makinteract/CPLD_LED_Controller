@@ -3,7 +3,6 @@
 // Libs
 #include <ArduinoJson.h>
 #include <Adafruit_MCP4725.h>
-#include <EEPROM.h>
 
 // Constants
 #include "constants.hpp"
@@ -13,15 +12,22 @@ enum class CmdLed { VCC_LED, GND_LED, A0_LED, A1_LED, A2_LED, D0_LED, D1_LED, D2
 
 
 // Forward declarations
+// Init
 void initialize();
 void reset();
 
+// Parse
 void parse(const String &buffer);
 void sendJson();
 void invalidCommand();
 
+// InOut
 uint32_t setVoltage(uint32_t mV);
 void readAnalogSamples (uint16_t& a0, uint16_t& a1, uint16_t& a2, uint8_t samples);
+uint16_t dutyCycleToByte (uint16_t value);
+uint16_t analogReadingToVoltage (uint16_t val);
+
+// LED ctrl
 uint16_t setBrigtness(uint16_t brightness);
 
 bool sendLedCommand (uint8_t ledNumber, uint8_t chipNumber, String& state);
@@ -33,21 +39,10 @@ void allLedOff();
 void setStatus(bool on);
 void setErrorStatus(bool on);
 
-uint16_t dutyCycleToByte (uint16_t value);
-uint16_t analogReadingToVoltage (uint16_t val);
-
-// EEPROM
-void writeDateEeprom (uint8_t month, uint8_t year);
-bool isActive (uint8_t currentMonth, uint8_t currentYear);
-
-
-
-
 // Globals
 Adafruit_MCP4725 dac;
 StaticJsonDocument<BUFFER_SIZE> json;
 String buffer = "";
-bool active = false;
 
 
 // Main
@@ -85,7 +80,7 @@ void loop()
 
 void initialize()
 {
-  Serial.begin(115200);
+  Serial.begin(BAUD_RATE);
 
   pinMode(LATCH1, OUTPUT);
   pinMode(LATCH2, OUTPUT);
@@ -145,53 +140,19 @@ void parse(const String &buffer)
     return;
   }
 
-  // Pre-Parse JSON for activation
-  // SetActivation
-  if (json["cmd"] == F("activate"))
-  {
-    long month= json["month"].as<long>();
-    long year= json["year"].as<long>();
-
-    writeDateEeprom(month,year);
-    json.clear();
-    json["ack"] = "activate";
-    sendJson();
-    return;
-  }
-  // Check activation
-  else if (json["cmd"] == F("initialize"))
-  {
-    long month= json["month"].as<long>();
-    long year= json["year"].as<long>();
-    active = isActive (month, year);
-    
-    if (active) 
-    {
-      json.clear();
-      json["status"] = "ready";
-      setErrorStatus(false); 
-      sendJson();
-      return;
-    }
-  }
-
-  // No longer active
-  if (!active)
-  {
-    setErrorStatus(true); 
-    json.clear();
-    json["status"] = "expired";
-    sendJson();
-    return;
-  }
-
   // Parse JSON commands
   // READY
   if (json["cmd"] == F("status"))
   {
     json.clear();
-    if (active) json["status"] = "ready";
-    else json["status"] = "expired";
+    json["status"] = "ready";
+    sendJson();
+  }
+  // VERSION
+  else if (json["cmd"] == F("version"))
+  {
+    json.clear();
+    json["version"] = VERSION;
     sendJson();
   }
   // RESET
@@ -554,21 +515,4 @@ uint16_t analogReadingToVoltage (uint16_t val)
   return map (val, 0, 1025, 0, 5000);
 }
 
-void writeDateEeprom (uint8_t month, uint8_t year)
-{
-  if (month > 12) return;
-  if (year > 50) return; // e.g., 2021 is 21
 
-  EEPROM.write(EEPROM_ADDRESS, month);
-  EEPROM.write(EEPROM_ADDRESS+1, year);
-}
-
-bool isActive (uint8_t currentMonth, uint8_t currentYear)
-{
-  uint8_t month = EEPROM.read(EEPROM_ADDRESS);
-  uint8_t year = EEPROM.read(EEPROM_ADDRESS+1);
-
-  if (currentYear < year) return true;
-  if (currentYear > year) return false;
-  return currentMonth <= month; // same year
-}
