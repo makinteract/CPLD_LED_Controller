@@ -1,1 +1,2 @@
-Record=TopLevelDocument|FileName=BlinkBoard.SchDoc
+Record=TopLevelDocument|FileName=BlinkBoard.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=BlinkBoard.SchDoc|FileName=LEDcontroller.SchDoc|SheetNumber=2

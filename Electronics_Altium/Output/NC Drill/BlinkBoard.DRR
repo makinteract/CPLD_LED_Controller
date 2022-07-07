@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: BlinkBoard.PcbDoc   7/7/2022  4:38:01 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : BlinkBoard.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.3mm)                                             Round             127       PTH        28.04inch (712.14mm)
+T2      35mil (0.9mm)                                             Round             32        PTH        7.76inch (197.18mm)
+T3      43mil (1.1mm)                                             Round             12        PTH        3.51inch (89.14mm)
+T4      47mil (1.2mm)                                             Round             20        PTH        2.10inch (53.34mm)
+T5      79mil (2mm)                                               Round             2         NPTH       2.20inch (55.88mm)
+T6      126mil (3.2mm)                                            Round             4         NPTH       8.78inch (222.98mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              197
+
+Total Processing Time (hh:mm:ss) : 00:00:00
