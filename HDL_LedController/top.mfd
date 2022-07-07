@@ -1,0 +1,883 @@
+MDF Database:  version 1.0
+MDF_INFO | top | XC9572XL-5-VQ44
+MACROCELL | 1 | 12 | buffer<5>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 22 | 1 | 12 | 1 | 11 | 0 | 17 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 2 | 17 | 2 | 12 | 2 | 11 | 2 | 9 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 2 | 2 | 0 | 0 | 2 | 0 | 1 | 3 | 0
+INPUTS | 5 | RESET  | buffer<4>  | LATCH  | buffer<5>  | CLK
+INPUTMC | 2 | 1 | 13 | 1 | 12
+INPUTP | 3 | 15 | 13 | 12
+EQ | 3 | 
+   buffer<5>.D = RESET & buffer<5> & LATCH
+	# RESET & buffer<4> & !LATCH;
+   buffer<5>.CLK = CLK;
+
+MACROCELL | 1 | 11 | buffer<6>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 21 | 1 | 11 | 3 | 17 | 3 | 15 | 3 | 12 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 6 | 3 | 5 | 3 | 3 | 3 | 2 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6
+INPUTS | 5 | RESET  | buffer<5>  | LATCH  | buffer<6>  | CLK
+INPUTMC | 2 | 1 | 12 | 1 | 11
+INPUTP | 3 | 15 | 13 | 12
+EQ | 3 | 
+   buffer<6>.D = RESET & buffer<5> & !LATCH
+	# RESET & buffer<6> & LATCH;
+   buffer<6>.CLK = CLK;
+
+MACROCELL | 1 | 17 | buffer<0>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 42 | 1 | 17 | 1 | 16 | 0 | 17 | 3 | 17 | 0 | 15 | 3 | 15 | 0 | 13 | 3 | 12 | 0 | 12 | 3 | 11 | 0 | 11 | 3 | 9 | 0 | 10 | 3 | 8 | 0 | 9 | 3 | 6 | 0 | 8 | 3 | 5 | 2 | 17 | 3 | 3 | 2 | 12 | 3 | 2 | 2 | 11 | 0 | 7 | 2 | 9 | 0 | 6 | 2 | 6 | 0 | 5 | 2 | 5 | 0 | 4 | 2 | 3 | 0 | 3 | 2 | 2 | 1 | 10 | 2 | 0 | 1 | 9 | 0 | 2 | 1 | 8 | 0 | 1 | 1 | 7 | 3 | 0 | 1 | 6
+INPUTS | 5 | RESET  | LATCH  | DATA  | buffer<0>  | CLK
+INPUTMC | 1 | 1 | 17
+INPUTP | 4 | 15 | 13 | 11 | 12
+EQ | 3 | 
+   buffer<0>.D = RESET & buffer<0> & LATCH
+	# RESET & !LATCH & DATA;
+   buffer<0>.CLK = CLK;
+
+MACROCELL | 1 | 16 | buffer<1>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 42 | 1 | 16 | 1 | 15 | 0 | 17 | 3 | 17 | 0 | 15 | 3 | 15 | 0 | 13 | 3 | 12 | 0 | 12 | 3 | 11 | 0 | 11 | 3 | 9 | 0 | 10 | 3 | 8 | 0 | 9 | 3 | 6 | 0 | 8 | 3 | 5 | 2 | 17 | 3 | 3 | 2 | 12 | 3 | 2 | 2 | 11 | 0 | 7 | 2 | 9 | 0 | 6 | 2 | 6 | 0 | 5 | 2 | 5 | 0 | 4 | 2 | 3 | 0 | 3 | 2 | 2 | 1 | 10 | 2 | 0 | 1 | 9 | 0 | 2 | 1 | 8 | 0 | 1 | 1 | 7 | 3 | 0 | 1 | 6
+INPUTS | 5 | RESET  | buffer<0>  | LATCH  | buffer<1>  | CLK
+INPUTMC | 2 | 1 | 17 | 1 | 16
+INPUTP | 3 | 15 | 13 | 12
+EQ | 3 | 
+   buffer<1>.D = RESET & buffer<0> & !LATCH
+	# RESET & buffer<1> & LATCH;
+   buffer<1>.CLK = CLK;
+
+MACROCELL | 1 | 15 | buffer<2>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 42 | 1 | 15 | 1 | 14 | 0 | 17 | 3 | 17 | 0 | 15 | 3 | 15 | 0 | 13 | 3 | 12 | 0 | 12 | 3 | 11 | 0 | 11 | 3 | 9 | 0 | 10 | 3 | 8 | 0 | 9 | 3 | 6 | 0 | 8 | 3 | 5 | 2 | 17 | 3 | 3 | 2 | 12 | 3 | 2 | 2 | 11 | 0 | 7 | 2 | 9 | 0 | 6 | 2 | 6 | 0 | 5 | 2 | 5 | 0 | 4 | 2 | 3 | 0 | 3 | 2 | 2 | 1 | 10 | 2 | 0 | 1 | 9 | 0 | 2 | 1 | 8 | 0 | 1 | 1 | 7 | 3 | 0 | 1 | 6
+INPUTS | 5 | RESET  | buffer<1>  | LATCH  | buffer<2>  | CLK
+INPUTMC | 2 | 1 | 16 | 1 | 15
+INPUTP | 3 | 15 | 13 | 12
+EQ | 3 | 
+   buffer<2>.D = RESET & buffer<1> & !LATCH
+	# RESET & buffer<2> & LATCH;
+   buffer<2>.CLK = CLK;
+
+MACROCELL | 1 | 14 | buffer<3>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 42 | 1 | 14 | 1 | 13 | 0 | 17 | 3 | 17 | 0 | 15 | 3 | 15 | 0 | 13 | 3 | 12 | 0 | 12 | 3 | 11 | 0 | 11 | 3 | 9 | 0 | 10 | 3 | 8 | 0 | 9 | 3 | 6 | 0 | 8 | 3 | 5 | 2 | 17 | 3 | 3 | 2 | 12 | 3 | 2 | 2 | 11 | 0 | 7 | 2 | 9 | 0 | 6 | 2 | 6 | 0 | 5 | 2 | 5 | 0 | 4 | 2 | 3 | 0 | 3 | 2 | 2 | 1 | 10 | 2 | 0 | 1 | 9 | 0 | 2 | 1 | 8 | 0 | 1 | 1 | 7 | 3 | 0 | 1 | 6
+INPUTS | 5 | RESET  | buffer<2>  | LATCH  | buffer<3>  | CLK
+INPUTMC | 2 | 1 | 15 | 1 | 14
+INPUTP | 3 | 15 | 13 | 12
+EQ | 3 | 
+   buffer<3>.D = RESET & buffer<2> & !LATCH
+	# RESET & buffer<3> & LATCH;
+   buffer<3>.CLK = CLK;
+
+MACROCELL | 1 | 13 | buffer<4>
+ATTRIBUTES | 8520480 | 0
+OUTPUTMC | 42 | 1 | 12 | 1 | 13 | 0 | 17 | 3 | 17 | 0 | 15 | 3 | 15 | 0 | 13 | 3 | 12 | 0 | 12 | 3 | 11 | 0 | 11 | 3 | 9 | 0 | 10 | 3 | 8 | 0 | 9 | 3 | 6 | 0 | 8 | 3 | 5 | 2 | 17 | 3 | 3 | 2 | 12 | 3 | 2 | 2 | 11 | 0 | 7 | 2 | 9 | 0 | 6 | 2 | 6 | 0 | 5 | 2 | 5 | 0 | 4 | 2 | 3 | 0 | 3 | 2 | 2 | 1 | 10 | 2 | 0 | 1 | 9 | 0 | 2 | 1 | 8 | 0 | 1 | 1 | 7 | 3 | 0 | 1 | 6
+INPUTS | 5 | RESET  | buffer<4>  | LATCH  | buffer<3>  | CLK
+INPUTMC | 2 | 1 | 13 | 1 | 14
+INPUTP | 3 | 15 | 13 | 12
+EQ | 3 | 
+   buffer<4>.D = RESET & buffer<3> & !LATCH
+	# RESET & buffer<4> & LATCH;
+   buffer<4>.CLK = CLK;
+
+MACROCELL | 1 | 5 | half_pattern
+ATTRIBUTES | 4326176 | 0
+OUTPUTMC | 20 | 1 | 4 | 2 | 16 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1 | 0 | 16 | 0 | 14 | 1 | 1 | 3 | 16 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 7 | 3 | 4 | 3 | 1 | 2 | 15
+INPUTS | 1 | temp
+INPUTMC | 1 | 0 | 0
+EQ | 2 | 
+   half_pattern.T = Vcc;
+   half_pattern.CLK = temp;
+
+MACROCELL | 0 | 17 | led0<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 4
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led0<0>.D = Gnd;
+   led0<0>.CLK = Gnd;
+   led0<0>.AP = buffer<5> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led0<0>.AR = !buffer<5> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 17 | led0<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 4
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led0<1>.D = Gnd;
+   led0<1>.CLK = Gnd;
+   led0<1>.AP = buffer<6> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led0<1>.AR = !buffer<6> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 15 | led10<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led10<0>.D = Gnd;
+   led10<0>.CLK = Gnd;
+   led10<0>.AP = buffer<5> & !buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led10<0>.AR = !buffer<5> & !buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 15 | led10<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led10<1>.D = Gnd;
+   led10<1>.CLK = Gnd;
+   led10<1>.AP = buffer<6> & !buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led10<1>.AR = !buffer<6> & !buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 13 | led11<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led11<0>.D = Gnd;
+   led11<0>.CLK = Gnd;
+   led11<0>.AP = buffer<5> & buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led11<0>.AR = !buffer<5> & buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 12 | led11<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led11<1>.D = Gnd;
+   led11<1>.CLK = Gnd;
+   led11<1>.AP = buffer<6> & buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led11<1>.AR = !buffer<6> & buffer<0> & buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 12 | led12<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led12<0>.D = Gnd;
+   led12<0>.CLK = Gnd;
+   led12<0>.AP = buffer<5> & !buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led12<0>.AR = !buffer<5> & !buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 11 | led12<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led12<1>.D = Gnd;
+   led12<1>.CLK = Gnd;
+   led12<1>.AP = buffer<6> & !buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led12<1>.AR = !buffer<6> & !buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 11 | led13<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led13<0>.D = Gnd;
+   led13<0>.CLK = Gnd;
+   led13<0>.AP = buffer<5> & buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led13<0>.AR = !buffer<5> & buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 9 | led13<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led13<1>.D = Gnd;
+   led13<1>.CLK = Gnd;
+   led13<1>.AP = buffer<6> & buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led13<1>.AR = !buffer<6> & buffer<0> & !buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 10 | led14<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led14<0>.D = Gnd;
+   led14<0>.CLK = Gnd;
+   led14<0>.AP = buffer<5> & !buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led14<0>.AR = !buffer<5> & !buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 8 | led14<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led14<1>.D = Gnd;
+   led14<1>.CLK = Gnd;
+   led14<1>.AP = buffer<6> & !buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led14<1>.AR = !buffer<6> & !buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 9 | led15<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led15<0>.D = Gnd;
+   led15<0>.CLK = Gnd;
+   led15<0>.AP = buffer<5> & buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led15<0>.AR = !buffer<5> & buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 6 | led15<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led15<1>.D = Gnd;
+   led15<1>.CLK = Gnd;
+   led15<1>.AP = buffer<6> & buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led15<1>.AR = !buffer<6> & buffer<0> & buffer<1> & buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 8 | led16<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led16<0>.D = Gnd;
+   led16<0>.CLK = Gnd;
+   led16<0>.AP = buffer<5> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led16<0>.AR = !buffer<5> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 3 | 5 | led16<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led16<1>.D = Gnd;
+   led16<1>.CLK = Gnd;
+   led16<1>.AP = buffer<6> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led16<1>.AR = !buffer<6> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 2 | 17 | led17<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led17<0>.D = Gnd;
+   led17<0>.CLK = Gnd;
+   led17<0>.AP = buffer<5> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led17<0>.AR = !buffer<5> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 3 | 3 | led17<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led17<1>.D = Gnd;
+   led17<1>.CLK = Gnd;
+   led17<1>.AP = buffer<6> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led17<1>.AR = !buffer<6> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 2 | 12 | led18<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 0 | 16
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led18<0>.D = Gnd;
+   led18<0>.CLK = Gnd;
+   led18<0>.AP = buffer<5> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led18<0>.AR = !buffer<5> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 3 | 2 | led18<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 0 | 16
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led18<1>.D = Gnd;
+   led18<1>.CLK = Gnd;
+   led18<1>.AP = buffer<6> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led18<1>.AR = !buffer<6> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 2 | 11 | led19<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led19<0>.D = Gnd;
+   led19<0>.CLK = Gnd;
+   led19<0>.AP = buffer<5> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led19<0>.AR = !buffer<5> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 0 | 7 | led19<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led19<1>.D = Gnd;
+   led19<1>.CLK = Gnd;
+   led19<1>.AP = buffer<6> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+   led19<1>.AR = !buffer<6> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & buffer<4> & LATCH;
+
+MACROCELL | 2 | 9 | led1<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led1<0>.D = Gnd;
+   led1<0>.CLK = Gnd;
+   led1<0>.AP = buffer<5> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led1<0>.AR = !buffer<5> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 6 | led1<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led1<1>.D = Gnd;
+   led1<1>.CLK = Gnd;
+   led1<1>.AP = buffer<6> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led1<1>.AR = !buffer<6> & buffer<0> & !buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 2 | 6 | led2<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led2<0>.D = Gnd;
+   led2<0>.CLK = Gnd;
+   led2<0>.AP = buffer<5> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led2<0>.AR = !buffer<5> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 5 | led2<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led2<1>.D = Gnd;
+   led2<1>.CLK = Gnd;
+   led2<1>.AP = buffer<6> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led2<1>.AR = !buffer<6> & !buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 2 | 5 | led3<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led3<0>.D = Gnd;
+   led3<0>.CLK = Gnd;
+   led3<0>.AP = buffer<5> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led3<0>.AR = !buffer<5> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 4 | led3<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led3<1>.D = Gnd;
+   led3<1>.CLK = Gnd;
+   led3<1>.AP = buffer<6> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led3<1>.AR = !buffer<6> & buffer<0> & buffer<1> & !buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 2 | 3 | led4<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 13
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led4<0>.D = Gnd;
+   led4<0>.CLK = Gnd;
+   led4<0>.AP = buffer<5> & !buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led4<0>.AR = !buffer<5> & !buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 3 | led4<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 13
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led4<1>.D = Gnd;
+   led4<1>.CLK = Gnd;
+   led4<1>.AP = buffer<6> & !buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led4<1>.AR = !buffer<6> & !buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 2 | 2 | led5<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 10
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led5<0>.D = Gnd;
+   led5<0>.CLK = Gnd;
+   led5<0>.AP = buffer<5> & buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led5<0>.AR = !buffer<5> & buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 1 | 10 | led5<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 10
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led5<1>.D = Gnd;
+   led5<1>.CLK = Gnd;
+   led5<1>.AP = buffer<6> & buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led5<1>.AR = !buffer<6> & buffer<0> & !buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 2 | 0 | led6<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 7
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led6<0>.D = Gnd;
+   led6<0>.CLK = Gnd;
+   led6<0>.AP = buffer<5> & !buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led6<0>.AR = !buffer<5> & !buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 1 | 9 | led6<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 7
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led6<1>.D = Gnd;
+   led6<1>.CLK = Gnd;
+   led6<1>.AP = buffer<6> & !buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led6<1>.AR = !buffer<6> & !buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 2 | led7<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 4
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led7<0>.D = Gnd;
+   led7<0>.CLK = Gnd;
+   led7<0>.AP = buffer<5> & buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led7<0>.AR = !buffer<5> & buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 1 | 8 | led7<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 4
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led7<1>.D = Gnd;
+   led7<1>.CLK = Gnd;
+   led7<1>.AP = buffer<6> & buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+   led7<1>.AR = !buffer<6> & buffer<0> & buffer<1> & buffer<2> & 
+	!buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 1 | led8<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led8<0>.D = Gnd;
+   led8<0>.CLK = Gnd;
+   led8<0>.AP = buffer<5> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led8<0>.AR = !buffer<5> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 1 | 7 | led8<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led8<1>.D = Gnd;
+   led8<1>.CLK = Gnd;
+   led8<1>.AP = buffer<6> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led8<1>.AR = !buffer<6> & !buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 3 | 0 | led9<0>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 7 | buffer<5>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 12 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led9<0>.D = Gnd;
+   led9<0>.CLK = Gnd;
+   led9<0>.AP = buffer<5> & buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led9<0>.AR = !buffer<5> & buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 1 | 6 | led9<1>
+ATTRIBUTES | 8520624 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 7 | buffer<6>  | buffer<0>  | buffer<1>  | buffer<2>  | buffer<3>  | buffer<4>  | LATCH
+INPUTMC | 6 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTP | 1 | 13
+EQ | 6 | 
+   led9<1>.D = Gnd;
+   led9<1>.CLK = Gnd;
+   led9<1>.AP = buffer<6> & buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+   led9<1>.AR = !buffer<6> & buffer<0> & !buffer<1> & !buffer<2> & 
+	buffer<3> & !buffer<4> & LATCH;
+
+MACROCELL | 0 | 0 | temp
+ATTRIBUTES | 4326176 | 0
+OUTPUTMC | 1 | 1 | 5
+INPUTS | 1 | PATTERN_555
+INPUTP | 1 | 9
+EQ | 2 | 
+   temp.T = Vcc;
+   temp.CLK = PATTERN_555;
+
+MACROCELL | 1 | 4 | LED_0_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led0<0>  | led0<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 17 | 3 | 17 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<0> = half_pattern & led0<0> & PWM
+	# led0<0> & !led0<1> & PWM
+	# !led0<0> & led0<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 16 | LED_10_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led10<0>  | led10<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 15 | 3 | 15 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<10> = half_pattern & led10<0> & PWM
+	# led10<0> & !led10<1> & PWM
+	# !led10<0> & led10<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 14 | LED_11_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led11<0>  | led11<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 13 | 3 | 12 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<11> = half_pattern & led11<0> & PWM
+	# led11<0> & !led11<1> & PWM
+	# !led11<0> & led11<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 13 | LED_12_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led12<0>  | led12<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 12 | 3 | 11 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<12> = half_pattern & led12<0> & PWM
+	# led12<0> & !led12<1> & PWM
+	# !led12<0> & led12<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 10 | LED_13_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led13<0>  | led13<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 11 | 3 | 9 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<13> = half_pattern & led13<0> & PWM
+	# led13<0> & !led13<1> & PWM
+	# !led13<0> & led13<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 8 | LED_14_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led14<0>  | led14<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 10 | 3 | 8 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<14> = half_pattern & led14<0> & PWM
+	# led14<0> & !led14<1> & PWM
+	# !led14<0> & led14<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 7 | LED_15_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led15<0>  | led15<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 9 | 3 | 6 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<15> = half_pattern & led15<0> & PWM
+	# led15<0> & !led15<1> & PWM
+	# !led15<0> & led15<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 4 | LED_16_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led16<0>  | led16<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 8 | 3 | 5 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<16> = half_pattern & led16<0> & PWM
+	# led16<0> & !led16<1> & PWM
+	# !led16<0> & led16<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 1 | LED_17_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led17<0>  | led17<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 17 | 3 | 3 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<17> = half_pattern & led17<0> & PWM
+	# led17<0> & !led17<1> & PWM
+	# !led17<0> & led17<1> & PATTERN_555 & PWM;
+
+MACROCELL | 0 | 16 | LED_18_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led18<0>  | led18<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 12 | 3 | 2 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<18> = half_pattern & led18<0> & PWM
+	# led18<0> & !led18<1> & PWM
+	# !led18<0> & led18<1> & PATTERN_555 & PWM;
+
+MACROCELL | 0 | 14 | LED_19_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led19<0>  | led19<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 11 | 0 | 7 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<19> = half_pattern & led19<0> & PWM
+	# led19<0> & !led19<1> & PWM
+	# !led19<0> & led19<1> & PATTERN_555 & PWM;
+
+MACROCELL | 1 | 1 | LED_1_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led1<0>  | led1<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 9 | 0 | 6 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<1> = half_pattern & led1<0> & PWM
+	# led1<0> & !led1<1> & PWM
+	# !led1<0> & led1<1> & PATTERN_555 & PWM;
+
+MACROCELL | 3 | 16 | LED_2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led2<0>  | led2<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 6 | 0 | 5 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<2> = half_pattern & led2<0> & PWM
+	# led2<0> & !led2<1> & PWM
+	# !led2<0> & led2<1> & PATTERN_555 & PWM;
+
+MACROCELL | 3 | 14 | LED_3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led3<0>  | led3<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 5 | 0 | 4 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<3> = half_pattern & led3<0> & PWM
+	# led3<0> & !led3<1> & PWM
+	# !led3<0> & led3<1> & PATTERN_555 & PWM;
+
+MACROCELL | 3 | 13 | LED_4_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led4<0>  | led4<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 3 | 0 | 3 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<4> = half_pattern & led4<0> & PWM
+	# led4<0> & !led4<1> & PWM
+	# !led4<0> & led4<1> & PATTERN_555 & PWM;
+
+MACROCELL | 3 | 10 | LED_5_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led5<0>  | led5<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 2 | 1 | 10 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<5> = half_pattern & led5<0> & PWM
+	# led5<0> & !led5<1> & PWM
+	# !led5<0> & led5<1> & PATTERN_555 & PWM;
+
+MACROCELL | 3 | 7 | LED_6_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led6<0>  | led6<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 2 | 0 | 1 | 9 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<6> = half_pattern & led6<0> & PWM
+	# led6<0> & !led6<1> & PWM
+	# !led6<0> & led6<1> & PATTERN_555 & PWM;
+
+MACROCELL | 3 | 4 | LED_7_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led7<0>  | led7<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 2 | 1 | 8 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<7> = half_pattern & led7<0> & PWM
+	# led7<0> & !led7<1> & PWM
+	# !led7<0> & led7<1> & PATTERN_555 & PWM;
+
+MACROCELL | 3 | 1 | LED_8_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led8<0>  | led8<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 0 | 1 | 1 | 7 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<8> = half_pattern & led8<0> & PWM
+	# led8<0> & !led8<1> & PWM
+	# !led8<0> & led8<1> & PATTERN_555 & PWM;
+
+MACROCELL | 2 | 15 | LED_9_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | led9<0>  | led9<1>  | PWM  | half_pattern  | PATTERN_555
+INPUTMC | 3 | 3 | 0 | 1 | 6 | 1 | 5
+INPUTP | 2 | 10 | 9
+EQ | 3 | 
+   LED<9> = half_pattern & led9<0> & PWM
+	# led9<0> & !led9<1> & PWM
+	# !led9<0> & led9<1> & PATTERN_555 & PWM;
+
+PIN | RESET | 64 | 0 | N/A | 15 | 7 | 1 | 12 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+PIN | CLK | 64 | 0 | N/A | 12 | 7 | 1 | 12 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13
+PIN | LATCH | 64 | 0 | N/A | 13 | 47 | 1 | 12 | 1 | 11 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 17 | 3 | 17 | 0 | 15 | 3 | 15 | 0 | 13 | 3 | 12 | 0 | 12 | 3 | 11 | 0 | 11 | 3 | 9 | 0 | 10 | 3 | 8 | 0 | 9 | 3 | 6 | 0 | 8 | 3 | 5 | 2 | 17 | 3 | 3 | 2 | 12 | 3 | 2 | 2 | 11 | 0 | 7 | 2 | 9 | 0 | 6 | 2 | 6 | 0 | 5 | 2 | 5 | 0 | 4 | 2 | 3 | 0 | 3 | 2 | 2 | 1 | 10 | 2 | 0 | 1 | 9 | 0 | 2 | 1 | 8 | 0 | 1 | 1 | 7 | 3 | 0 | 1 | 6
+PIN | DATA | 64 | 0 | N/A | 11 | 1 | 1 | 17
+PIN | PATTERN_555 | 64 | 0 | N/A | 9 | 21 | 0 | 0 | 1 | 4 | 2 | 16 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1 | 0 | 16 | 0 | 14 | 1 | 1 | 3 | 16 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 7 | 3 | 4 | 3 | 1 | 2 | 15
+PIN | PWM | 64 | 0 | N/A | 10 | 20 | 1 | 4 | 2 | 16 | 2 | 14 | 2 | 13 | 2 | 10 | 2 | 8 | 2 | 7 | 2 | 4 | 2 | 1 | 0 | 16 | 0 | 14 | 1 | 1 | 3 | 16 | 3 | 14 | 3 | 13 | 3 | 10 | 3 | 7 | 3 | 4 | 3 | 1 | 2 | 15
+PIN | LED<0> | 536871040 | 0 | N/A | 88
+PIN | LED<10> | 536871040 | 0 | N/A | 52
+PIN | LED<11> | 536871040 | 0 | N/A | 50
+PIN | LED<12> | 536871040 | 0 | N/A | 49
+PIN | LED<13> | 536871040 | 0 | N/A | 46
+PIN | LED<14> | 536871040 | 0 | N/A | 38
+PIN | LED<15> | 536871040 | 0 | N/A | 33
+PIN | LED<16> | 536871040 | 0 | N/A | 31
+PIN | LED<17> | 536871040 | 0 | N/A | 29
+PIN | LED<18> | 536871040 | 0 | N/A | 27
+PIN | LED<19> | 536871040 | 0 | N/A | 26
+PIN | LED<1> | 536871040 | 0 | N/A | 87
+PIN | LED<2> | 536871040 | 0 | N/A | 83
+PIN | LED<3> | 536871040 | 0 | N/A | 82
+PIN | LED<4> | 536871040 | 0 | N/A | 72
+PIN | LED<5> | 536871040 | 0 | N/A | 68
+PIN | LED<6> | 536871040 | 0 | N/A | 65
+PIN | LED<7> | 536871040 | 0 | N/A | 63
+PIN | LED<8> | 536871040 | 0 | N/A | 62
+PIN | LED<9> | 536871040 | 0 | N/A | 59

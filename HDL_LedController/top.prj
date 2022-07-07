@@ -1,0 +1,3 @@
+verilog work "src/shift_reg.v"
+verilog work "src/ledCtrl.v"
+verilog work "src/top.v"

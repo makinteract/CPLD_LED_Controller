@@ -1,0 +1,846 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: top                                 Date:  7- 7-2022,  4:23PM
+Device Used: XC9572XL-5-VQ44
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+69 /72  ( 96%) 163 /360  ( 45%) 87 /216 ( 40%)   49 /72  ( 68%) 26 /34  ( 76%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          18/18*      15/54       37/90       6/ 9
+FB2          15/18       19/54       38/90       4/ 9
+FB3          18/18*      28/54       45/90       9/ 9*
+FB4          18/18*      25/54       43/90       7/ 7*
+             -----       -----       -----      -----    
+             69/72       87/216     163/360     26/34 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Global clock net(s) unused.
+Global output enable net(s) unused.
+Global set/reset net(s) unused.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    6           6    |  I/O              :    26      28
+Output        :   20          20    |  GCK/IO           :     0       3
+Bidirectional :    0           0    |  GTS/IO           :     0       2
+GCK           :    0           0    |  GSR/IO           :     0       1
+GTS           :    0           0    |
+GSR           :    0           0    |
+                 ----        ----
+        Total     26          26
+
+** Power Data **
+
+There are 69 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'top.ise'.
+*************************  Summary of Mapped Logic  ************************
+
+** 20 Outputs **
+
+Signal              Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                Pts   Inps          No.  Type    Use     Mode Rate State
+LED<19>             3     5     FB1_15  2    I/O     O       STD  FAST 
+LED<18>             3     5     FB1_17  3    I/O     O       STD  FAST 
+LED<1>              3     5     FB2_2   29   I/O     O       STD  FAST 
+LED<0>              3     5     FB2_5   30   I/O     O       STD  FAST 
+LED<17>             3     5     FB3_2   5    I/O     O       STD  FAST 
+LED<16>             3     5     FB3_5   6    I/O     O       STD  FAST 
+LED<15>             3     5     FB3_8   7    I/O     O       STD  FAST 
+LED<14>             3     5     FB3_9   8    I/O     O       STD  FAST 
+LED<13>             3     5     FB3_11  12   I/O     O       STD  FAST 
+LED<12>             3     5     FB3_14  13   I/O     O       STD  FAST 
+LED<11>             3     5     FB3_15  14   I/O     O       STD  FAST 
+LED<9>              3     5     FB3_16  18   I/O     O       STD  FAST 
+LED<10>             3     5     FB3_17  16   I/O     O       STD  FAST 
+LED<8>              3     5     FB4_2   19   I/O     O       STD  FAST 
+LED<7>              3     5     FB4_5   20   I/O     O       STD  FAST 
+LED<6>              3     5     FB4_8   21   I/O     O       STD  FAST 
+LED<5>              3     5     FB4_11  22   I/O     O       STD  FAST 
+LED<4>              3     5     FB4_14  23   I/O     O       STD  FAST 
+LED<3>              3     5     FB4_15  27   I/O     O       STD  FAST 
+LED<2>              3     5     FB4_17  28   I/O     O       STD  FAST 
+
+** 49 Buried Nodes **
+
+Signal              Total Total Loc     Pwr  Reg Init
+Name                Pts   Inps          Mode State
+temp                1     1     FB1_1   STD  RESET
+led8<0>             2     7     FB1_2   STD  RESET
+led7<0>             2     7     FB1_3   STD  RESET
+led4<1>             2     7     FB1_4   STD  RESET
+led3<1>             2     7     FB1_5   STD  RESET
+led2<1>             2     7     FB1_6   STD  RESET
+led1<1>             2     7     FB1_7   STD  RESET
+led19<1>            2     7     FB1_8   STD  RESET
+led16<0>            2     7     FB1_9   STD  RESET
+led15<0>            2     7     FB1_10  STD  RESET
+led14<0>            2     7     FB1_11  STD  RESET
+led13<0>            2     7     FB1_12  STD  RESET
+led12<0>            2     7     FB1_13  STD  RESET
+led11<0>            2     7     FB1_14  STD  RESET
+led10<0>            2     7     FB1_16  STD  RESET
+led0<0>             2     7     FB1_18  STD  RESET
+half_pattern        1     1     FB2_6   STD  RESET
+led9<1>             2     7     FB2_7   STD  RESET
+led8<1>             2     7     FB2_8   STD  RESET
+led7<1>             2     7     FB2_9   STD  RESET
+led6<1>             2     7     FB2_10  STD  RESET
+led5<1>             2     7     FB2_11  STD  RESET
+buffer<6>           3     5     FB2_12  STD  RESET
+buffer<5>           3     5     FB2_13  STD  RESET
+buffer<4>           3     5     FB2_14  STD  RESET
+buffer<3>           3     5     FB2_15  STD  RESET
+buffer<2>           3     5     FB2_16  STD  RESET
+buffer<1>           3     5     FB2_17  STD  RESET
+buffer<0>           3     5     FB2_18  STD  RESET
+led6<0>             2     7     FB3_1   STD  RESET
+led5<0>             2     7     FB3_3   STD  RESET
+led4<0>             2     7     FB3_4   STD  RESET
+led3<0>             2     7     FB3_6   STD  RESET
+led2<0>             2     7     FB3_7   STD  RESET
+led1<0>             2     7     FB3_10  STD  RESET
+led19<0>            2     7     FB3_12  STD  RESET
+led18<0>            2     7     FB3_13  STD  RESET
+led17<0>            2     7     FB3_18  STD  RESET
+led9<0>             2     7     FB4_1   STD  RESET
+led18<1>            2     7     FB4_3   STD  RESET
+
+Signal              Total Total Loc     Pwr  Reg Init
+Name                Pts   Inps          Mode State
+led17<1>            2     7     FB4_4   STD  RESET
+led16<1>            2     7     FB4_6   STD  RESET
+led15<1>            2     7     FB4_7   STD  RESET
+led14<1>            2     7     FB4_9   STD  RESET
+led13<1>            2     7     FB4_10  STD  RESET
+led12<1>            2     7     FB4_12  STD  RESET
+led11<1>            2     7     FB4_13  STD  RESET
+led10<1>            2     7     FB4_16  STD  RESET
+led0<1>             2     7     FB4_18  STD  RESET
+
+** 6 Inputs **
+
+Signal              Loc     Pin  Pin     Pin     
+Name                        No.  Type    Use     
+DATA                FB1_2   39   I/O     I
+CLK                 FB1_5   40   I/O     I
+LATCH               FB1_6   41   I/O     I
+RESET               FB1_8   42   I/O     I
+PATTERN_555         FB2_15  37   I/O     I
+PWM                 FB2_17  38   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               15/39
+Number of signals used by logic mapping into function block:  15
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+temp                  1       0     0   4     FB1_1         (b)     (b)
+led8<0>               2       0     0   3     FB1_2   39    I/O     I
+led7<0>               2       0     0   3     FB1_3         (b)     (b)
+led4<1>               2       0     0   3     FB1_4         (b)     (b)
+led3<1>               2       0     0   3     FB1_5   40    I/O     I
+led2<1>               2       0     0   3     FB1_6   41    I/O     I
+led1<1>               2       0     0   3     FB1_7         (b)     (b)
+led19<1>              2       0     0   3     FB1_8   42    I/O     I
+led16<0>              2       0     0   3     FB1_9   43    GCK/I/O (b)
+led15<0>              2       0     0   3     FB1_10        (b)     (b)
+led14<0>              2       0     0   3     FB1_11  44    GCK/I/O (b)
+led13<0>              2       0     0   3     FB1_12        (b)     (b)
+led12<0>              2       0     0   3     FB1_13        (b)     (b)
+led11<0>              2       0     0   3     FB1_14  1     GCK/I/O (b)
+LED<19>               3       0     0   2     FB1_15  2     I/O     O
+led10<0>              2       0     0   3     FB1_16        (b)     (b)
+LED<18>               3       0     0   2     FB1_17  3     I/O     O
+led0<0>               2       0     0   3     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: LATCH              6: buffer<2>         11: half_pattern 
+  2: PATTERN_555        7: buffer<3>         12: led18<0> 
+  3: PWM                8: buffer<4>         13: led18<1> 
+  4: buffer<0>          9: buffer<5>         14: led19<0> 
+  5: buffer<1>         10: buffer<6>         15: led19<1> 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+temp                 .X...................................... 1
+led8<0>              X..XXXXXX............................... 7
+led7<0>              X..XXXXXX............................... 7
+led4<1>              X..XXXXX.X.............................. 7
+led3<1>              X..XXXXX.X.............................. 7
+led2<1>              X..XXXXX.X.............................. 7
+led1<1>              X..XXXXX.X.............................. 7
+led19<1>             X..XXXXX.X.............................. 7
+led16<0>             X..XXXXXX............................... 7
+led15<0>             X..XXXXXX............................... 7
+led14<0>             X..XXXXXX............................... 7
+led13<0>             X..XXXXXX............................... 7
+led12<0>             X..XXXXXX............................... 7
+led11<0>             X..XXXXXX............................... 7
+LED<19>              .XX.......X..XX......................... 5
+led10<0>             X..XXXXXX............................... 7
+LED<18>              .XX.......XXX........................... 5
+led0<0>              X..XXXXXX............................... 7
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               19/35
+Number of signals used by logic mapping into function block:  19
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB2_1         (b)     
+LED<1>                3       0     0   2     FB2_2   29    I/O     O
+(unused)              0       0     0   5     FB2_3         (b)     
+(unused)              0       0     0   5     FB2_4         (b)     
+LED<0>                3       0     0   2     FB2_5   30    I/O     O
+half_pattern          1       0     0   4     FB2_6   31    I/O     (b)
+led9<1>               2       0     0   3     FB2_7         (b)     (b)
+led8<1>               2       0     0   3     FB2_8   32    I/O     (b)
+led7<1>               2       0     0   3     FB2_9   33    GSR/I/O (b)
+led6<1>               2       0     0   3     FB2_10        (b)     (b)
+led5<1>               2       0     0   3     FB2_11  34    GTS/I/O (b)
+buffer<6>             3       0     0   2     FB2_12        (b)     (b)
+buffer<5>             3       0     0   2     FB2_13        (b)     (b)
+buffer<4>             3       0     0   2     FB2_14  36    GTS/I/O (b)
+buffer<3>             3       0     0   2     FB2_15  37    I/O     I
+buffer<2>             3       0     0   2     FB2_16        (b)     (b)
+buffer<1>             3       0     0   2     FB2_17  38    I/O     I
+buffer<0>             3       0     0   2     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: CLK                8: buffer<1>         14: half_pattern 
+  2: DATA               9: buffer<2>         15: led0<0> 
+  3: LATCH             10: buffer<3>         16: led0<1> 
+  4: PATTERN_555       11: buffer<4>         17: led1<0> 
+  5: PWM               12: buffer<5>         18: led1<1> 
+  6: RESET             13: buffer<6>         19: temp 
+  7: buffer<0>        
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+LED<1>               ...XX........X..XX...................... 5
+LED<0>               ...XX........XXX........................ 5
+half_pattern         ..................X..................... 1
+led9<1>              ..X...XXXXX.X........................... 7
+led8<1>              ..X...XXXXX.X........................... 7
+led7<1>              ..X...XXXXX.X........................... 7
+led6<1>              ..X...XXXXX.X........................... 7
+led5<1>              ..X...XXXXX.X........................... 7
+buffer<6>            X.X..X.....XX........................... 5
+buffer<5>            X.X..X....XX............................ 5
+buffer<4>            X.X..X...XX............................. 5
+buffer<3>            X.X..X..XX.............................. 5
+buffer<2>            X.X..X.XX............................... 5
+buffer<1>            X.X..XXX................................ 5
+buffer<0>            XXX..XX................................. 5
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               28/26
+Number of signals used by logic mapping into function block:  28
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+led6<0>               2       0     0   3     FB3_1         (b)     (b)
+LED<17>               3       0     0   2     FB3_2   5     I/O     O
+led5<0>               2       0     0   3     FB3_3         (b)     (b)
+led4<0>               2       0     0   3     FB3_4         (b)     (b)
+LED<16>               3       0     0   2     FB3_5   6     I/O     O
+led3<0>               2       0     0   3     FB3_6         (b)     (b)
+led2<0>               2       0     0   3     FB3_7         (b)     (b)
+LED<15>               3       0     0   2     FB3_8   7     I/O     O
+LED<14>               3       0     0   2     FB3_9   8     I/O     O
+led1<0>               2       0     0   3     FB3_10        (b)     (b)
+LED<13>               3       0     0   2     FB3_11  12    I/O     O
+led19<0>              2       0     0   3     FB3_12        (b)     (b)
+led18<0>              2       0     0   3     FB3_13        (b)     (b)
+LED<12>               3       0     0   2     FB3_14  13    I/O     O
+LED<11>               3       0     0   2     FB3_15  14    I/O     O
+LED<9>                3       0     0   2     FB3_16  18    I/O     O
+LED<10>               3       0     0   2     FB3_17  16    I/O     O
+led17<0>              2       0     0   3     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: LATCH             11: led10<0>          20: led14<1> 
+  2: PATTERN_555       12: led10<1>          21: led15<0> 
+  3: PWM               13: led11<0>          22: led15<1> 
+  4: buffer<0>         14: led11<1>          23: led16<0> 
+  5: buffer<1>         15: led12<0>          24: led16<1> 
+  6: buffer<2>         16: led12<1>          25: led17<0> 
+  7: buffer<3>         17: led13<0>          26: led17<1> 
+  8: buffer<4>         18: led13<1>          27: led9<0> 
+  9: buffer<5>         19: led14<0>          28: led9<1> 
+ 10: half_pattern     
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+led6<0>              X..XXXXXX............................... 7
+LED<17>              .XX......X..............XX.............. 5
+led5<0>              X..XXXXXX............................... 7
+led4<0>              X..XXXXXX............................... 7
+LED<16>              .XX......X............XX................ 5
+led3<0>              X..XXXXXX............................... 7
+led2<0>              X..XXXXXX............................... 7
+LED<15>              .XX......X..........XX.................. 5
+LED<14>              .XX......X........XX.................... 5
+led1<0>              X..XXXXXX............................... 7
+LED<13>              .XX......X......XX...................... 5
+led19<0>             X..XXXXXX............................... 7
+led18<0>             X..XXXXXX............................... 7
+LED<12>              .XX......X....XX........................ 5
+LED<11>              .XX......X..XX.......................... 5
+LED<9>               .XX......X................XX............ 5
+LED<10>              .XX......XXX............................ 5
+led17<0>             X..XXXXXX............................... 7
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               25/29
+Number of signals used by logic mapping into function block:  25
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+led9<0>               2       0     0   3     FB4_1         (b)     (b)
+LED<8>                3       0     0   2     FB4_2   19    I/O     O
+led18<1>              2       0     0   3     FB4_3         (b)     (b)
+led17<1>              2       0     0   3     FB4_4         (b)     (b)
+LED<7>                3       0     0   2     FB4_5   20    I/O     O
+led16<1>              2       0     0   3     FB4_6         (b)     (b)
+led15<1>              2       0     0   3     FB4_7         (b)     (b)
+LED<6>                3       0     0   2     FB4_8   21    I/O     O
+led14<1>              2       0     0   3     FB4_9         (b)     (b)
+led13<1>              2       0     0   3     FB4_10        (b)     (b)
+LED<5>                3       0     0   2     FB4_11  22    I/O     O
+led12<1>              2       0     0   3     FB4_12        (b)     (b)
+led11<1>              2       0     0   3     FB4_13        (b)     (b)
+LED<4>                3       0     0   2     FB4_14  23    I/O     O
+LED<3>                3       0     0   2     FB4_15  27    I/O     O
+led10<1>              2       0     0   3     FB4_16        (b)     (b)
+LED<2>                3       0     0   2     FB4_17  28    I/O     O
+led0<1>               2       0     0   3     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: LATCH             10: buffer<6>         18: led5<0> 
+  2: PATTERN_555       11: half_pattern      19: led5<1> 
+  3: PWM               12: led2<0>           20: led6<0> 
+  4: buffer<0>         13: led2<1>           21: led6<1> 
+  5: buffer<1>         14: led3<0>           22: led7<0> 
+  6: buffer<2>         15: led3<1>           23: led7<1> 
+  7: buffer<3>         16: led4<0>           24: led8<0> 
+  8: buffer<4>         17: led4<1>           25: led8<1> 
+  9: buffer<5>        
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+led9<0>              X..XXXXXX............................... 7
+LED<8>               .XX.......X............XX............... 5
+led18<1>             X..XXXXX.X.............................. 7
+led17<1>             X..XXXXX.X.............................. 7
+LED<7>               .XX.......X..........XX................. 5
+led16<1>             X..XXXXX.X.............................. 7
+led15<1>             X..XXXXX.X.............................. 7
+LED<6>               .XX.......X........XX................... 5
+led14<1>             X..XXXXX.X.............................. 7
+led13<1>             X..XXXXX.X.............................. 7
+LED<5>               .XX.......X......XX..................... 5
+led12<1>             X..XXXXX.X.............................. 7
+led11<1>             X..XXXXX.X.............................. 7
+LED<4>               .XX.......X....XX....................... 5
+LED<3>               .XX.......X..XX......................... 5
+led10<1>             X..XXXXX.X.............................. 7
+LED<2>               .XX.......XXX........................... 5
+led0<1>              X..XXXXX.X.............................. 7
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+LED(0) <= ((half_pattern AND led0(0) AND PWM)
+	OR (led0(0) AND NOT led0(1) AND PWM)
+	OR (NOT led0(0) AND led0(1) AND PATTERN_555 AND PWM));
+
+
+LED(1) <= ((half_pattern AND led1(0) AND PWM)
+	OR (led1(0) AND NOT led1(1) AND PWM)
+	OR (NOT led1(0) AND led1(1) AND PATTERN_555 AND PWM));
+
+
+LED(2) <= ((half_pattern AND led2(0) AND PWM)
+	OR (led2(0) AND NOT led2(1) AND PWM)
+	OR (NOT led2(0) AND led2(1) AND PATTERN_555 AND PWM));
+
+
+LED(3) <= ((half_pattern AND led3(0) AND PWM)
+	OR (led3(0) AND NOT led3(1) AND PWM)
+	OR (NOT led3(0) AND led3(1) AND PATTERN_555 AND PWM));
+
+
+LED(4) <= ((half_pattern AND led4(0) AND PWM)
+	OR (led4(0) AND NOT led4(1) AND PWM)
+	OR (NOT led4(0) AND led4(1) AND PATTERN_555 AND PWM));
+
+
+LED(5) <= ((half_pattern AND led5(0) AND PWM)
+	OR (led5(0) AND NOT led5(1) AND PWM)
+	OR (NOT led5(0) AND led5(1) AND PATTERN_555 AND PWM));
+
+
+LED(6) <= ((half_pattern AND led6(0) AND PWM)
+	OR (led6(0) AND NOT led6(1) AND PWM)
+	OR (NOT led6(0) AND led6(1) AND PATTERN_555 AND PWM));
+
+
+LED(7) <= ((half_pattern AND led7(0) AND PWM)
+	OR (led7(0) AND NOT led7(1) AND PWM)
+	OR (NOT led7(0) AND led7(1) AND PATTERN_555 AND PWM));
+
+
+LED(8) <= ((half_pattern AND led8(0) AND PWM)
+	OR (led8(0) AND NOT led8(1) AND PWM)
+	OR (NOT led8(0) AND led8(1) AND PATTERN_555 AND PWM));
+
+
+LED(9) <= ((half_pattern AND led9(0) AND PWM)
+	OR (led9(0) AND NOT led9(1) AND PWM)
+	OR (NOT led9(0) AND led9(1) AND PATTERN_555 AND PWM));
+
+
+LED(10) <= ((half_pattern AND led10(0) AND PWM)
+	OR (led10(0) AND NOT led10(1) AND PWM)
+	OR (NOT led10(0) AND led10(1) AND PATTERN_555 AND PWM));
+
+
+LED(11) <= ((half_pattern AND led11(0) AND PWM)
+	OR (led11(0) AND NOT led11(1) AND PWM)
+	OR (NOT led11(0) AND led11(1) AND PATTERN_555 AND PWM));
+
+
+LED(12) <= ((half_pattern AND led12(0) AND PWM)
+	OR (led12(0) AND NOT led12(1) AND PWM)
+	OR (NOT led12(0) AND led12(1) AND PATTERN_555 AND PWM));
+
+
+LED(13) <= ((half_pattern AND led13(0) AND PWM)
+	OR (led13(0) AND NOT led13(1) AND PWM)
+	OR (NOT led13(0) AND led13(1) AND PATTERN_555 AND PWM));
+
+
+LED(14) <= ((half_pattern AND led14(0) AND PWM)
+	OR (led14(0) AND NOT led14(1) AND PWM)
+	OR (NOT led14(0) AND led14(1) AND PATTERN_555 AND PWM));
+
+
+LED(15) <= ((half_pattern AND led15(0) AND PWM)
+	OR (led15(0) AND NOT led15(1) AND PWM)
+	OR (NOT led15(0) AND led15(1) AND PATTERN_555 AND PWM));
+
+
+LED(16) <= ((half_pattern AND led16(0) AND PWM)
+	OR (led16(0) AND NOT led16(1) AND PWM)
+	OR (NOT led16(0) AND led16(1) AND PATTERN_555 AND PWM));
+
+
+LED(17) <= ((half_pattern AND led17(0) AND PWM)
+	OR (led17(0) AND NOT led17(1) AND PWM)
+	OR (NOT led17(0) AND led17(1) AND PATTERN_555 AND PWM));
+
+
+LED(18) <= ((half_pattern AND led18(0) AND PWM)
+	OR (led18(0) AND NOT led18(1) AND PWM)
+	OR (NOT led18(0) AND led18(1) AND PATTERN_555 AND PWM));
+
+
+LED(19) <= ((half_pattern AND led19(0) AND PWM)
+	OR (led19(0) AND NOT led19(1) AND PWM)
+	OR (NOT led19(0) AND led19(1) AND PATTERN_555 AND PWM));
+
+FDCPE_buffer0: FDCPE port map (buffer(0),buffer_D(0),CLK,'0','0');
+buffer_D(0) <= ((RESET AND buffer(0) AND LATCH)
+	OR (RESET AND NOT LATCH AND DATA));
+
+FDCPE_buffer1: FDCPE port map (buffer(1),buffer_D(1),CLK,'0','0');
+buffer_D(1) <= ((RESET AND buffer(0) AND NOT LATCH)
+	OR (RESET AND buffer(1) AND LATCH));
+
+FDCPE_buffer2: FDCPE port map (buffer(2),buffer_D(2),CLK,'0','0');
+buffer_D(2) <= ((RESET AND buffer(1) AND NOT LATCH)
+	OR (RESET AND buffer(2) AND LATCH));
+
+FDCPE_buffer3: FDCPE port map (buffer(3),buffer_D(3),CLK,'0','0');
+buffer_D(3) <= ((RESET AND buffer(2) AND NOT LATCH)
+	OR (RESET AND buffer(3) AND LATCH));
+
+FDCPE_buffer4: FDCPE port map (buffer(4),buffer_D(4),CLK,'0','0');
+buffer_D(4) <= ((RESET AND buffer(3) AND NOT LATCH)
+	OR (RESET AND buffer(4) AND LATCH));
+
+FDCPE_buffer5: FDCPE port map (buffer(5),buffer_D(5),CLK,'0','0');
+buffer_D(5) <= ((RESET AND buffer(5) AND LATCH)
+	OR (RESET AND buffer(4) AND NOT LATCH));
+
+FDCPE_buffer6: FDCPE port map (buffer(6),buffer_D(6),CLK,'0','0');
+buffer_D(6) <= ((RESET AND buffer(5) AND NOT LATCH)
+	OR (RESET AND buffer(6) AND LATCH));
+
+FTCPE_half_pattern: FTCPE port map (half_pattern,'1',temp,'0','0');
+
+FDCPE_led00: FDCPE port map (led0(0),'0','0',led0_CLR(0),led0_PRE(0));
+led0_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led0_PRE(0) <= (buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led01: FDCPE port map (led0(1),'0','0',led0_CLR(1),led0_PRE(1));
+led0_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led0_PRE(1) <= (buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led100: FDCPE port map (led10(0),'0','0',led10_CLR(0),led10_PRE(0));
+led10_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led10_PRE(0) <= (buffer(5) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led101: FDCPE port map (led10(1),'0','0',led10_CLR(1),led10_PRE(1));
+led10_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led10_PRE(1) <= (buffer(6) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led110: FDCPE port map (led11(0),'0','0',led11_CLR(0),led11_PRE(0));
+led11_CLR(0) <= (NOT buffer(5) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led11_PRE(0) <= (buffer(5) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led111: FDCPE port map (led11(1),'0','0',led11_CLR(1),led11_PRE(1));
+led11_CLR(1) <= (NOT buffer(6) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led11_PRE(1) <= (buffer(6) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led120: FDCPE port map (led12(0),'0','0',led12_CLR(0),led12_PRE(0));
+led12_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led12_PRE(0) <= (buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led121: FDCPE port map (led12(1),'0','0',led12_CLR(1),led12_PRE(1));
+led12_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led12_PRE(1) <= (buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led130: FDCPE port map (led13(0),'0','0',led13_CLR(0),led13_PRE(0));
+led13_CLR(0) <= (NOT buffer(5) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led13_PRE(0) <= (buffer(5) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led131: FDCPE port map (led13(1),'0','0',led13_CLR(1),led13_PRE(1));
+led13_CLR(1) <= (NOT buffer(6) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led13_PRE(1) <= (buffer(6) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led140: FDCPE port map (led14(0),'0','0',led14_CLR(0),led14_PRE(0));
+led14_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led14_PRE(0) <= (buffer(5) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led141: FDCPE port map (led14(1),'0','0',led14_CLR(1),led14_PRE(1));
+led14_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led14_PRE(1) <= (buffer(6) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led150: FDCPE port map (led15(0),'0','0',led15_CLR(0),led15_PRE(0));
+led15_CLR(0) <= (NOT buffer(5) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led15_PRE(0) <= (buffer(5) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led151: FDCPE port map (led15(1),'0','0',led15_CLR(1),led15_PRE(1));
+led15_CLR(1) <= (NOT buffer(6) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led15_PRE(1) <= (buffer(6) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led160: FDCPE port map (led16(0),'0','0',led16_CLR(0),led16_PRE(0));
+led16_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led16_PRE(0) <= (buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led161: FDCPE port map (led16(1),'0','0',led16_CLR(1),led16_PRE(1));
+led16_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led16_PRE(1) <= (buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led170: FDCPE port map (led17(0),'0','0',led17_CLR(0),led17_PRE(0));
+led17_CLR(0) <= (NOT buffer(5) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led17_PRE(0) <= (buffer(5) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led171: FDCPE port map (led17(1),'0','0',led17_CLR(1),led17_PRE(1));
+led17_CLR(1) <= (NOT buffer(6) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led17_PRE(1) <= (buffer(6) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led180: FDCPE port map (led18(0),'0','0',led18_CLR(0),led18_PRE(0));
+led18_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led18_PRE(0) <= (buffer(5) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led181: FDCPE port map (led18(1),'0','0',led18_CLR(1),led18_PRE(1));
+led18_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led18_PRE(1) <= (buffer(6) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led190: FDCPE port map (led19(0),'0','0',led19_CLR(0),led19_PRE(0));
+led19_CLR(0) <= (NOT buffer(5) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led19_PRE(0) <= (buffer(5) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led191: FDCPE port map (led19(1),'0','0',led19_CLR(1),led19_PRE(1));
+led19_CLR(1) <= (NOT buffer(6) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+led19_PRE(1) <= (buffer(6) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND buffer(4) AND LATCH);
+
+FDCPE_led10: FDCPE port map (led1(0),'0','0',led1_CLR(0),led1_PRE(0));
+led1_CLR(0) <= (NOT buffer(5) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led1_PRE(0) <= (buffer(5) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led11: FDCPE port map (led1(1),'0','0',led1_CLR(1),led1_PRE(1));
+led1_CLR(1) <= (NOT buffer(6) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led1_PRE(1) <= (buffer(6) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led20: FDCPE port map (led2(0),'0','0',led2_CLR(0),led2_PRE(0));
+led2_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led2_PRE(0) <= (buffer(5) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led21: FDCPE port map (led2(1),'0','0',led2_CLR(1),led2_PRE(1));
+led2_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led2_PRE(1) <= (buffer(6) AND NOT buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led30: FDCPE port map (led3(0),'0','0',led3_CLR(0),led3_PRE(0));
+led3_CLR(0) <= (NOT buffer(5) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led3_PRE(0) <= (buffer(5) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led31: FDCPE port map (led3(1),'0','0',led3_CLR(1),led3_PRE(1));
+led3_CLR(1) <= (NOT buffer(6) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led3_PRE(1) <= (buffer(6) AND buffer(0) AND buffer(1) AND NOT buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led40: FDCPE port map (led4(0),'0','0',led4_CLR(0),led4_PRE(0));
+led4_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led4_PRE(0) <= (buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led41: FDCPE port map (led4(1),'0','0',led4_CLR(1),led4_PRE(1));
+led4_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led4_PRE(1) <= (buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led50: FDCPE port map (led5(0),'0','0',led5_CLR(0),led5_PRE(0));
+led5_CLR(0) <= (NOT buffer(5) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led5_PRE(0) <= (buffer(5) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led51: FDCPE port map (led5(1),'0','0',led5_CLR(1),led5_PRE(1));
+led5_CLR(1) <= (NOT buffer(6) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led5_PRE(1) <= (buffer(6) AND buffer(0) AND NOT buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led60: FDCPE port map (led6(0),'0','0',led6_CLR(0),led6_PRE(0));
+led6_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led6_PRE(0) <= (buffer(5) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led61: FDCPE port map (led6(1),'0','0',led6_CLR(1),led6_PRE(1));
+led6_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led6_PRE(1) <= (buffer(6) AND NOT buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led70: FDCPE port map (led7(0),'0','0',led7_CLR(0),led7_PRE(0));
+led7_CLR(0) <= (NOT buffer(5) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led7_PRE(0) <= (buffer(5) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led71: FDCPE port map (led7(1),'0','0',led7_CLR(1),led7_PRE(1));
+led7_CLR(1) <= (NOT buffer(6) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+led7_PRE(1) <= (buffer(6) AND buffer(0) AND buffer(1) AND buffer(2) AND 
+	NOT buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led80: FDCPE port map (led8(0),'0','0',led8_CLR(0),led8_PRE(0));
+led8_CLR(0) <= (NOT buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led8_PRE(0) <= (buffer(5) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led81: FDCPE port map (led8(1),'0','0',led8_CLR(1),led8_PRE(1));
+led8_CLR(1) <= (NOT buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led8_PRE(1) <= (buffer(6) AND NOT buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led90: FDCPE port map (led9(0),'0','0',led9_CLR(0),led9_PRE(0));
+led9_CLR(0) <= (NOT buffer(5) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led9_PRE(0) <= (buffer(5) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FDCPE_led91: FDCPE port map (led9(1),'0','0',led9_CLR(1),led9_PRE(1));
+led9_CLR(1) <= (NOT buffer(6) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+led9_PRE(1) <= (buffer(6) AND buffer(0) AND NOT buffer(1) AND NOT buffer(2) AND 
+	buffer(3) AND NOT buffer(4) AND LATCH);
+
+FTCPE_temp: FTCPE port map (temp,'1',PATTERN_555,'0','0');
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC9572XL-5-VQ44
+
+
+   --------------------------------  
+  /44 43 42 41 40 39 38 37 36 35 34 \
+ | 1                             33 | 
+ | 2                             32 | 
+ | 3                             31 | 
+ | 4                             30 | 
+ | 5         XC9572XL-5-VQ44     29 | 
+ | 6                             28 | 
+ | 7                             27 | 
+ | 8                             26 | 
+ | 9                             25 | 
+ | 10                            24 | 
+ | 11                            23 | 
+ \ 12 13 14 15 16 17 18 19 20 21 22 /
+   --------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 KPR                              23 LED<4>                        
+  2 LED<19>                          24 TDO                           
+  3 LED<18>                          25 GND                           
+  4 GND                              26 VCC                           
+  5 LED<17>                          27 LED<3>                        
+  6 LED<16>                          28 LED<2>                        
+  7 LED<15>                          29 LED<1>                        
+  8 LED<14>                          30 LED<0>                        
+  9 TDI                              31 KPR                           
+ 10 TMS                              32 KPR                           
+ 11 TCK                              33 KPR                           
+ 12 LED<13>                          34 KPR                           
+ 13 LED<12>                          35 VCC                           
+ 14 LED<11>                          36 KPR                           
+ 15 VCC                              37 PATTERN_555                   
+ 16 LED<10>                          38 PWM                           
+ 17 GND                              39 DATA                          
+ 18 LED<9>                           40 CLK                           
+ 19 LED<8>                           41 LATCH                         
+ 20 LED<7>                           42 RESET                         
+ 21 LED<6>                           43 KPR                           
+ 22 LED<5>                           44 KPR                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-5-VQ44
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25

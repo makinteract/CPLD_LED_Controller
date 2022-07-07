@@ -1,0 +1,1329 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "top";
+      var device = "XC9572XL";
+      signals = new Array("LED0_SPECSIG","LED10_SPECSIG","LED11_SPECSIG","LED12_SPECSIG","LED13_SPECSIG","LED14_SPECSIG","LED15_SPECSIG","LED16_SPECSIG","LED17_SPECSIG","LED18_SPECSIG","LED19_SPECSIG","LED1_SPECSIG","LED2_SPECSIG","LED3_SPECSIG","LED4_SPECSIG","LED5_SPECSIG","LED6_SPECSIG","LED7_SPECSIG","LED8_SPECSIG","LED9_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","buffer4_SPECSIG","buffer5_SPECSIG","buffer6_SPECSIG","half_pattern","led00_SPECSIG","led01_SPECSIG","led100_SPECSIG","led101_SPECSIG","led10_SPECSIG","led110_SPECSIG","led111_SPECSIG","led11_SPECSIG","led120_SPECSIG","led121_SPECSIG","led130_SPECSIG","led131_SPECSIG","led140_SPECSIG","led141_SPECSIG","led150_SPECSIG","led151_SPECSIG","led160_SPECSIG","led161_SPECSIG","led170_SPECSIG","led171_SPECSIG","led180_SPECSIG","led181_SPECSIG","led190_SPECSIG","led191_SPECSIG","led20_SPECSIG","led21_SPECSIG","led30_SPECSIG","led31_SPECSIG","led40_SPECSIG","led41_SPECSIG","led50_SPECSIG","led51_SPECSIG","led60_SPECSIG","led61_SPECSIG","led70_SPECSIG","led71_SPECSIG","led80_SPECSIG","led81_SPECSIG","led90_SPECSIG","led91_SPECSIG","temp");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","","","","","","","","","","","","","","","","","","","D","D","D","D","D","D","D","T","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","D","T");
+
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["led160_SPECSIG"]=new Array("led16<0>");
+      
+        specSig["led140_SPECSIG"]=new Array("led14<0>");
+      
+        specSig["led110_SPECSIG"]=new Array("led11<0>");
+      
+        specSig["LED19_SPECSIG"]=new Array("LED<19>");
+      
+        specSig["LED18_SPECSIG"]=new Array("LED<18>");
+      
+        specSig["LED1_SPECSIG"]=new Array("LED<1>");
+      
+        specSig["LED0_SPECSIG"]=new Array("LED<0>");
+      
+        specSig["led81_SPECSIG"]=new Array("led8<1>");
+      
+        specSig["led71_SPECSIG"]=new Array("led7<1>");
+      
+        specSig["led51_SPECSIG"]=new Array("led5<1>");
+      
+        specSig["buffer4_SPECSIG"]=new Array("buffer<4>");
+      
+        specSig["LED17_SPECSIG"]=new Array("LED<17>");
+      
+        specSig["LED16_SPECSIG"]=new Array("LED<16>");
+      
+        specSig["LED15_SPECSIG"]=new Array("LED<15>");
+      
+        specSig["LED14_SPECSIG"]=new Array("LED<14>");
+      
+        specSig["LED13_SPECSIG"]=new Array("LED<13>");
+      
+        specSig["LED12_SPECSIG"]=new Array("LED<12>");
+      
+        specSig["LED11_SPECSIG"]=new Array("LED<11>");
+      
+        specSig["LED9_SPECSIG"]=new Array("LED<9>");
+      
+        specSig["LED10_SPECSIG"]=new Array("LED<10>");
+      
+        specSig["LED8_SPECSIG"]=new Array("LED<8>");
+      
+        specSig["LED7_SPECSIG"]=new Array("LED<7>");
+      
+        specSig["LED6_SPECSIG"]=new Array("LED<6>");
+      
+        specSig["LED5_SPECSIG"]=new Array("LED<5>");
+      
+        specSig["LED4_SPECSIG"]=new Array("LED<4>");
+      
+        specSig["LED3_SPECSIG"]=new Array("LED<3>");
+      
+        specSig["LED2_SPECSIG"]=new Array("LED<2>");
+      
+        specSig["led80_SPECSIG"]=new Array("led8<0>");
+      
+        specSig["led70_SPECSIG"]=new Array("led7<0>");
+      
+        specSig["led41_SPECSIG"]=new Array("led4<1>");
+      
+        specSig["led31_SPECSIG"]=new Array("led3<1>");
+      
+        specSig["led21_SPECSIG"]=new Array("led2<1>");
+      
+        specSig["led11_SPECSIG"]=new Array("led1<1>");
+      
+        specSig["led191_SPECSIG"]=new Array("led19<1>");
+      
+        specSig["led150_SPECSIG"]=new Array("led15<0>");
+      
+        specSig["led130_SPECSIG"]=new Array("led13<0>");
+      
+        specSig["led120_SPECSIG"]=new Array("led12<0>");
+      
+        specSig["led100_SPECSIG"]=new Array("led10<0>");
+      
+        specSig["led00_SPECSIG"]=new Array("led0<0>");
+      
+        specSig["buffer0_SPECSIG"]=new Array("buffer<0>");
+      
+        specSig["buffer1_SPECSIG"]=new Array("buffer<1>");
+      
+        specSig["buffer2_SPECSIG"]=new Array("buffer<2>");
+      
+        specSig["buffer3_SPECSIG"]=new Array("buffer<3>");
+      
+        specSig["buffer5_SPECSIG"]=new Array("buffer<5>");
+      
+        specSig["buffer6_SPECSIG"]=new Array("buffer<6>");
+      
+        specSig["led180_SPECSIG"]=new Array("led18<0>");
+      
+        specSig["led181_SPECSIG"]=new Array("led18<1>");
+      
+        specSig["led190_SPECSIG"]=new Array("led19<0>");
+      
+        specSig["led91_SPECSIG"]=new Array("led9<1>");
+      
+        specSig["led61_SPECSIG"]=new Array("led6<1>");
+      
+        specSig["led01_SPECSIG"]=new Array("led0<1>");
+      
+        specSig["led10_SPECSIG"]=new Array("led1<0>");
+      
+        specSig["led60_SPECSIG"]=new Array("led6<0>");
+      
+        specSig["led50_SPECSIG"]=new Array("led5<0>");
+      
+        specSig["led40_SPECSIG"]=new Array("led4<0>");
+      
+        specSig["led30_SPECSIG"]=new Array("led3<0>");
+      
+        specSig["led20_SPECSIG"]=new Array("led2<0>");
+      
+        specSig["led170_SPECSIG"]=new Array("led17<0>");
+      
+        specSig["led101_SPECSIG"]=new Array("led10<1>");
+      
+        specSig["led111_SPECSIG"]=new Array("led11<1>");
+      
+        specSig["led121_SPECSIG"]=new Array("led12<1>");
+      
+        specSig["led131_SPECSIG"]=new Array("led13<1>");
+      
+        specSig["led141_SPECSIG"]=new Array("led14<1>");
+      
+        specSig["led151_SPECSIG"]=new Array("led15<1>");
+      
+        specSig["led161_SPECSIG"]=new Array("led16<1>");
+      
+        specSig["led171_SPECSIG"]=new Array("led17<1>");
+      
+        specSig["led90_SPECSIG"]=new Array("led9<0>");
+      
+            pterms["FB1_1_1"]=new Array("PATTERN_555");
+          
+            pterms["FB1_2_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_2_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_3_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_3_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_4_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_4_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_5_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_5_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_6_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_6_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_7_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_7_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_8_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_8_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_9_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_9_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_10_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_10_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_11_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_11_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_12_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_12_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_13_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_13_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_14_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_14_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_15_1"]=new Array("half_pattern","led190_SPECSIG","PWM");
+          
+            pterms["FB1_15_2"]=new Array("led190_SPECSIG","/led191_SPECSIG","PWM");
+          
+            pterms["FB1_15_3"]=new Array("/led190_SPECSIG","led191_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB1_16_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_16_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_17_1"]=new Array("half_pattern","led180_SPECSIG","PWM");
+          
+            pterms["FB1_17_2"]=new Array("led180_SPECSIG","/led181_SPECSIG","PWM");
+          
+            pterms["FB1_17_3"]=new Array("/led180_SPECSIG","led181_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB1_18_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB1_18_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_2_1"]=new Array("half_pattern","led10_SPECSIG","PWM");
+          
+            pterms["FB2_2_2"]=new Array("led10_SPECSIG","/led11_SPECSIG","PWM");
+          
+            pterms["FB2_2_3"]=new Array("/led10_SPECSIG","led11_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB2_5_1"]=new Array("half_pattern","led00_SPECSIG","PWM");
+          
+            pterms["FB2_5_2"]=new Array("led00_SPECSIG","/led01_SPECSIG","PWM");
+          
+            pterms["FB2_5_3"]=new Array("/led00_SPECSIG","led01_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB2_6_1"]=new Array("temp");
+          
+            pterms["FB2_7_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_7_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_8_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_8_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_9_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_9_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_10_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_10_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_11_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_11_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_12_1"]=new Array("RESET","buffer5_SPECSIG","/LATCH");
+          
+            pterms["FB2_12_2"]=new Array("RESET","buffer6_SPECSIG","LATCH");
+          
+            pterms["FB2_12_3"]=new Array("CLK");
+          
+            pterms["FB2_13_1"]=new Array("RESET","buffer5_SPECSIG","LATCH");
+          
+            pterms["FB2_13_2"]=new Array("RESET","buffer4_SPECSIG","/LATCH");
+          
+            pterms["FB2_13_3"]=new Array("CLK");
+          
+            pterms["FB2_14_1"]=new Array("RESET","buffer3_SPECSIG","/LATCH");
+          
+            pterms["FB2_14_2"]=new Array("RESET","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB2_14_3"]=new Array("CLK");
+          
+            pterms["FB2_15_1"]=new Array("RESET","buffer2_SPECSIG","/LATCH");
+          
+            pterms["FB2_15_2"]=new Array("RESET","buffer3_SPECSIG","LATCH");
+          
+            pterms["FB2_15_3"]=new Array("CLK");
+          
+            pterms["FB2_16_1"]=new Array("RESET","buffer1_SPECSIG","/LATCH");
+          
+            pterms["FB2_16_2"]=new Array("RESET","buffer2_SPECSIG","LATCH");
+          
+            pterms["FB2_16_3"]=new Array("CLK");
+          
+            pterms["FB2_17_1"]=new Array("RESET","buffer0_SPECSIG","/LATCH");
+          
+            pterms["FB2_17_2"]=new Array("RESET","buffer1_SPECSIG","LATCH");
+          
+            pterms["FB2_17_3"]=new Array("CLK");
+          
+            pterms["FB2_18_1"]=new Array("RESET","buffer0_SPECSIG","LATCH");
+          
+            pterms["FB2_18_2"]=new Array("RESET","/LATCH","DATA");
+          
+            pterms["FB2_18_3"]=new Array("CLK");
+          
+            pterms["FB3_1_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_1_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_2_1"]=new Array("half_pattern","led170_SPECSIG","PWM");
+          
+            pterms["FB3_2_2"]=new Array("led170_SPECSIG","/led171_SPECSIG","PWM");
+          
+            pterms["FB3_2_3"]=new Array("/led170_SPECSIG","led171_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_3_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_3_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_4_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_4_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_5_1"]=new Array("half_pattern","led160_SPECSIG","PWM");
+          
+            pterms["FB3_5_2"]=new Array("led160_SPECSIG","/led161_SPECSIG","PWM");
+          
+            pterms["FB3_5_3"]=new Array("/led160_SPECSIG","led161_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_6_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_6_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_7_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_7_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_8_1"]=new Array("half_pattern","led150_SPECSIG","PWM");
+          
+            pterms["FB3_8_2"]=new Array("led150_SPECSIG","/led151_SPECSIG","PWM");
+          
+            pterms["FB3_8_3"]=new Array("/led150_SPECSIG","led151_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_9_1"]=new Array("half_pattern","led140_SPECSIG","PWM");
+          
+            pterms["FB3_9_2"]=new Array("led140_SPECSIG","/led141_SPECSIG","PWM");
+          
+            pterms["FB3_9_3"]=new Array("/led140_SPECSIG","led141_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_10_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_10_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_11_1"]=new Array("half_pattern","led130_SPECSIG","PWM");
+          
+            pterms["FB3_11_2"]=new Array("led130_SPECSIG","/led131_SPECSIG","PWM");
+          
+            pterms["FB3_11_3"]=new Array("/led130_SPECSIG","led131_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_12_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_12_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_13_1"]=new Array("/buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_13_2"]=new Array("buffer5_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_14_1"]=new Array("half_pattern","led120_SPECSIG","PWM");
+          
+            pterms["FB3_14_2"]=new Array("led120_SPECSIG","/led121_SPECSIG","PWM");
+          
+            pterms["FB3_14_3"]=new Array("/led120_SPECSIG","led121_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_15_1"]=new Array("half_pattern","led110_SPECSIG","PWM");
+          
+            pterms["FB3_15_2"]=new Array("led110_SPECSIG","/led111_SPECSIG","PWM");
+          
+            pterms["FB3_15_3"]=new Array("/led110_SPECSIG","led111_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_16_1"]=new Array("half_pattern","led90_SPECSIG","PWM");
+          
+            pterms["FB3_16_2"]=new Array("led90_SPECSIG","/led91_SPECSIG","PWM");
+          
+            pterms["FB3_16_3"]=new Array("/led90_SPECSIG","led91_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_17_1"]=new Array("half_pattern","led100_SPECSIG","PWM");
+          
+            pterms["FB3_17_2"]=new Array("led100_SPECSIG","/led101_SPECSIG","PWM");
+          
+            pterms["FB3_17_3"]=new Array("/led100_SPECSIG","led101_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB3_18_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB3_18_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_1_1"]=new Array("/buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_1_2"]=new Array("buffer5_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_2_1"]=new Array("half_pattern","led80_SPECSIG","PWM");
+          
+            pterms["FB4_2_2"]=new Array("led80_SPECSIG","/led81_SPECSIG","PWM");
+          
+            pterms["FB4_2_3"]=new Array("/led80_SPECSIG","led81_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB4_3_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_3_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_4_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_4_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_5_1"]=new Array("half_pattern","led70_SPECSIG","PWM");
+          
+            pterms["FB4_5_2"]=new Array("led70_SPECSIG","/led71_SPECSIG","PWM");
+          
+            pterms["FB4_5_3"]=new Array("/led70_SPECSIG","led71_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB4_6_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_6_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_7_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_7_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_8_1"]=new Array("half_pattern","led60_SPECSIG","PWM");
+          
+            pterms["FB4_8_2"]=new Array("led60_SPECSIG","/led61_SPECSIG","PWM");
+          
+            pterms["FB4_8_3"]=new Array("/led60_SPECSIG","led61_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB4_9_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_9_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_10_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_10_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_11_1"]=new Array("half_pattern","led50_SPECSIG","PWM");
+          
+            pterms["FB4_11_2"]=new Array("led50_SPECSIG","/led51_SPECSIG","PWM");
+          
+            pterms["FB4_11_3"]=new Array("/led50_SPECSIG","led51_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB4_12_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_12_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_13_1"]=new Array("/buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_13_2"]=new Array("buffer6_SPECSIG","buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_14_1"]=new Array("half_pattern","led40_SPECSIG","PWM");
+          
+            pterms["FB4_14_2"]=new Array("led40_SPECSIG","/led41_SPECSIG","PWM");
+          
+            pterms["FB4_14_3"]=new Array("/led40_SPECSIG","led41_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB4_15_1"]=new Array("half_pattern","led30_SPECSIG","PWM");
+          
+            pterms["FB4_15_2"]=new Array("led30_SPECSIG","/led31_SPECSIG","PWM");
+          
+            pterms["FB4_15_3"]=new Array("/led30_SPECSIG","led31_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB4_16_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_16_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","buffer1_SPECSIG","/buffer2_SPECSIG","buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_17_1"]=new Array("half_pattern","led20_SPECSIG","PWM");
+          
+            pterms["FB4_17_2"]=new Array("led20_SPECSIG","/led21_SPECSIG","PWM");
+          
+            pterms["FB4_17_3"]=new Array("/led20_SPECSIG","led21_SPECSIG","PATTERN_555","PWM");
+          
+            pterms["FB4_18_1"]=new Array("/buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+            pterms["FB4_18_2"]=new Array("buffer6_SPECSIG","/buffer0_SPECSIG","/buffer1_SPECSIG","/buffer2_SPECSIG","/buffer3_SPECSIG","/buffer4_SPECSIG","LATCH");
+          
+          d2["temp"]=new Array("VCC");
+          
+            d2imp["temp"]=new Array("1");
+          
+              clk["temp"]=new Array("FB1_1_1");
+              
+                clkimp["temp"]=new Array("1");
+              prld["temp"]="GND";
+          d2["led80_SPECSIG"]=new Array("GND");
+          
+            d2imp["led80_SPECSIG"]=new Array("1");
+          
+              clk["led80_SPECSIG"]=new Array("GND");
+              
+                clkimp["led80_SPECSIG"]=new Array("1");
+              
+              set["led80_SPECSIG"]=new Array("FB1_2_2");
+              
+                setimp["led80_SPECSIG"]=new Array("1");
+              
+              rst["led80_SPECSIG"]=new Array("FB1_2_1");
+              
+                rstimp["led80_SPECSIG"]=new Array("1");
+              prld["led80_SPECSIG"]="GND";
+          d2["led70_SPECSIG"]=new Array("GND");
+          
+            d2imp["led70_SPECSIG"]=new Array("1");
+          
+              clk["led70_SPECSIG"]=new Array("GND");
+              
+                clkimp["led70_SPECSIG"]=new Array("1");
+              
+              set["led70_SPECSIG"]=new Array("FB1_3_2");
+              
+                setimp["led70_SPECSIG"]=new Array("1");
+              
+              rst["led70_SPECSIG"]=new Array("FB1_3_1");
+              
+                rstimp["led70_SPECSIG"]=new Array("1");
+              prld["led70_SPECSIG"]="GND";
+          d2["led41_SPECSIG"]=new Array("GND");
+          
+            d2imp["led41_SPECSIG"]=new Array("1");
+          
+              clk["led41_SPECSIG"]=new Array("GND");
+              
+                clkimp["led41_SPECSIG"]=new Array("1");
+              
+              set["led41_SPECSIG"]=new Array("FB1_4_2");
+              
+                setimp["led41_SPECSIG"]=new Array("1");
+              
+              rst["led41_SPECSIG"]=new Array("FB1_4_1");
+              
+                rstimp["led41_SPECSIG"]=new Array("1");
+              prld["led41_SPECSIG"]="GND";
+          d2["led31_SPECSIG"]=new Array("GND");
+          
+            d2imp["led31_SPECSIG"]=new Array("1");
+          
+              clk["led31_SPECSIG"]=new Array("GND");
+              
+                clkimp["led31_SPECSIG"]=new Array("1");
+              
+              set["led31_SPECSIG"]=new Array("FB1_5_2");
+              
+                setimp["led31_SPECSIG"]=new Array("1");
+              
+              rst["led31_SPECSIG"]=new Array("FB1_5_1");
+              
+                rstimp["led31_SPECSIG"]=new Array("1");
+              prld["led31_SPECSIG"]="GND";
+          d2["led21_SPECSIG"]=new Array("GND");
+          
+            d2imp["led21_SPECSIG"]=new Array("1");
+          
+              clk["led21_SPECSIG"]=new Array("GND");
+              
+                clkimp["led21_SPECSIG"]=new Array("1");
+              
+              set["led21_SPECSIG"]=new Array("FB1_6_2");
+              
+                setimp["led21_SPECSIG"]=new Array("1");
+              
+              rst["led21_SPECSIG"]=new Array("FB1_6_1");
+              
+                rstimp["led21_SPECSIG"]=new Array("1");
+              prld["led21_SPECSIG"]="GND";
+          d2["led11_SPECSIG"]=new Array("GND");
+          
+            d2imp["led11_SPECSIG"]=new Array("1");
+          
+              clk["led11_SPECSIG"]=new Array("GND");
+              
+                clkimp["led11_SPECSIG"]=new Array("1");
+              
+              set["led11_SPECSIG"]=new Array("FB1_7_2");
+              
+                setimp["led11_SPECSIG"]=new Array("1");
+              
+              rst["led11_SPECSIG"]=new Array("FB1_7_1");
+              
+                rstimp["led11_SPECSIG"]=new Array("1");
+              prld["led11_SPECSIG"]="GND";
+          d2["led191_SPECSIG"]=new Array("GND");
+          
+            d2imp["led191_SPECSIG"]=new Array("1");
+          
+              clk["led191_SPECSIG"]=new Array("GND");
+              
+                clkimp["led191_SPECSIG"]=new Array("1");
+              
+              set["led191_SPECSIG"]=new Array("FB1_8_2");
+              
+                setimp["led191_SPECSIG"]=new Array("1");
+              
+              rst["led191_SPECSIG"]=new Array("FB1_8_1");
+              
+                rstimp["led191_SPECSIG"]=new Array("1");
+              prld["led191_SPECSIG"]="GND";
+          d2["led160_SPECSIG"]=new Array("GND");
+          
+            d2imp["led160_SPECSIG"]=new Array("1");
+          
+              clk["led160_SPECSIG"]=new Array("GND");
+              
+                clkimp["led160_SPECSIG"]=new Array("1");
+              
+              set["led160_SPECSIG"]=new Array("FB1_9_2");
+              
+                setimp["led160_SPECSIG"]=new Array("1");
+              
+              rst["led160_SPECSIG"]=new Array("FB1_9_1");
+              
+                rstimp["led160_SPECSIG"]=new Array("1");
+              prld["led160_SPECSIG"]="GND";
+          d2["led150_SPECSIG"]=new Array("GND");
+          
+            d2imp["led150_SPECSIG"]=new Array("1");
+          
+              clk["led150_SPECSIG"]=new Array("GND");
+              
+                clkimp["led150_SPECSIG"]=new Array("1");
+              
+              set["led150_SPECSIG"]=new Array("FB1_10_2");
+              
+                setimp["led150_SPECSIG"]=new Array("1");
+              
+              rst["led150_SPECSIG"]=new Array("FB1_10_1");
+              
+                rstimp["led150_SPECSIG"]=new Array("1");
+              prld["led150_SPECSIG"]="GND";
+          d2["led140_SPECSIG"]=new Array("GND");
+          
+            d2imp["led140_SPECSIG"]=new Array("1");
+          
+              clk["led140_SPECSIG"]=new Array("GND");
+              
+                clkimp["led140_SPECSIG"]=new Array("1");
+              
+              set["led140_SPECSIG"]=new Array("FB1_11_2");
+              
+                setimp["led140_SPECSIG"]=new Array("1");
+              
+              rst["led140_SPECSIG"]=new Array("FB1_11_1");
+              
+                rstimp["led140_SPECSIG"]=new Array("1");
+              prld["led140_SPECSIG"]="GND";
+          d2["led130_SPECSIG"]=new Array("GND");
+          
+            d2imp["led130_SPECSIG"]=new Array("1");
+          
+              clk["led130_SPECSIG"]=new Array("GND");
+              
+                clkimp["led130_SPECSIG"]=new Array("1");
+              
+              set["led130_SPECSIG"]=new Array("FB1_12_2");
+              
+                setimp["led130_SPECSIG"]=new Array("1");
+              
+              rst["led130_SPECSIG"]=new Array("FB1_12_1");
+              
+                rstimp["led130_SPECSIG"]=new Array("1");
+              prld["led130_SPECSIG"]="GND";
+          d2["led120_SPECSIG"]=new Array("GND");
+          
+            d2imp["led120_SPECSIG"]=new Array("1");
+          
+              clk["led120_SPECSIG"]=new Array("GND");
+              
+                clkimp["led120_SPECSIG"]=new Array("1");
+              
+              set["led120_SPECSIG"]=new Array("FB1_13_2");
+              
+                setimp["led120_SPECSIG"]=new Array("1");
+              
+              rst["led120_SPECSIG"]=new Array("FB1_13_1");
+              
+                rstimp["led120_SPECSIG"]=new Array("1");
+              prld["led120_SPECSIG"]="GND";
+          d2["led110_SPECSIG"]=new Array("GND");
+          
+            d2imp["led110_SPECSIG"]=new Array("1");
+          
+              clk["led110_SPECSIG"]=new Array("GND");
+              
+                clkimp["led110_SPECSIG"]=new Array("1");
+              
+              set["led110_SPECSIG"]=new Array("FB1_14_2");
+              
+                setimp["led110_SPECSIG"]=new Array("1");
+              
+              rst["led110_SPECSIG"]=new Array("FB1_14_1");
+              
+                rstimp["led110_SPECSIG"]=new Array("1");
+              prld["led110_SPECSIG"]="GND";
+          d2["LED19_SPECSIG"]=new Array("FB1_15_1","FB1_15_2","FB1_15_3");
+          
+            d2imp["LED19_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led100_SPECSIG"]=new Array("GND");
+          
+            d2imp["led100_SPECSIG"]=new Array("1");
+          
+              clk["led100_SPECSIG"]=new Array("GND");
+              
+                clkimp["led100_SPECSIG"]=new Array("1");
+              
+              set["led100_SPECSIG"]=new Array("FB1_16_2");
+              
+                setimp["led100_SPECSIG"]=new Array("1");
+              
+              rst["led100_SPECSIG"]=new Array("FB1_16_1");
+              
+                rstimp["led100_SPECSIG"]=new Array("1");
+              prld["led100_SPECSIG"]="GND";
+          d2["LED18_SPECSIG"]=new Array("FB1_17_1","FB1_17_2","FB1_17_3");
+          
+            d2imp["LED18_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led00_SPECSIG"]=new Array("GND");
+          
+            d2imp["led00_SPECSIG"]=new Array("1");
+          
+              clk["led00_SPECSIG"]=new Array("GND");
+              
+                clkimp["led00_SPECSIG"]=new Array("1");
+              
+              set["led00_SPECSIG"]=new Array("FB1_18_2");
+              
+                setimp["led00_SPECSIG"]=new Array("1");
+              
+              rst["led00_SPECSIG"]=new Array("FB1_18_1");
+              
+                rstimp["led00_SPECSIG"]=new Array("1");
+              prld["led00_SPECSIG"]="GND";
+          d2["LED1_SPECSIG"]=new Array("FB2_2_1","FB2_2_2","FB2_2_3");
+          
+            d2imp["LED1_SPECSIG"]=new Array("1","1","1");
+          
+          d2["LED0_SPECSIG"]=new Array("FB2_5_1","FB2_5_2","FB2_5_3");
+          
+            d2imp["LED0_SPECSIG"]=new Array("1","1","1");
+          
+          d2["half_pattern"]=new Array("VCC");
+          
+            d2imp["half_pattern"]=new Array("1");
+          
+              clk["half_pattern"]=new Array("FB2_6_1");
+              
+                clkimp["half_pattern"]=new Array("1");
+              prld["half_pattern"]="GND";
+          d2["led91_SPECSIG"]=new Array("GND");
+          
+            d2imp["led91_SPECSIG"]=new Array("1");
+          
+              clk["led91_SPECSIG"]=new Array("GND");
+              
+                clkimp["led91_SPECSIG"]=new Array("1");
+              
+              set["led91_SPECSIG"]=new Array("FB2_7_2");
+              
+                setimp["led91_SPECSIG"]=new Array("1");
+              
+              rst["led91_SPECSIG"]=new Array("FB2_7_1");
+              
+                rstimp["led91_SPECSIG"]=new Array("1");
+              prld["led91_SPECSIG"]="GND";
+          d2["led81_SPECSIG"]=new Array("GND");
+          
+            d2imp["led81_SPECSIG"]=new Array("1");
+          
+              clk["led81_SPECSIG"]=new Array("GND");
+              
+                clkimp["led81_SPECSIG"]=new Array("1");
+              
+              set["led81_SPECSIG"]=new Array("FB2_8_2");
+              
+                setimp["led81_SPECSIG"]=new Array("1");
+              
+              rst["led81_SPECSIG"]=new Array("FB2_8_1");
+              
+                rstimp["led81_SPECSIG"]=new Array("1");
+              prld["led81_SPECSIG"]="GND";
+          d2["led71_SPECSIG"]=new Array("GND");
+          
+            d2imp["led71_SPECSIG"]=new Array("1");
+          
+              clk["led71_SPECSIG"]=new Array("GND");
+              
+                clkimp["led71_SPECSIG"]=new Array("1");
+              
+              set["led71_SPECSIG"]=new Array("FB2_9_2");
+              
+                setimp["led71_SPECSIG"]=new Array("1");
+              
+              rst["led71_SPECSIG"]=new Array("FB2_9_1");
+              
+                rstimp["led71_SPECSIG"]=new Array("1");
+              prld["led71_SPECSIG"]="GND";
+          d2["led61_SPECSIG"]=new Array("GND");
+          
+            d2imp["led61_SPECSIG"]=new Array("1");
+          
+              clk["led61_SPECSIG"]=new Array("GND");
+              
+                clkimp["led61_SPECSIG"]=new Array("1");
+              
+              set["led61_SPECSIG"]=new Array("FB2_10_2");
+              
+                setimp["led61_SPECSIG"]=new Array("1");
+              
+              rst["led61_SPECSIG"]=new Array("FB2_10_1");
+              
+                rstimp["led61_SPECSIG"]=new Array("1");
+              prld["led61_SPECSIG"]="GND";
+          d2["led51_SPECSIG"]=new Array("GND");
+          
+            d2imp["led51_SPECSIG"]=new Array("1");
+          
+              clk["led51_SPECSIG"]=new Array("GND");
+              
+                clkimp["led51_SPECSIG"]=new Array("1");
+              
+              set["led51_SPECSIG"]=new Array("FB2_11_2");
+              
+                setimp["led51_SPECSIG"]=new Array("1");
+              
+              rst["led51_SPECSIG"]=new Array("FB2_11_1");
+              
+                rstimp["led51_SPECSIG"]=new Array("1");
+              prld["led51_SPECSIG"]="GND";
+          d2["buffer6_SPECSIG"]=new Array("FB2_12_1","FB2_12_2");
+          
+            d2imp["buffer6_SPECSIG"]=new Array("1","1");
+          
+              clk["buffer6_SPECSIG"]=new Array("FB2_12_3");
+              
+                clkimp["buffer6_SPECSIG"]=new Array("1");
+              prld["buffer6_SPECSIG"]="GND";
+          d2["buffer5_SPECSIG"]=new Array("FB2_13_1","FB2_13_2");
+          
+            d2imp["buffer5_SPECSIG"]=new Array("1","1");
+          
+              clk["buffer5_SPECSIG"]=new Array("FB2_13_3");
+              
+                clkimp["buffer5_SPECSIG"]=new Array("1");
+              prld["buffer5_SPECSIG"]="GND";
+          d2["buffer4_SPECSIG"]=new Array("FB2_14_1","FB2_14_2");
+          
+            d2imp["buffer4_SPECSIG"]=new Array("1","1");
+          
+              clk["buffer4_SPECSIG"]=new Array("FB2_14_3");
+              
+                clkimp["buffer4_SPECSIG"]=new Array("1");
+              prld["buffer4_SPECSIG"]="GND";
+          d2["buffer3_SPECSIG"]=new Array("FB2_15_1","FB2_15_2");
+          
+            d2imp["buffer3_SPECSIG"]=new Array("1","1");
+          
+              clk["buffer3_SPECSIG"]=new Array("FB2_15_3");
+              
+                clkimp["buffer3_SPECSIG"]=new Array("1");
+              prld["buffer3_SPECSIG"]="GND";
+          d2["buffer2_SPECSIG"]=new Array("FB2_16_1","FB2_16_2");
+          
+            d2imp["buffer2_SPECSIG"]=new Array("1","1");
+          
+              clk["buffer2_SPECSIG"]=new Array("FB2_16_3");
+              
+                clkimp["buffer2_SPECSIG"]=new Array("1");
+              prld["buffer2_SPECSIG"]="GND";
+          d2["buffer1_SPECSIG"]=new Array("FB2_17_1","FB2_17_2");
+          
+            d2imp["buffer1_SPECSIG"]=new Array("1","1");
+          
+              clk["buffer1_SPECSIG"]=new Array("FB2_17_3");
+              
+                clkimp["buffer1_SPECSIG"]=new Array("1");
+              prld["buffer1_SPECSIG"]="GND";
+          d2["buffer0_SPECSIG"]=new Array("FB2_18_1","FB2_18_2");
+          
+            d2imp["buffer0_SPECSIG"]=new Array("1","1");
+          
+              clk["buffer0_SPECSIG"]=new Array("FB2_18_3");
+              
+                clkimp["buffer0_SPECSIG"]=new Array("1");
+              prld["buffer0_SPECSIG"]="GND";
+          d2["led60_SPECSIG"]=new Array("GND");
+          
+            d2imp["led60_SPECSIG"]=new Array("1");
+          
+              clk["led60_SPECSIG"]=new Array("GND");
+              
+                clkimp["led60_SPECSIG"]=new Array("1");
+              
+              set["led60_SPECSIG"]=new Array("FB3_1_2");
+              
+                setimp["led60_SPECSIG"]=new Array("1");
+              
+              rst["led60_SPECSIG"]=new Array("FB3_1_1");
+              
+                rstimp["led60_SPECSIG"]=new Array("1");
+              prld["led60_SPECSIG"]="GND";
+          d2["LED17_SPECSIG"]=new Array("FB3_2_1","FB3_2_2","FB3_2_3");
+          
+            d2imp["LED17_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led50_SPECSIG"]=new Array("GND");
+          
+            d2imp["led50_SPECSIG"]=new Array("1");
+          
+              clk["led50_SPECSIG"]=new Array("GND");
+              
+                clkimp["led50_SPECSIG"]=new Array("1");
+              
+              set["led50_SPECSIG"]=new Array("FB3_3_2");
+              
+                setimp["led50_SPECSIG"]=new Array("1");
+              
+              rst["led50_SPECSIG"]=new Array("FB3_3_1");
+              
+                rstimp["led50_SPECSIG"]=new Array("1");
+              prld["led50_SPECSIG"]="GND";
+          d2["led40_SPECSIG"]=new Array("GND");
+          
+            d2imp["led40_SPECSIG"]=new Array("1");
+          
+              clk["led40_SPECSIG"]=new Array("GND");
+              
+                clkimp["led40_SPECSIG"]=new Array("1");
+              
+              set["led40_SPECSIG"]=new Array("FB3_4_2");
+              
+                setimp["led40_SPECSIG"]=new Array("1");
+              
+              rst["led40_SPECSIG"]=new Array("FB3_4_1");
+              
+                rstimp["led40_SPECSIG"]=new Array("1");
+              prld["led40_SPECSIG"]="GND";
+          d2["LED16_SPECSIG"]=new Array("FB3_5_1","FB3_5_2","FB3_5_3");
+          
+            d2imp["LED16_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led30_SPECSIG"]=new Array("GND");
+          
+            d2imp["led30_SPECSIG"]=new Array("1");
+          
+              clk["led30_SPECSIG"]=new Array("GND");
+              
+                clkimp["led30_SPECSIG"]=new Array("1");
+              
+              set["led30_SPECSIG"]=new Array("FB3_6_2");
+              
+                setimp["led30_SPECSIG"]=new Array("1");
+              
+              rst["led30_SPECSIG"]=new Array("FB3_6_1");
+              
+                rstimp["led30_SPECSIG"]=new Array("1");
+              prld["led30_SPECSIG"]="GND";
+          d2["led20_SPECSIG"]=new Array("GND");
+          
+            d2imp["led20_SPECSIG"]=new Array("1");
+          
+              clk["led20_SPECSIG"]=new Array("GND");
+              
+                clkimp["led20_SPECSIG"]=new Array("1");
+              
+              set["led20_SPECSIG"]=new Array("FB3_7_2");
+              
+                setimp["led20_SPECSIG"]=new Array("1");
+              
+              rst["led20_SPECSIG"]=new Array("FB3_7_1");
+              
+                rstimp["led20_SPECSIG"]=new Array("1");
+              prld["led20_SPECSIG"]="GND";
+          d2["LED15_SPECSIG"]=new Array("FB3_8_1","FB3_8_2","FB3_8_3");
+          
+            d2imp["LED15_SPECSIG"]=new Array("1","1","1");
+          
+          d2["LED14_SPECSIG"]=new Array("FB3_9_1","FB3_9_2","FB3_9_3");
+          
+            d2imp["LED14_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led10_SPECSIG"]=new Array("GND");
+          
+            d2imp["led10_SPECSIG"]=new Array("1");
+          
+              clk["led10_SPECSIG"]=new Array("GND");
+              
+                clkimp["led10_SPECSIG"]=new Array("1");
+              
+              set["led10_SPECSIG"]=new Array("FB3_10_2");
+              
+                setimp["led10_SPECSIG"]=new Array("1");
+              
+              rst["led10_SPECSIG"]=new Array("FB3_10_1");
+              
+                rstimp["led10_SPECSIG"]=new Array("1");
+              prld["led10_SPECSIG"]="GND";
+          d2["LED13_SPECSIG"]=new Array("FB3_11_1","FB3_11_2","FB3_11_3");
+          
+            d2imp["LED13_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led190_SPECSIG"]=new Array("GND");
+          
+            d2imp["led190_SPECSIG"]=new Array("1");
+          
+              clk["led190_SPECSIG"]=new Array("GND");
+              
+                clkimp["led190_SPECSIG"]=new Array("1");
+              
+              set["led190_SPECSIG"]=new Array("FB3_12_2");
+              
+                setimp["led190_SPECSIG"]=new Array("1");
+              
+              rst["led190_SPECSIG"]=new Array("FB3_12_1");
+              
+                rstimp["led190_SPECSIG"]=new Array("1");
+              prld["led190_SPECSIG"]="GND";
+          d2["led180_SPECSIG"]=new Array("GND");
+          
+            d2imp["led180_SPECSIG"]=new Array("1");
+          
+              clk["led180_SPECSIG"]=new Array("GND");
+              
+                clkimp["led180_SPECSIG"]=new Array("1");
+              
+              set["led180_SPECSIG"]=new Array("FB3_13_2");
+              
+                setimp["led180_SPECSIG"]=new Array("1");
+              
+              rst["led180_SPECSIG"]=new Array("FB3_13_1");
+              
+                rstimp["led180_SPECSIG"]=new Array("1");
+              prld["led180_SPECSIG"]="GND";
+          d2["LED12_SPECSIG"]=new Array("FB3_14_1","FB3_14_2","FB3_14_3");
+          
+            d2imp["LED12_SPECSIG"]=new Array("1","1","1");
+          
+          d2["LED11_SPECSIG"]=new Array("FB3_15_1","FB3_15_2","FB3_15_3");
+          
+            d2imp["LED11_SPECSIG"]=new Array("1","1","1");
+          
+          d2["LED9_SPECSIG"]=new Array("FB3_16_1","FB3_16_2","FB3_16_3");
+          
+            d2imp["LED9_SPECSIG"]=new Array("1","1","1");
+          
+          d2["LED10_SPECSIG"]=new Array("FB3_17_1","FB3_17_2","FB3_17_3");
+          
+            d2imp["LED10_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led170_SPECSIG"]=new Array("GND");
+          
+            d2imp["led170_SPECSIG"]=new Array("1");
+          
+              clk["led170_SPECSIG"]=new Array("GND");
+              
+                clkimp["led170_SPECSIG"]=new Array("1");
+              
+              set["led170_SPECSIG"]=new Array("FB3_18_2");
+              
+                setimp["led170_SPECSIG"]=new Array("1");
+              
+              rst["led170_SPECSIG"]=new Array("FB3_18_1");
+              
+                rstimp["led170_SPECSIG"]=new Array("1");
+              prld["led170_SPECSIG"]="GND";
+          d2["led90_SPECSIG"]=new Array("GND");
+          
+            d2imp["led90_SPECSIG"]=new Array("1");
+          
+              clk["led90_SPECSIG"]=new Array("GND");
+              
+                clkimp["led90_SPECSIG"]=new Array("1");
+              
+              set["led90_SPECSIG"]=new Array("FB4_1_2");
+              
+                setimp["led90_SPECSIG"]=new Array("1");
+              
+              rst["led90_SPECSIG"]=new Array("FB4_1_1");
+              
+                rstimp["led90_SPECSIG"]=new Array("1");
+              prld["led90_SPECSIG"]="GND";
+          d2["LED8_SPECSIG"]=new Array("FB4_2_1","FB4_2_2","FB4_2_3");
+          
+            d2imp["LED8_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led181_SPECSIG"]=new Array("GND");
+          
+            d2imp["led181_SPECSIG"]=new Array("1");
+          
+              clk["led181_SPECSIG"]=new Array("GND");
+              
+                clkimp["led181_SPECSIG"]=new Array("1");
+              
+              set["led181_SPECSIG"]=new Array("FB4_3_2");
+              
+                setimp["led181_SPECSIG"]=new Array("1");
+              
+              rst["led181_SPECSIG"]=new Array("FB4_3_1");
+              
+                rstimp["led181_SPECSIG"]=new Array("1");
+              prld["led181_SPECSIG"]="GND";
+          d2["led171_SPECSIG"]=new Array("GND");
+          
+            d2imp["led171_SPECSIG"]=new Array("1");
+          
+              clk["led171_SPECSIG"]=new Array("GND");
+              
+                clkimp["led171_SPECSIG"]=new Array("1");
+              
+              set["led171_SPECSIG"]=new Array("FB4_4_2");
+              
+                setimp["led171_SPECSIG"]=new Array("1");
+              
+              rst["led171_SPECSIG"]=new Array("FB4_4_1");
+              
+                rstimp["led171_SPECSIG"]=new Array("1");
+              prld["led171_SPECSIG"]="GND";
+          d2["LED7_SPECSIG"]=new Array("FB4_5_1","FB4_5_2","FB4_5_3");
+          
+            d2imp["LED7_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led161_SPECSIG"]=new Array("GND");
+          
+            d2imp["led161_SPECSIG"]=new Array("1");
+          
+              clk["led161_SPECSIG"]=new Array("GND");
+              
+                clkimp["led161_SPECSIG"]=new Array("1");
+              
+              set["led161_SPECSIG"]=new Array("FB4_6_2");
+              
+                setimp["led161_SPECSIG"]=new Array("1");
+              
+              rst["led161_SPECSIG"]=new Array("FB4_6_1");
+              
+                rstimp["led161_SPECSIG"]=new Array("1");
+              prld["led161_SPECSIG"]="GND";
+          d2["led151_SPECSIG"]=new Array("GND");
+          
+            d2imp["led151_SPECSIG"]=new Array("1");
+          
+              clk["led151_SPECSIG"]=new Array("GND");
+              
+                clkimp["led151_SPECSIG"]=new Array("1");
+              
+              set["led151_SPECSIG"]=new Array("FB4_7_2");
+              
+                setimp["led151_SPECSIG"]=new Array("1");
+              
+              rst["led151_SPECSIG"]=new Array("FB4_7_1");
+              
+                rstimp["led151_SPECSIG"]=new Array("1");
+              prld["led151_SPECSIG"]="GND";
+          d2["LED6_SPECSIG"]=new Array("FB4_8_1","FB4_8_2","FB4_8_3");
+          
+            d2imp["LED6_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led141_SPECSIG"]=new Array("GND");
+          
+            d2imp["led141_SPECSIG"]=new Array("1");
+          
+              clk["led141_SPECSIG"]=new Array("GND");
+              
+                clkimp["led141_SPECSIG"]=new Array("1");
+              
+              set["led141_SPECSIG"]=new Array("FB4_9_2");
+              
+                setimp["led141_SPECSIG"]=new Array("1");
+              
+              rst["led141_SPECSIG"]=new Array("FB4_9_1");
+              
+                rstimp["led141_SPECSIG"]=new Array("1");
+              prld["led141_SPECSIG"]="GND";
+          d2["led131_SPECSIG"]=new Array("GND");
+          
+            d2imp["led131_SPECSIG"]=new Array("1");
+          
+              clk["led131_SPECSIG"]=new Array("GND");
+              
+                clkimp["led131_SPECSIG"]=new Array("1");
+              
+              set["led131_SPECSIG"]=new Array("FB4_10_2");
+              
+                setimp["led131_SPECSIG"]=new Array("1");
+              
+              rst["led131_SPECSIG"]=new Array("FB4_10_1");
+              
+                rstimp["led131_SPECSIG"]=new Array("1");
+              prld["led131_SPECSIG"]="GND";
+          d2["LED5_SPECSIG"]=new Array("FB4_11_1","FB4_11_2","FB4_11_3");
+          
+            d2imp["LED5_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led121_SPECSIG"]=new Array("GND");
+          
+            d2imp["led121_SPECSIG"]=new Array("1");
+          
+              clk["led121_SPECSIG"]=new Array("GND");
+              
+                clkimp["led121_SPECSIG"]=new Array("1");
+              
+              set["led121_SPECSIG"]=new Array("FB4_12_2");
+              
+                setimp["led121_SPECSIG"]=new Array("1");
+              
+              rst["led121_SPECSIG"]=new Array("FB4_12_1");
+              
+                rstimp["led121_SPECSIG"]=new Array("1");
+              prld["led121_SPECSIG"]="GND";
+          d2["led111_SPECSIG"]=new Array("GND");
+          
+            d2imp["led111_SPECSIG"]=new Array("1");
+          
+              clk["led111_SPECSIG"]=new Array("GND");
+              
+                clkimp["led111_SPECSIG"]=new Array("1");
+              
+              set["led111_SPECSIG"]=new Array("FB4_13_2");
+              
+                setimp["led111_SPECSIG"]=new Array("1");
+              
+              rst["led111_SPECSIG"]=new Array("FB4_13_1");
+              
+                rstimp["led111_SPECSIG"]=new Array("1");
+              prld["led111_SPECSIG"]="GND";
+          d2["LED4_SPECSIG"]=new Array("FB4_14_1","FB4_14_2","FB4_14_3");
+          
+            d2imp["LED4_SPECSIG"]=new Array("1","1","1");
+          
+          d2["LED3_SPECSIG"]=new Array("FB4_15_1","FB4_15_2","FB4_15_3");
+          
+            d2imp["LED3_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led101_SPECSIG"]=new Array("GND");
+          
+            d2imp["led101_SPECSIG"]=new Array("1");
+          
+              clk["led101_SPECSIG"]=new Array("GND");
+              
+                clkimp["led101_SPECSIG"]=new Array("1");
+              
+              set["led101_SPECSIG"]=new Array("FB4_16_2");
+              
+                setimp["led101_SPECSIG"]=new Array("1");
+              
+              rst["led101_SPECSIG"]=new Array("FB4_16_1");
+              
+                rstimp["led101_SPECSIG"]=new Array("1");
+              prld["led101_SPECSIG"]="GND";
+          d2["LED2_SPECSIG"]=new Array("FB4_17_1","FB4_17_2","FB4_17_3");
+          
+            d2imp["LED2_SPECSIG"]=new Array("1","1","1");
+          
+          d2["led01_SPECSIG"]=new Array("GND");
+          
+            d2imp["led01_SPECSIG"]=new Array("1");
+          
+              clk["led01_SPECSIG"]=new Array("GND");
+              
+                clkimp["led01_SPECSIG"]=new Array("1");
+              
+              set["led01_SPECSIG"]=new Array("FB4_18_2");
+              
+                setimp["led01_SPECSIG"]=new Array("1");
+              
+              rst["led01_SPECSIG"]=new Array("FB4_18_1");
+              
+                rstimp["led01_SPECSIG"]=new Array("1");
+              prld["led01_SPECSIG"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

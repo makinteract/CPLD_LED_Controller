@@ -1,0 +1,257 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : Yes
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : NO
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "src/shift_reg.v" in library work
+Compiling verilog file "src/ledCtrl.v" in library work
+Module <shift_reg> compiled
+Compiling verilog file "src/top.v" in library work
+Module <ledCtrl> compiled
+Module <top> compiled
+No errors in compilation
+Analysis of file <"top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top> in library <work> with parameters.
+	MSB = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <shift_reg> in library <work> with parameters.
+	MSB = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <ledCtrl> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top>.
+	MSB = 32'sb00000000000000000000000000001000
+Module <top> is correct for synthesis.
+ 
+Analyzing module <shift_reg> in library <work>.
+	MSB = 32'sb00000000000000000000000000001000
+Module <shift_reg> is correct for synthesis.
+ 
+Analyzing module <ledCtrl> in library <work>.
+Module <ledCtrl> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <shift_reg>.
+    Related source file is "src/shift_reg.v".
+    Found 8-bit register for signal <registers>.
+Unit <shift_reg> synthesized.
+
+
+Synthesizing Unit <ledCtrl>.
+    Related source file is "src/ledCtrl.v".
+Unit <ledCtrl> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "src/top.v".
+WARNING:Xst:646 - Signal <instruction<2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 2-bit latch for signal <led0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 2-bit latch for signal <led19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <half_pattern>.
+    Found 1-bit register for signal <temp>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 8-bit register                                        : 1
+# Latches                                              : 20
+ 2-bit latch                                           : 20
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Latches                                              : 20
+ 2-bit latch                                           : 20
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <ledCtrl> ...
+
+Optimizing unit <shift_reg> ...
+WARNING:Xst:2677 - Node <registers_7> of sequential type is unconnected in block <sr0>.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : NO
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 26
+
+Cell Usage :
+# BELS                             : 324
+#      AND2                        : 148
+#      AND3                        : 13
+#      AND4                        : 1
+#      AND5                        : 6
+#      INV                         : 109
+#      OR2                         : 47
+# FlipFlops/Latches                : 49
+#      FD                          : 9
+#      LD                          : 40
+# IO Buffers                       : 26
+#      IBUF                        : 6
+#      OBUF                        : 20
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.14 secs
+ 
+--> 
+
+Total memory usage is 4498336 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/Andrea/GIT/BlinkBoard/HDL_LedController/top.xst" -ofn "C:/Users/Andrea/GIT/BlinkBoard/HDL_LedController/top.syr" 
+xst -intstyle ise -ifn "C:/Users/Andrea/GIT/BlinkBoard/HDL_LedController/top.xst" -ofn "C:/Users/Andrea/GIT/BlinkBoard/HDL_LedController/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc src/constraints.ucf -p xc9572xl-VQ44-5 top.ngc top.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper top.ngd 
+XSLTProcess top_build.xml 
+tsim -intstyle ise top top.nga 
+hprep6 -s IEEE1149 -n top -i top 

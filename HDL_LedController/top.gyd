@@ -1,0 +1,55 @@
+Pin Freeze File:  version P.20131013
+
+9572XL44VQ XC9572XL-5-VQ44
+CLK S:PIN40
+DATA S:PIN39
+LATCH S:PIN41
+PATTERN_555 S:PIN37
+PWM S:PIN38
+RESET S:PIN42
+LED<0> S:PIN30
+LED<10> S:PIN16
+LED<11> S:PIN14
+LED<12> S:PIN13
+LED<13> S:PIN12
+LED<14> S:PIN8
+LED<15> S:PIN7
+LED<16> S:PIN6
+LED<17> S:PIN5
+LED<18> S:PIN3
+LED<19> S:PIN2
+LED<1> S:PIN29
+LED<2> S:PIN28
+LED<3> S:PIN27
+LED<4> S:PIN23
+LED<5> S:PIN22
+LED<6> S:PIN21
+LED<7> S:PIN20
+LED<8> S:PIN19
+LED<9> S:PIN18
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 temp led8<0> led7<0> led4<1>
+		 led3<1> led2<1> led1<1> led19<1>
+		 led16<0> led15<0> led14<0> led13<0>
+		 led12<0> led11<0> LED_19_OBUF led10<0>
+		 LED_18_OBUF led0<0>
+PARTITION FB2_2 LED_1_OBUF
+PARTITION FB2_5 LED_0_OBUF half_pattern led9<1> led8<1>
+		 led7<1> led6<1> led5<1> buffer<6>
+		 buffer<5> buffer<4> buffer<3> buffer<2>
+		 buffer<1> buffer<0>
+PARTITION FB3_1 led6<0> LED_17_OBUF led5<0> led4<0>
+		 LED_16_OBUF led3<0> led2<0> LED_15_OBUF
+		 LED_14_OBUF led1<0> LED_13_OBUF led19<0>
+		 led18<0> LED_12_OBUF LED_11_OBUF LED_9_OBUF
+		 LED_10_OBUF led17<0>
+PARTITION FB4_1 led9<0> LED_8_OBUF led18<1> led17<1>
+		 LED_7_OBUF led16<1> led15<1> LED_6_OBUF
+		 led14<1> led13<1> LED_5_OBUF led12<1>
+		 led11<1> LED_4_OBUF LED_3_OBUF led10<1>
+		 LED_2_OBUF led0<1>
+
