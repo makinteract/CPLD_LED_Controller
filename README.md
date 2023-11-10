@@ -27,7 +27,7 @@ Check if ready.
 {"status": "ready"}  // answer
 ```
 
-## Check formware version
+### Check formware version
 
 Check activation by passing the current month and year and see if it is <= of activation date
 
@@ -36,7 +36,7 @@ Check activation by passing the current month and year and see if it is <= of ac
 {"version": "1.0"}  // answer
 ```
 
-## Reset
+### Reset
 
 Reset LED and outputs
 
@@ -45,7 +45,7 @@ Reset LED and outputs
 {"ack": "reset"}
 ```
 
-## Get Input
+### Get Input
 
 Read A0, A1, A2 using specific number of samples (default 1 max 50);
 
@@ -56,7 +56,7 @@ Read A0, A1, A2 using specific number of samples (default 1 max 50);
 {"ack":"analogRead", "A0":343, "A1":371, "A2":364}  // example answer
 ```
 
-## Set output
+### Set output
 
 Set voltage between 0V and 4.5V on **D2**. The input value and the return voltage are clipped between 0 and 4.5V.
 
@@ -154,7 +154,7 @@ Values of brightness between 0 and 99
 {"ack": "brightness", "value": "100"}
 ```
 
-#### Animate LEDs
+### Animate LEDs
 
 Draw all LEDs 1-50 and vice-versa
 
