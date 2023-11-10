@@ -30,7 +30,7 @@
 #define ANIMATION_DELAYMS 30
 #define ROWS 25
 
-#define VERSION F("1.1")
+#define VERSION F("1.2")
 #define BAUD_RATE 115200
 
 #endif

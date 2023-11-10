@@ -59,7 +59,7 @@ Set voltage between 0V and 4.5V on **D2**. The input value and the return voltag
 {"ack": "voltage", "value": 4500}     // answer
 ```
 
-**D1** and **D2** can be set HIGH/LOW or PWM.
+**D0** and **D1** can be set HIGH/LOW or PWM.
 
 ```js
 {"cmd": "setHigh", "pin": "D0"}       // request
@@ -69,7 +69,7 @@ Set voltage between 0V and 4.5V on **D2**. The input value and the return voltag
 {"ack": "setLow", "pin": "D0"}        // answer
 ```
 
-For PWM the input duty and the return voltage are clipped between 0 and 100. Pin can be "D0" or "D1".
+For PWM the input duty and the return voltage are clipped between 0 and 100. Pin can be **D0** or **D1**.
 
 ```js
 {"cmd": "setPwm", "pin": "D0", "duty" : "90"}       // request
