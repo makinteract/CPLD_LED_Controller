@@ -217,6 +217,13 @@ For details about how to assemble this hardware, please refer to the Hardware X 
 
 Controlling LEDs using the [CoolRunner-II][product]. [Schematics][schematics] and [datasheet][datasheet] are provided in the links for reference.
 
+---
+
+## Citation
+
+Andrea Bianchi, Kongpyung Justin Moon, Artem Dementyev, Seungwoo Je. 2024. BlinkBoard: Guiding and monitoring circuit assembly for synchronous and remote physical computing education. In HardwareX 2024, e00511, ISSN 2468-0672, DOI: [https://doi.org/10.1016/j.ohx.2024.e00511](https://doi.org/10.1016/j.ohx.2024.e00511).
+
+
 <!-- REFERENCES -->
 
 [product]: https://store.digilentinc.com/cmod-c2-breadboardable-coolrunner-ii-cpld-module/
