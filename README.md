@@ -221,7 +221,7 @@ Controlling LEDs using the [CoolRunner-II][product]. [Schematics][schematics] an
 
 ## Citation
 
-Andrea Bianchi, Kongpyung Justin Moon, Artem Dementyev, Seungwoo Je. 2024. BlinkBoard: Guiding and monitoring circuit assembly for synchronous and remote physical computing education. In HardwareX 2024, e00511, ISSN 2468-0672, DOI: [https://doi.org/10.1016/j.ohx.2024.e00511](https://doi.org/10.1016/j.ohx.2024.e00511).
+Andrea Bianchi, Kongpyung Justin Moon, Artem Dementyev, Seungwoo Je. 2024. _BlinkBoard: Guiding and monitoring circuit assembly for synchronous and remote physical computing education_. In HardwareX 2024, e00511, ISSN 2468-0672, DOI: [https://doi.org/10.1016/j.ohx.2024.e00511](https://doi.org/10.1016/j.ohx.2024.e00511).
 
 
 <!-- REFERENCES -->
